@@ -20,6 +20,12 @@ Inspired by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877)
 
 ## Installation
 
+### Claude.ai
+
+Download `anti-slop-writing.skill` from the [Releases](https://github.com/adenaufal/anti-slop-writing/releases) page, then install it in Claude.ai via **Settings → Skills → Install from file**.
+
+---
+
 ### Claude Code
 
 ```bash
@@ -143,6 +149,9 @@ anti-slop-writing/
     ├── vocabulary-banlist.md        ← Full banned word list, organized by AI model era
     ├── structural-patterns.md       ← 12 structural patterns with before/after examples
     └── wikipedia-sign-ai-writing.md ← Offline copy of the Wikipedia source
+
+# Released separately (not committed to git):
+anti-slop-writing.skill             ← Claude.ai installable package (zip of the above)
 ```
 
 `AGENTS.md`, `GEMINI.md`, and `system-prompt.md` are **identical in content** — self-contained with all rules inline. The different filenames exist because different tools look for different filenames.
