@@ -4,7 +4,7 @@ A universal AI agent skill that makes generated text read as authentically human
 
 Based on Wikipedia's ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and peer-reviewed LLM detection research.
 
-Inspired by [@mkbijaksana](https://twitter.com/mkbijaksana) — the original insight of using the Wikipedia AI writing catalog as a writing ruleset.
+Inspired by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877) — the original insight of using the Wikipedia AI writing catalog as a writing ruleset.
 
 ---
 
@@ -174,7 +174,7 @@ Every rule in this skill targets one or both of these metrics.
 
 ## Credits
 
-- Original insight by [@mkbijaksana](https://twitter.com/mkbijaksana) — using Wikipedia's AI writing catalog as a system prompt
+- Original insight by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877) — using Wikipedia's AI writing catalog as a system prompt
 - Wikipedia [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) editors who compiled the Signs of AI Writing guide
 
 ---
