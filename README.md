@@ -23,12 +23,12 @@ Inspired by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877)
 ### Claude Code
 
 ```bash
-git clone https://github.com/your-username/anti-slop-writing ~/.claude/skills/anti-slop-writing
+git clone https://github.com/adenaufal/anti-slop-writing ~/.claude/skills/anti-slop-writing
 ```
 
 Or project-level:
 ```bash
-git clone https://github.com/your-username/anti-slop-writing .claude/skills/anti-slop-writing
+git clone https://github.com/adenaufal/anti-slop-writing .claude/skills/anti-slop-writing
 ```
 
 Trigger with: *"write this without AI patterns"*, *"make this sound human"*, *"no slop"*, or `/anti-slop-writing`
@@ -39,7 +39,7 @@ Trigger with: *"write this without AI patterns"*, *"make this sound human"*, *"n
 
 Global (applies to all projects):
 ```bash
-git clone https://github.com/your-username/anti-slop-writing /tmp/anti-slop-writing
+git clone https://github.com/adenaufal/anti-slop-writing /tmp/anti-slop-writing
 cp /tmp/anti-slop-writing/AGENTS.md ~/.codex/AGENTS.md
 ```
 
@@ -56,7 +56,7 @@ Codex reads `AGENTS.md` automatically from `~/.codex/` and the project root.
 
 Global:
 ```bash
-git clone https://github.com/your-username/anti-slop-writing /tmp/anti-slop-writing
+git clone https://github.com/adenaufal/anti-slop-writing /tmp/anti-slop-writing
 cp /tmp/anti-slop-writing/GEMINI.md ~/.gemini/GEMINI.md
 ```
 
