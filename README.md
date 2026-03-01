@@ -172,12 +172,30 @@ Every rule in this skill targets one or both of these metrics.
 
 ---
 
+## Bahasa Indonesia support
+
+Indonesian-specific AI slop patterns are documented and covered. AI-generated Indonesian has unique tells beyond the universal English ones:
+
+- **Translationese structure** — AI writes formal Bahasa Indonesia baku that sounds like a government document even in casual contexts. SEACrowd research confirms LLM outputs in Indonesian show measurable naturalness gaps (~41% vs human baselines).
+- **Missing discourse particles** — Natural Indonesian uses *nah, sih, dong, deh, lho, kan*. AI never uses them.
+- **Signature vocabulary** — *sangat penting, merupakan, tidak hanya...tetapi juga, selain itu, oleh karena itu, dapat disimpulkan bahwa* appear at high rates in AI-generated Indonesian text, confirmed via corpus comparison of M4 multilingual datasets.
+- **The "Kesimpulan" ending** — AI adds a labeled Conclusion section to every Indonesian article. Humans don't.
+- **Nominalization overload** — AI prefers *pelaksanaan pelatihan* over *melatih*, *pengembangan* over *mengembangkan* — a pattern over-learned from Indonesian academic/bureaucratic text.
+
+The `references/vocabulary-banlist.md` and `references/structural-patterns.md` files contain the full Indonesian ban list and 10 Indonesian-specific structural patterns with before/after examples. The main skill files (SKILL.md, system-prompt.md, AGENTS.md, GEMINI.md) include the Indonesian rules inline.
+
+---
+
 ## Sources
 
 - Wikipedia: [Signs of AI Writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) (WikiProject AI Cleanup)
 - Kobak et al. (2024): *Delving into LLM-assisted writing in biomedical publications through excess vocabulary* — Science Advances ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016))
 - Russell, Karpinska & Iyyer (2025): *People who frequently use ChatGPT are accurate detectors of AI-generated text* — ACL 2025
 - Fraser, Dawkins & Kiritchenko (2025): *Detecting AI-generated text: factors influencing detectability* — JAIR 82:2233-2278
+- Wang et al. (2024): *M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated Text Detection* — EACL 2024 (includes Indonesian parallel corpora)
+- Lovenia et al. (2024): *SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages* ([arXiv:2406.10118](https://arxiv.org/abs/2406.10118)) — documents naturalness gap in LLM-generated Indonesian (~41.58% naturalness)
+- Ilman Akbar (2024): *Cara gampang mendeteksi konten buatan AI secara manual* — LinkedIn/DailySEO ID (10 patterns for detecting AI content in Indonesian)
+- The Conversation Indonesia (2024): *Mengapa tulisan asli bisa terdeteksi buatan AI* — documents kebakuan bahasa as primary AI detection signal in Indonesian
 
 ---
 

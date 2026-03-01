@@ -180,3 +180,110 @@ When you encounter a banned word, don't just swap it for a synonym. Restructure 
 **After:** "The festival has been running since 1987. Locals sell handmade pottery and goat cheese from stalls they build themselves each spring."
 
 The fix is never finding a better adjective. The fix is replacing vague praise with specific facts.
+
+---
+
+## Bahasa Indonesia Ban List
+
+AI-generated Indonesian has its own signature vocabulary distinct from AI-English. These are the words and constructions that mark Indonesian text as machine-generated.
+
+### Significance Puffers (Indonesian)
+- sangat penting → state specifically why it matters or drop the qualifier
+- sangat krusial / krusial → drop; if something is critical, show evidence
+- sangat signifikan / signifikan → quantify the significance instead
+- sangat relevan → specify what makes it relevant to this context
+- fundamental / mendasar (as vague praise) → say what specifically makes it foundational
+- luar biasa (as generic praise) → say what specifically is remarkable
+- mendalam (without substance) → provide the actual depth
+- berarti / bermakna (as vague praise) → specify what meaning it carries
+
+### Analytical Verbs (Indonesian AI overuses)
+- menyoroti / menyorot → "menunjukkan" or describe the finding directly
+- menggarisbawahi → "menunjukkan" or remove the meta-commentary
+- memfasilitasi → "membantu" or "memungkinkan"
+- mengoptimalkan → "memperbaiki" or state what is being optimized
+- memanfaatkan → "menggunakan"
+- mengimplementasikan → "menerapkan" or "menjalankan"
+- berkontribusi pada → state the specific contribution
+- berperan dalam → state the specific action performed
+- mengedepankan → "mengutamakan"
+- mewujudkan → "membuat" or "menciptakan"
+- merealisasikan → "mewujudkan" → "membuat"
+
+### Promotional/Puffery Adjectives (Indonesian)
+- komprehensif → state what is actually covered
+- holistik → name all the parts
+- inovatif → state what is actually new
+- dinamis → state what changes and how
+- inklusif → name who is included
+- berbagai macam (as vague filler) → list the actual things
+- beragam (as vague filler) → list the actual variety
+- terkini (without a date) → give the actual date or timeframe
+
+### Formal Connectives AI Overuses in Indonesian
+Replace with simpler alternatives or restructure.
+- selain itu → "juga" or restructure the sentence
+- di sisi lain → "tapi" or "namun" (not as a hollow pivot)
+- lebih lanjut → restructure or continue without the transition
+- dengan demikian → "jadi" or "maka"
+- oleh karena itu → "jadi" or "makanya" (colloquial contexts)
+- tak kalah penting / tidak kalah pentingnya → state what it actually is
+- menariknya → lead with the interesting fact; drop the framing word
+- sehubungan dengan hal tersebut → restructure the sentence entirely
+- berkaitan dengan hal ini → be specific about what "this" is
+- dalam hal ini → specify what "this" means
+
+### Opening/Closing Crutches (Indonesian)
+- "Di era modern ini," → start with a specific fact
+- "Dalam konteks [X] yang semakin [Y]," → start with the fact, not the framing
+- "Seiring perkembangan zaman," → state the specific change and when
+- "Perlu diketahui bahwa" → drop; just state what follows
+- "Penting untuk diingat" → drop or write "Ingat:" or just state it
+- "Sebagai kesimpulan," → drop or write a conclusion that says something new
+- "Dapat disimpulkan bahwa" → state the conclusion directly
+- "Dengan demikian, dapat disimpulkan" → drop entirely
+- "Pada akhirnya," → restructure or use "Akhirnya" only for actual sequence
+
+### Copula-Avoidance Constructions (Indonesian)
+AI substitutes elaborate verb phrases for simple "adalah" or "punya."
+- merupakan → "adalah" when possible, or restructure
+- berperan sebagai → "adalah"
+- berfungsi sebagai → "adalah" or "digunakan sebagai"
+- menjadi salah satu... → restructure to be specific
+- memiliki peran penting → state what the role is
+- "menjadi [X] yang [Y] dalam/bagi [Z]" → state directly
+
+### Vague Attribution (Indonesian)
+- "para ahli menyatakan" → name the expert
+- "penelitian menunjukkan" → name the study or researcher
+- "banyak kalangan berpendapat" → name who and cite them
+- "menurut beberapa sumber" → name the sources
+- "studi menunjukkan" → which study, when, by whom?
+- "komunitas ilmiah sepakat" → who specifically?
+
+### AI Promotional Phrases (Indonesian)
+- "memiliki komitmen untuk" → state what they actually do
+- "memberikan dampak positif" → state the specific impact
+- "berperan penting dalam" → state how specifically
+- "dalam rangka [positive goal]" → state what they are doing
+- "dalam upaya [X]" → state what they are doing
+- "guna meningkatkan" → state what actually increased
+- "untuk mencapai tujuan tersebut" → state what the goal is and what they did
+
+### Collaborative Chat Artifacts (Indonesian — never include)
+- "Semoga membantu!"
+- "Tentu saja!"
+- "Baik, berikut adalah..."
+- "Apakah ada yang ingin Anda tanyakan?"
+- "Jika ada pertanyaan, jangan ragu untuk bertanya."
+- "Sebagai AI, saya..."
+
+## Indonesian Replacement Strategy
+
+Indonesian AI text fails differently from English AI text. The core problem is translationese: AI writes formal Bahasa Indonesia baku that sounds like a government document or a translated Wikipedia article, even for casual contexts.
+
+**Before (AI Indonesian):**
+> Festival ini merupakan salah satu momen penting yang tidak hanya menampilkan kekayaan budaya lokal, tetapi juga memperkuat ikatan sosial antar masyarakat, menjadikannya sebagai ajang yang sangat krusial dalam pelestarian tradisi.
+
+**After (human Indonesian):**
+> Festival ini sudah jalan sejak 1987. Warga bikin lapak sendiri. Keju kambing dan gerabah habis sebelum tengah hari.

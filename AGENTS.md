@@ -123,3 +123,66 @@ After drafting, check every item:
 ## Language Support
 
 Apply these rules regardless of the language you're writing in. The structural tells (rule of three, participial tack-ons, copula avoidance, false ranges) appear in AI output across all languages. When writing in a non-English language, adapt the vocabulary ban list to equivalent overused words in that language and maintain natural idioms of the target language rather than translating AI-English patterns directly.
+
+---
+
+## Bahasa Indonesia - Specific Rules
+
+When writing in Indonesian, apply all the rules above plus these Indonesian-specific ones.
+
+### Indonesian Vocabulary Ban
+
+**Significance puffers:** sangat penting, sangat krusial, sangat signifikan, sangat relevan, fundamental (as vague praise), luar biasa (as generic praise), mendalam (without concrete detail)
+
+**Analytical verbs:** menyoroti, menggarisbawahi, memfasilitasi, mengoptimalkan. For replacements, keep meaning: memanfaatkan -> gunakan "menggunakan" only when it means "to use"; keep "memanfaatkan" when it means "to benefit from" | mengimplementasikan -> "menerapkan" in plain style | berkontribusi pada -> state the concrete action and result | berperan dalam -> name the action directly
+
+**Formal connectives (replace with simpler alternatives):** selain itu -> "juga" | di sisi lain -> "namun" or "tapi" (match register) | lebih lanjut -> restructure or cut | dengan demikian -> "jadi" | oleh karena itu -> "jadi" or "karena itu" | tak kalah penting -> state what it is | menariknya -> lead with the fact directly | sehubungan dengan hal tersebut -> restructure the sentence
+
+**Opening/closing crutches:** "Di era modern ini," | "Dalam konteks [X] yang semakin [Y]," | "Seiring perkembangan zaman," | "Perlu diketahui bahwa" | "Penting untuk diingat" | "Sebagai kesimpulan," | "Dapat disimpulkan bahwa" | "Dengan demikian, dapat disimpulkan" | "Pada akhirnya,"
+
+**Copula-avoidance:** merupakan -> prefer "adalah" or rewrite directly | berperan sebagai -> use "adalah" only for identity statements, otherwise use a concrete verb | berfungsi sebagai -> use "berfungsi untuk" for purpose statements | memiliki peran penting -> state the exact role | menjadi salah satu... -> quantify directly
+
+**Vague attribution:** "para ahli menyatakan" -> name them | "penelitian menunjukkan" -> name the study | "banyak kalangan berpendapat" -> name who | "menurut beberapa sumber" -> name the sources
+
+**Promotional phrases:** "memiliki komitmen untuk" | "memberikan dampak positif" | "dalam rangka [goal]" | "dalam upaya [X]" | "guna meningkatkan" | "berkontribusi pada kemajuan"
+
+### Indonesian Structural Rules
+
+**Avoid automatic "Kesimpulan" headings.** Use a "Kesimpulan" section only when the genre requires it (for example: academic papers, formal reports, compliance docs). For essays, articles, and casual writing, close in prose.
+
+**No temporal openings.** Never start with "Di era modern ini," "Seiring perkembangan zaman," or "Dalam konteks X yang semakin Y." Start with a specific fact, number, or scene.
+
+**Avoid "tidak hanya...tetapi juga."** Keep it only when the contrast is truly needed and adds new meaning.
+
+**No "merupakan salah satu X yang paling Y."** Importance assertion without evidence. Quantify or compare specifically instead.
+
+**No template line "di sisi lain, terdapat tantangan."** Name the concrete problem and, when possible, include numbers.
+
+**No "dapat dilihat bahwa" padding.** Delete "dapat dilihat bahwa," "dapat dipahami bahwa," "perlu dipahami bahwa." State the finding directly.
+
+**Avoid "di mana" as relative pronoun.** "Program di mana peserta akan..." is usually a calque from English. Rewrite as "program yang..." or as a direct sentence.
+
+**Prefer verbs over nominalizations.** "Melatih" not "pelaksanaan pelatihan." "Mengembangkan" not "pengembangan." "Membangun" not "pembangunan."
+
+### Indonesian Voice Rules
+
+**Use discourse particles when appropriate.** Natural Indonesian often uses nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya in conversational contexts. Do not force particles in formal writing.
+
+**Match pronoun register.** AI defaults to "Anda" regardless of context. Casual writing uses kamu or lo/lu. Formal uses Anda. Match the actual tone of the piece.
+
+**Avoid pure Bahasa baku in casual contexts.** When the context is informal: nggak (not tidak), udah (not sudah), gimana (not bagaimana), bikin (not membuat).
+
+**Add reader engagement when it fits the genre.** Human Indonesian writing can ask direct questions, use asides, or use light humor when context allows.
+
+### Indonesian Checklist (in addition to main checklist)
+
+After the standard checklist, also run these:
+1. Find all "merupakan" - replace most with "adalah" or rewrite directly
+2. Remove automatic "Kesimpulan" section headers unless format requires them
+3. Find every "tidak hanya...tetapi juga" - keep only when the contrast is necessary
+4. Check the opening - if it starts with "Di era" / "Seiring" / "Dalam konteks" - rewrite with a specific fact
+5. Find all nominalization chains (pe-/ke-an/-an) - prefer verb forms where clarity improves
+6. Find all "dapat dilihat bahwa" / "dapat dipahami bahwa" - delete them and state the fact
+7. Check pronoun register - does "Anda" match the intended tone?
+8. Find all "di mana" relative clauses - rewrite as direct sentences
+9. Re-check semantic accuracy - make sure each replacement keeps the original meaning
