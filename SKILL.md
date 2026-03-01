@@ -27,6 +27,8 @@ Before writing anything, load `references/vocabulary-banlist.md` for the complet
 
 **Copula avoidance constructions:** Replace "serves as a" with "is a." Replace "stands as a testament to" with "shows." Replace "marks a pivotal moment" with describe the moment directly. Replace "features" and "boasts" with "has." Replace "represents a shift" with "is a shift" or describe the shift.
 
+**Common AI filler phrases (cut or replace):** "plays a [crucial/key/important] role" → state the action directly | "when it comes to" → rewrite with a verb | "in order to" → "to" | "a wide range of" → name what's in the range | "needless to say" → cut | "it goes without saying" → cut | "more often than not" → "usually" or give a number | "take a closer look at" → cut or be direct | "at this point in time" → "now" | "in recent years" → give the actual years or timeframe
+
 ## Replacement Principle
 
 Use short, common words: "use" not "utilize," "help" not "facilitate," "show" not "demonstrate," "end" not "conclude," "start" not "embark," "dig into" not "delve into."
@@ -71,6 +73,14 @@ Use irregular paragraph lengths. One-sentence paragraphs for emphasis. Longer pa
 
 Prefer prose over bullet-point lists with bolded inline headers followed by colons. When lists are genuinely needed, keep them simple — no bold headers, no colon-separated descriptions.
 
+## Vary Sentence Type, Not Just Length
+
+Mix declarative sentences with questions, imperatives, and deliberate fragments. A genuine question mid-paragraph ("Why does this matter?") signals a thinking mind. An imperative ("Think about that.") shifts the register. A fragment for emphasis. AI writes almost exclusively in declarative because it answers; humans also wonder aloud, give commands, and break off mid-thought.
+
+## Break Paragraph-Level Predictability
+
+Don't open every paragraph with its thesis sentence. Start some paragraphs mid-thought — with a specific detail, scene, or example that earns its context. End some paragraphs before completing the expected "so what." AI writes clean arcs: claim → evidence → implication. Break that arc at least twice per piece.
+
 # Content Rules
 
 ## Specificity Over Generality
@@ -93,6 +103,10 @@ Never write about how something "contributes to the broader" anything. Never sta
 
 Take positions. "This approach is wrong because..." not "Some argue X, while others argue Y." AI hedges reflexively; humans commit.
 
+## Show Genuine Uncertainty When Appropriate
+
+When you don't know something, say so directly. "I'm not sure" or "I don't have enough information" signals honest thinking. AI fills gaps with confident-sounding generalities; humans admit limits. Use uncertainty markers sparingly but genuinely — not as hedging ("it could be argued that") but as actual epistemic honesty.
+
 # Voice and Texture
 
 ## Add Human Imperfection
@@ -111,6 +125,10 @@ Name real recent events, specific pop culture moments, actual people and works. 
 
 Use "I" when the context allows. Share specific experiences, opinions, or observations. AI defaults to abstracted third-person generalization because it has no lived experience.
 
+## Vary Syntactic Depth
+
+Mix shallow and deep sentence structures. A shallow sentence: subject-verb-object, one clause. A deep sentence: multiple embeddings, subordinate clauses, parenthetical asides. AI produces medium-depth sentences with boring consistency. Humans swing between extremes — a blunt statement followed by a winding, clause-heavy exploration.
+
 # Post-Generation Checklist
 
 After drafting, run this checklist:
@@ -125,6 +143,8 @@ After drafting, run this checklist:
 8. Read the entire piece aloud — awkward AI rhythm is audible in ways it's not visible
 9. Count em dashes — if more than one per 500 words, replace most with commas, parentheses, or periods
 10. Check for any -ing participial phrases tacked onto sentence ends — rewrite as separate sentences or remove
+11. Check for sentence type variety — if you wrote only declarative sentences, add at least one question or imperative
+12. Verify paragraph openings — if every paragraph starts with its thesis sentence, rewrite at least two to start mid-thought with a detail or example
 
 # Language Support
 

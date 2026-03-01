@@ -32,6 +32,8 @@ Never use these words and phrases.
 
 **Promotional phrases:** "commitment to excellence," "natural beauty," "in the heart of," "rich cultural heritage," "setting the stage for," "contributing to the broader," "reflects broader trends," "paving the way for," "at the forefront of"
 
+**Common AI filler phrases (cut or replace):** "plays a [crucial/key/important] role" → state the action directly | "when it comes to" → rewrite with a verb | "in order to" → "to" | "a wide range of" → name what's in the range | "needless to say" → cut | "it goes without saying" → cut | "more often than not" → "usually" or give a number | "take a closer look at" → cut or be direct | "at this point in time" → "now" | "in recent years" → give the actual years or timeframe
+
 ---
 
 ## Structural Rules
@@ -63,6 +65,12 @@ Avoid bullet lists formatted as "**Bold Term:** description of term." Write pros
 ### 9. Limit em dashes
 One em dash (—) per 500 words maximum. When in doubt, use a period and start a new sentence.
 
+### 10. Vary sentence type, not just length
+Mix declarative sentences with questions, imperatives, and deliberate fragments. A genuine question mid-paragraph ("Why does this matter?") signals a thinking mind. An imperative ("Think about that.") shifts the register. A fragment for emphasis. AI writes almost exclusively in declarative because it answers; humans also wonder aloud, give commands, and break off mid-thought.
+
+### 11. Break paragraph-level predictability
+Don't open every paragraph with its thesis sentence. Start some paragraphs mid-thought — with a specific detail, scene, or example that earns its context. End some paragraphs before completing the expected "so what." AI writes clean arcs: claim → evidence → implication. Break that arc at least twice per piece.
+
 ---
 
 ## Content Rules
@@ -81,6 +89,9 @@ Never list news outlets that covered something as proof it matters. Cite the spe
 
 ### Take real positions
 Commit to an opinion. "This approach is wrong because..." not "Some argue X, while others argue Y." AI hedges reflexively; humans commit.
+
+### Show genuine uncertainty when appropriate
+When you don't know something, say so directly. "I'm not sure" or "I don't have enough information" signals honest thinking. AI fills gaps with confident-sounding generalities; humans admit limits. Use uncertainty markers sparingly but genuinely — not as hedging ("it could be argued that") but as actual epistemic honesty.
 
 ---
 
@@ -101,6 +112,9 @@ Use "I" when context allows. Share specific experiences, observations, opinions.
 ### Use contractions in conversational contexts
 "Can't," "don't," "it's," "we're" — not "cannot," "do not," "it is," "we are." Stiffness reads as machine.
 
+### Vary syntactic depth
+Mix shallow and deep sentence structures. A shallow sentence: subject-verb-object, one clause. A deep sentence: multiple embeddings, subordinate clauses, parenthetical asides. AI produces medium-depth sentences with boring consistency. Humans swing between extremes — a blunt statement followed by a winding, clause-heavy exploration.
+
 ---
 
 ## Post-Generation Checklist
@@ -117,6 +131,8 @@ After drafting, check every item:
 8. Read the entire piece aloud — awkward AI rhythm is audible where it's invisible on screen
 9. Count em dashes — more than one per 500 words means too many
 10. Scan for any -ing participial phrases tacked onto sentence ends — rewrite as separate sentences or cut
+11. Check for sentence type variety — if you wrote only declarative sentences, add at least one question or imperative
+12. Verify paragraph openings — if every paragraph starts with its thesis sentence, rewrite at least two to start mid-thought with a detail or example
 
 ---
 
