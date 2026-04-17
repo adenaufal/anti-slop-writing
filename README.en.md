@@ -4,7 +4,9 @@
 
 A universal skill that makes AI output read more human, specific, and less stiff.
 
-Works with **Claude.ai, Claude Code, Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf**, and any tool that supports system prompts.
+Works with **Claude.ai, ChatGPT, Gemini, Copilot, Claude Code, Codex CLI, Gemini CLI, Cursor, Windsurf, Ollama, LM Studio**, and any tool that supports system prompts.
+
+👉 **Need per-platform install steps?** See [INSTALL.md](INSTALL.md) (full guide for ChatGPT, Gemini, Copilot, API, local LLMs).
 
 Based on Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) + AI text detection research. Inspired by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877).
 
@@ -41,9 +43,13 @@ git clone https://github.com/adenaufal/anti-slop-writing .claude/skills/anti-slo
 
 Skill file: `english/SKILL.md` (English) or `indonesian/SKILL.md` (Bahasa Indonesia).
 
-### Other Tools (Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf, Aider, ChatGPT)
+### ChatGPT / Gemini / Copilot / Others
 
-See [Full Installation](#full-installation) below.
+See [INSTALL.md](INSTALL.md) for the full per-platform guide. Short version:
+
+- **ChatGPT Custom Instructions** (char-limited): use the Lite version `english/SKILL-lite.md`
+- **ChatGPT Projects / Gemini Gems / Copilot Agents**: use the Full `english/system-prompt.md`
+- **CLI tools & editors**: see [Full Installation](#full-installation) below
 
 ---
 
@@ -100,7 +106,8 @@ If output is more concrete and sentence rhythm varies, the rules are active.
 ```text
 anti-slop-writing/
 ├── english/
-│   ├── SKILL.md
+│   ├── SKILL.md              ← Full version (~16 KB)
+│   ├── SKILL-lite.md         ← Lite version (~4 KB, for ChatGPT Custom Instructions)
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
@@ -108,14 +115,16 @@ anti-slop-writing/
 │       ├── vocabulary-banlist.md
 │       └── structural-patterns.md
 ├── indonesian/
-│   ├── SKILL.md
+│   ├── SKILL.md              ← Full version with 3-tier tone (formal/semi-formal/informal)
+│   ├── SKILL-lite.md         ← Lite version (~4 KB)
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
 │   └── references/
 │       ├── vocabulary-banlist.md
 │       └── structural-patterns.md
-├── references/              ← legacy (combined)
+├── references/               ← legacy (combined)
+├── INSTALL.md                ← Per-platform install guide (bilingual)
 ├── README.md
 ├── README.en.md
 └── LICENSE
@@ -136,8 +145,18 @@ This repo includes rules specific to AI patterns in Bahasa Indonesia text:
 - Heavy nominalization
 - Missing discourse particles (nah/sih/dong/kan)
 - Always-formal "Anda" regardless of register
+- Em and en dashes (banned entirely, the #1 AI tell in Indonesian text)
 
 Use files from the `indonesian/` folder.
+
+### 3-Tier Tone
+
+The Indonesian version supports three register tiers:
+- **Formal**: academic papers, reports, corporate docs. Pronouns: saya, Anda. No discourse particles.
+- **Semi-formal** (default): blog, opinion pieces, newsletters, LinkedIn. Pronouns: saya/aku, kamu. Occasional particles.
+- **Informal**: Twitter, IG captions, casual blog, TikTok. Pronouns: aku/gw, kamu/lo. Natural particles.
+
+Specify tier in your prompt: "Use semi-formal tier" or "Write in informal tier." Default is semi-formal.
 
 ---
 

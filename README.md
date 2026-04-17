@@ -4,7 +4,9 @@ Bahasa Indonesia (default) | [English](README.en.md)
 
 Skill universal biar output AI gak terdengar kayak AI. Lebih manusia, lebih spesifik, gak kaku.
 
-Cocok untuk **Claude.ai, Claude Code, Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf**, dan tool lain yang support system prompt.
+Cocok untuk **Claude.ai, ChatGPT, Gemini, Copilot, Claude Code, Codex CLI, Gemini CLI, Cursor, Windsurf, Ollama, LM Studio**, dan tool lain yang support system prompt.
+
+👉 **Butuh panduan install per platform?** Lihat [INSTALL.md](INSTALL.md) (panduan lengkap ChatGPT, Gemini, Copilot, API, local LLM).
 
 Berdasarkan Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) + riset deteksi teks AI. Terinspirasi dari [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877).
 
@@ -41,9 +43,13 @@ git clone https://github.com/adenaufal/anti-slop-writing .claude/skills/anti-slo
 
 Skill: `indonesian/SKILL.md` (Bahasa Indonesia) atau `english/SKILL.md` (English).
 
-### Tool Lain (Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf, Aider, ChatGPT)
+### ChatGPT / Gemini / Copilot / Lainnya
 
-Lihat [Instalasi Lengkap](#instalasi-lengkap) di bawah.
+Lihat [INSTALL.md](INSTALL.md) untuk panduan lengkap per platform. Ringkasnya:
+
+- **ChatGPT Custom Instructions** (karakter terbatas): pakai versi Lite `indonesian/SKILL-lite.md`
+- **ChatGPT Projects / Gemini Gems / Copilot Agents**: pakai Full `indonesian/system-prompt.md`
+- **CLI tools & editor**: lihat [Instalasi Lengkap](#instalasi-lengkap) di bawah
 
 ---
 
@@ -100,7 +106,8 @@ Kalau hasilnya lebih konkret dan ritme kalimatnya bervariasi, berarti aturannya 
 ```text
 anti-slop-writing/
 ├── english/
-│   ├── SKILL.md
+│   ├── SKILL.md              ← Full version (~16 KB)
+│   ├── SKILL-lite.md         ← Lite version (~4 KB, buat ChatGPT Custom Instructions)
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
@@ -108,14 +115,16 @@ anti-slop-writing/
 │       ├── vocabulary-banlist.md
 │       └── structural-patterns.md
 ├── indonesian/
-│   ├── SKILL.md
+│   ├── SKILL.md              ← Full version dengan 3-tier tone (formal/semi-formal/informal)
+│   ├── SKILL-lite.md         ← Lite version (~4 KB)
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
 │   └── references/
 │       ├── vocabulary-banlist.md
 │       └── structural-patterns.md
-├── references/              ← legacy (gabungan)
+├── references/               ← legacy (gabungan)
+├── INSTALL.md                ← Panduan install per platform (bilingual)
 ├── README.md
 ├── README.en.md
 └── LICENSE
@@ -136,8 +145,18 @@ Repo ini punya aturan khusus buat pola AI dalam teks Bahasa Indonesia:
 - Nominalisasi berlebihan
 - Absennya partikel wacana (nah/sih/dong/kan)
 - "Anda" yang kaku tanpa lihat konteks
+- Em dash dan en dash (dilarang total, jadi sinyal AI nomor satu)
 
 Pakai file dari folder `indonesian/`.
+
+### 3 Tier Tone
+
+Versi ID dukung tiga tier register:
+- **Formal**: makalah, laporan, dokumen kantor. Kata ganti: saya, Anda. Tanpa partikel wacana.
+- **Semi-formal** (default): blog, opini, newsletter, LinkedIn. Kata ganti: saya/aku, kamu. Partikel wacana sesekali.
+- **Informal**: Twitter, IG caption, blog santai, TikTok. Kata ganti: aku/gw, kamu/lo. Partikel wacana natural.
+
+Pilih tier di prompt lo: "Pakai tier semi-formal" atau "Tulis dalam tier informal". Default: semi-formal.
 
 ---
 
