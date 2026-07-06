@@ -1,453 +1,360 @@
-# Pola Struktur yang Harus Dihindari (Bahasa Indonesia)
+# Structural Patterns to Avoid
 
-Pola-pola ini telah didokumentasikan secara akademis (Kobak et al. 2024, Russell et al. 2025, Fraser et al. 2025) dan dikonfirmasi dalam teks AI berbahasa Indonesia. Ini adalah tanda-tanda struktural yang membuat teks terdeteksi sebagai buatan mesin.
+Every pattern here has been documented on Wikipedia's "Signs of AI Writing" page and confirmed by academic research (Kobak et al. 2024, Russell et al. 2025, Fraser et al. 2025). These are the structural tells that make text read as machine-generated.
 
-Turnitin (update 2025-2026) kini menganalisis "ritme, alur, dan prediktabilitas seluruh paragraf" — bukan hanya kalimat individual. Semua pola di bawah ini berkontribusi pada deteksi.
+## 1. Participial -ing Tack-Ons
+
+The single most recognizable AI pattern. A comma followed by an -ing phrase appended to the end of a sentence to appear analytical.
+
+**AI pattern:**
+> The team launched the product, revolutionizing the industry.
+> The temple was built in 1850, symbolizing the community's enduring faith.
+> As of 2008, the population stood at 56,998, creating a lively community.
+
+**Human alternative:**
+> The team launched the product. The industry changed.
+> The temple was built in 1850.
+> As of 2008, the population was 56,998.
+
+Rule: If the -ing clause adds no concrete information, delete it entirely. If it adds real information, make it a separate sentence.
+
+## 2. The Rule of Three
+
+AI defaults to grouping things in threes — three adjectives, three bullet points, three examples, three clauses.
+
+**AI pattern:**
+> The conference features keynote sessions, panel discussions, and networking opportunities.
+> The design is bold, innovative, and timeless.
+
+**Human alternative:**
+> The conference runs keynote sessions and panels. There's time to meet people between talks.
+> The design is bold. It'll still work in ten years.
+
+Rule: List two things. Or four. Or one. Never three by default.
+
+## 3. Negative Parallelisms
+
+"Not just X, but also Y" / "It's not X, it's Y" / "Not only X, but Y"
+
+**AI pattern:**
+> This is not just a memoir — it's a love letter to the city.
+> The painting represents not merely an artistic achievement, but a cultural milestone.
+
+**Human alternative:**
+> It's a memoir about growing up in the city. You can feel the author's affection for it on every page.
+> The painting became a cultural reference point. People still argue about it.
+
+Rule: State what something IS. Don't frame it as a correction of what someone might wrongly think.
+
+## 4. False Ranges ("From X to Y")
+
+Vague figurative spectrum using "from X to Y" where no real scale exists.
+
+**AI pattern:**
+> From intimate gatherings to global movements, the organization has made its mark.
+> From beginners to experts, everyone can benefit.
+> From the singularity of the Big Bang to the grand cosmic web...
+
+**Human alternative:**
+> The organization started with twelve people in a living room. Last year 40,000 showed up to their conference.
+> Works whether you've been doing this for a week or a decade.
+
+Rule: Only use "from X to Y" when there's a real, identifiable midpoint on a real scale.
+
+## 5. "Despite Its... Faces Challenges" Formula
+
+The formulaic challenges-and-future-prospects ending.
+
+**AI pattern:**
+> Despite its industrial prosperity, Korattur faces challenges typical of urban areas, including... With its strategic location and ongoing initiatives, Korattur continues to thrive.
+
+**Human alternative:**
+> Korattur's water supply can't keep up with the population. The pipes are from the 1970s.
+
+Rule: If you mention problems, name specific ones with specific evidence. Never follow with vague optimism about "ongoing initiatives."
+
+## 6. Copula Avoidance ("Serves As" / "Stands As")
+
+AI substitutes elaborate verb phrases for simple "is/are/has."
+
+**AI pattern:**
+> Gallery 825 serves as LAAA's exhibition space for contemporary art.
+> The gallery features four separate spaces.
+> She holds the distinction of being the first female director.
+
+**Human alternative:**
+> Gallery 825 is LAAA's exhibition space.
+> The gallery has four separate spaces.
+> She was the first female director.
+
+Rule: Use "is," "are," "has," "was." Simple copulas are not boring — they're clear.
+
+## 7. Superficial Analysis Padding
+
+Generic commentary attached to facts that need no commentary.
+
+**AI pattern:**
+> The city has a population of 56,998, creating a lively community within its borders.
+> The inscriptions offer valuable insights into the construction of the mosque.
+> These citations illustrate the enduring relevance of his work.
+
+**Human alternative:**
+> The city has a population of 56,998.
+> The inscriptions name the craftsmen who built the mosque.
+> His work keeps getting cited.
+
+Rule: If the analytical statement could apply to literally any subject, it adds nothing. Delete it.
+
+## 8. Elegant Variation (Synonym Cycling)
+
+AI avoids repeating the same word by cycling through synonyms, even when repetition would be clearer.
+
+**AI pattern:**
+> Soviet artistic constraints... non-conformist artists... their creativity... the confines of state-imposed artistic norms... the artistic aspirations...
+
+**Human alternative:**
+> The Soviet government told artists what they could and couldn't paint. Yankilevsky painted what he wanted anyway.
+
+Rule: Repeat words when clarity demands it. Don't cycle through "constraints / confines / norms / limitations" to avoid saying the same word twice.
+
+## 9. Em Dash Overuse
+
+AI uses em dashes (—) where humans use commas, parentheses, periods, or nothing.
+
+**AI pattern:**
+> The article complies with policies — including WP:V, WP:RS, and WP:BLP — with all claims supported by multiple sources.
+
+**Human alternative:**
+> The article complies with WP:V, WP:RS, and WP:BLP. All claims have sources.
+
+Rule: Maximum one em dash per 500 words. When in doubt, use a period and start a new sentence.
+
+## 10. Vertical Lists with Bold Inline Headers
+
+Formatting everything as bullet points with **Bold Header:** description.
+
+**AI pattern:**
+> - **SEO:** Traditional methods for improving visibility...
+> - **AEO:** Techniques focused on optimizing content...
+> - **GIO:** Strategies for ensuring businesses are cited...
+
+**Human alternative:**
+Write it as prose. If a list is genuinely needed, keep it simple without bold headers and colon separators.
+
+## 11. Undue Emphasis on Notability/Media Coverage
+
+Painstakingly listing every source that covered the topic to prove it matters.
+
+**AI pattern:**
+> Her views have been cited in The New York Times, BBC, Financial Times, and The Hindu.
+> The mall maintains a strong digital presence, particularly on Instagram.
+
+**Human alternative:**
+> She wrote a piece for the Times about it. [cite the actual piece]
+
+Rule: Cite sources inline as references. Don't make the existence of coverage into content.
+
+## 12. Overuse of Boldface
+
+Mechanically bolding every key term, proper noun, or concept.
+
+**AI pattern:**
+> A **leveraged buyout (LBO)** uses **debt financing** to let **private equity firms** control businesses using the company's **assets and future cash flows** as collateral.
+
+**Human alternative:**
+> A leveraged buyout uses debt to buy a company. The company's own assets and cash flow back the loans.
+
+Rule: Bold sparingly. In most prose, bold nothing at all.
 
 ---
 
-## Pola Universal (Berlaku untuk Semua Bahasa)
+## Bahasa Indonesia: Structural Patterns to Avoid
 
-Semua pola universal di bawah ini juga muncul dalam tulisan AI berbahasa Indonesia.
+AI-generated Indonesian has its own structural tells beyond the English patterns above. These patterns appear consistently across ChatGPT, Claude, Gemini, and other LLMs writing in Indonesian.
 
-### U-1. Sisipan Partisipatif -kan/-i di Akhir Kalimat
+### BI-1. The "Kesimpulan" Compulsory Ending
 
-Pola paling mudah dikenali: klausa yang ditempelkan di akhir kalimat untuk kesan analitis tanpa menambah informasi nyata.
+AI almost always ends Indonesian articles or essays with an explicit **"Kesimpulan"** (Conclusion) section. Human writers integrate their conclusion into the final paragraph or just stop.
 
-**Pola AI:**
-> Tim meluncurkan produk itu, merevolusi industri secara keseluruhan.
-> Candi ini dibangun tahun 1850, melambangkan iman masyarakat yang abadi.
-> Penduduknya berjumlah 56.998 jiwa, menciptakan komunitas yang dinamis.
-
-**Alternatif manusiawi:**
-> Tim meluncurkan produknya. Industri berubah.
-> Candi ini dibangun tahun 1850.
-> Penduduknya berjumlah 56.998 jiwa.
-
-Aturan: Jika klausa tidak menambah informasi konkret, hapus seluruhnya. Jika menambah informasi nyata, jadikan kalimat tersendiri.
-
-### U-2. Aturan Tiga
-
-AI mengelompokkan hal-hal dalam kelompok tiga — tiga kata sifat, tiga poin daftar, tiga contoh.
-
-**Pola AI:**
-> Konferensi ini menampilkan sesi keynote, diskusi panel, dan peluang jaringan.
-> Desainnya berani, inovatif, dan tahan waktu.
-
-**Alternatif manusiawi:**
-> Konferensinya punya sesi keynote dan panel diskusi. Ada jeda untuk kenalan antar sesi.
-> Desainnya berani. Sepuluh tahun lagi masih relevan.
-
-Aturan: Daftarkan dua hal. Atau empat. Jangan selalu tiga.
-
-### U-3. Parallelisme Negatif
-
-"Tidak hanya X, tetapi juga Y" / "Bukan X, melainkan Y" / "Bukan sekadar X, tapi Y"
-
-**Pola AI:**
-> Ini bukan sekadar memoar — ini surat cinta untuk kota.
-> Lukisan ini bukan hanya pencapaian artistik, tetapi juga tonggak budaya.
-
-**Alternatif manusiawi:**
-> Ini memoar tentang tumbuh besar di kota. Rasa sayang penulisnya terasa di setiap halaman.
-> Lukisan ini jadi referensi budaya. Orang masih memperdebatkannya sampai sekarang.
-
-Aturan: Nyatakan apa sesuatu ITU. Jangan bingkai sebagai koreksi dari asumsi yang salah.
-
-### U-4. Rentang Palsu ("Dari X hingga Y")
-
-Spektrum figuratif samar menggunakan "dari X hingga Y" tanpa skala nyata.
-
-**Pola AI:**
-> Dari pertemuan intim hingga gerakan global, organisasi ini telah meninggalkan jejaknya.
-> Dari pemula hingga ahli, semua bisa mengambil manfaatnya.
-
-**Alternatif manusiawi:**
-> Organisasi ini dimulai dari dua belas orang di ruang tamu. Tahun lalu 40.000 orang datang ke konferensinya.
-> Cocok baik kamu baru seminggu maupun sudah sepuluh tahun melakukannya.
-
-Aturan: Gunakan "dari X hingga Y" hanya ketika ada titik tengah yang nyata dan teridentifikasi.
-
-### U-5. Formula "Meski Begitu, Terdapat Tantangan"
-
-Penutup formulaik tantangan dan prospek masa depan.
-
-**Pola AI:**
-> Meski memiliki kemajuan yang signifikan, kawasan ini menghadapi tantangan yang perlu diatasi. Dengan berbagai inisiatif yang sedang berjalan, kawasan ini terus berkembang.
-
-**Alternatif manusiawi:**
-> Pasokan air kawasan ini tidak sanggup mengikuti pertumbuhan penduduk. Pipanya dari tahun 1970-an.
-
-Aturan: Jika menyebut masalah, sebutkan yang spesifik dengan bukti spesifik. Jangan diikuti optimisme samar.
-
-### U-6. Penghindaran Kopula
-
-AI mengganti frasa kata kerja rumit sebagai pengganti "adalah/punya."
-
-**Pola AI:**
-> Galeri ini berfungsi sebagai ruang pameran seni kontemporer.
-> Galeri ini menampilkan empat ruang terpisah.
-
-**Alternatif manusiawi:**
-> Galeri ini adalah ruang pameran seni kontemporer.
-> Galeri ini punya empat ruang.
-
-Aturan: Gunakan "adalah," "ada," "punya," "berisi." Kopula sederhana bukan membosankan — justru jelas.
-
-### U-7. Padding Analisis Dangkal
-
-Komentar generik yang ditempelkan pada fakta yang tidak memerlukan komentar.
-
-**Pola AI:**
-> Penduduknya 56.998 jiwa, menciptakan komunitas yang hidup di dalamnya.
-> Prasasti itu memberikan wawasan berharga tentang pembangunan masjid.
-
-**Alternatif manusiawi:**
-> Penduduknya 56.998 jiwa.
-> Prasasti itu menyebut nama para pengrajin yang membangun masjid.
-
-Aturan: Jika pernyataan analitis bisa berlaku untuk subjek apa pun, tidak ada gunanya. Hapus.
-
-### U-8. Variasi Elegan (Siklus Sinonim)
-
-AI menghindari mengulang kata yang sama dengan menggilir sinonim, bahkan ketika pengulangan lebih jelas.
-
-**Pola AI:**
-> batasan artistik Soviet... seniman nonkonformis... kreativitas mereka... kungkungan norma artistik yang dipaksakan negara... aspirasi artistik...
-
-**Alternatif manusiawi:**
-> Pemerintah Soviet memberi tahu seniman apa yang boleh dan tidak boleh dilukis. Yankilevsky melukis sesuka hatinya.
-
-Aturan: Ulangi kata ketika kejernihan menuntutnya. Jangan gilir sinonim untuk menghindari pengulangan.
-
-### U-9. Penggunaan Berlebihan Em Dash
-
-AI menggunakan em dash (—) di mana manusia menggunakan koma, tanda kurung, titik, atau tidak sama sekali.
-
-Aturan: Maksimal satu em dash per 500 kata. Jika ragu, gunakan titik dan mulai kalimat baru. Catatan: Bahasa Indonesia standar (EYD V) menggunakan tanda hubung ganda (--), bukan em dash.
-
-### U-10. Daftar Vertikal dengan Header Tebal
-
-Memformat segalanya sebagai poin-poin dengan **Header Tebal:** deskripsi.
-
-**Pola AI:**
-> - **SEO:** Metode tradisional untuk meningkatkan visibilitas...
-> - **AEO:** Teknik yang difokuskan pada optimasi konten...
-
-**Alternatif manusiawi:**
-Tulis sebagai prosa. Jika daftar benar-benar diperlukan, jaga tetap sederhana tanpa header tebal.
-
-### U-11. Tekanan Berlebihan pada Notabilitas/Liputan Media
-
-Mendaftar dengan cermat setiap sumber yang meliput topik untuk membuktikan relevansinya.
-
-Aturan: Kutip sumber sebagai referensi inline. Jangan jadikan keberadaan liputan sebagai isi konten.
-
-### U-12. Keseragaman Kedalaman Sintaktis
-
-AI menghasilkan kalimat dengan kedalaman sintaktis menengah secara konsisten — tidak pernah sangat dangkal, tidak pernah sangat dalam.
-
-**Pola AI (semua kalimat kedalaman menengah):**
-> Pemerintah daerah telah mengalokasikan dana untuk program pelatihan. Program ini dirancang untuk meningkatkan kompetensi tenaga kerja lokal. Peserta akan mendapatkan sertifikat setelah menyelesaikan seluruh modul pelatihan.
-
-**Alternatif manusiawi (kedalaman bervariasi):**
-> Anggarannya Rp 2 miliar. Dari situ, 200 orang dilatih selama tiga bulan — kebanyakan ibu rumah tangga yang sebelumnya tidak pernah pegang komputer, sebagian besar dari desa di lereng Merapi yang akses internetnya baru ada dua tahun lalu. Hasilnya? 147 dapat kerja.
-
-Aturan: Campurkan kalimat sangat dangkal (subjek-predikat-objek) dengan kalimat sangat dalam (beberapa klausa subordinat, parentetikal, embedding). Manusia berayun antara ekstrem.
-
-### U-13. Transisi Formulaik yang Berulang
-
-AI menggunakan transisi yang sama berulang-ulang: "Selain itu," "Di sisi lain," "Namun," "Lebih lanjut."
-
-**Alternatif manusiawi:** Gunakan transisi implisit (tanpa kata penghubung — biarkan urutan ide yang membimbing), pertanyaan sebagai transisi, fragmen kalimat, atau ganti topik mendadak yang mendapat konteks di kalimat berikutnya.
-
-### U-14. Struktur Paragraf yang Seragam
-
-AI menulis paragraf dengan pola yang sama: kalimat tesis → bukti pendukung → implikasi. Setiap paragraf mengikuti busur ini.
-
-Aturan: Pecah busur ini setidaknya dua kali per tulisan. Mulai beberapa paragraf dengan detail atau contoh. Akhiri beberapa paragraf sebelum "so what." Variasikan panjang paragraf secara dramatis (paragraf 1 kalimat + paragraf 6 kalimat).
-
----
-
-## Pola Khas Indonesia (BI-1 hingga BI-14)
-
-Pola-pola ini muncul konsisten di output ChatGPT, Claude, Gemini, dan LLM lain ketika menulis dalam Bahasa Indonesia.
-
-### BI-1. Penutup "Kesimpulan" yang Otomatis
-
-AI hampir selalu mengakhiri artikel atau esai Indonesia dengan bagian **"Kesimpulan"** yang eksplisit. Penulis manusia mengintegrasikan kesimpulan ke paragraf akhir atau langsung berhenti.
-
-**Pola AI:**
+**AI pattern:**
 > ## Kesimpulan
 > Dengan demikian, dapat disimpulkan bahwa festival ini memiliki peran penting dalam melestarikan budaya lokal dan memperkuat kohesi sosial masyarakat.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Festival itu masih jalan sampai sekarang. Itu yang penting.
 
-Aturan: Jangan tambahkan bagian berjudul "Kesimpulan." Jika teks butuh penutup, tulis sebagai prosa yang mengatakan sesuatu yang baru.
+Rule: Never add a section titled "Kesimpulan." If the piece needs a conclusion, write it as prose that says something new.
 
-### BI-2. Pembuka "Di Era Modern Ini"
+### BI-2. The "Di Era Modern Ini" Opening
 
-AI membuka dengan kalimat framing temporal yang menetapkan konteks luas sebelum mengatakan sesuatu yang nyata.
+AI opens with temporal-framing sentences that set up a broad context before saying anything real.
 
-**Pola AI:**
+**AI pattern:**
 > Di era modern ini, teknologi memainkan peran yang semakin krusial dalam kehidupan manusia.
 > Seiring perkembangan zaman, semakin banyak orang yang menyadari pentingnya...
 > Dalam konteks globalisasi yang terus berkembang...
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Tahun lalu, 87% startup Indonesia tutup di tahun pertama.
 
-Aturan: Mulai dengan fakta spesifik, adegan, atau klaim. Jangan mulai dengan framing periode waktu.
+Rule: Start with a specific fact, scene, or claim. Never with a time-period frame.
 
-### BI-3. Parallelisme "Tidak Hanya... Tetapi Juga"
+### BI-3. "Tidak Hanya... Tetapi Juga" Parallelism
 
-Padanan Indonesia dari "Not only X, but also Y." AI suka konstruksi ini. Menambah panjang tanpa menambah makna.
+The Indonesian equivalent of "Not only X, but also Y." AI loves this construction. It adds length without adding meaning.
 
-**Pola AI:**
+**AI pattern:**
 > Pelatihan ini tidak hanya meningkatkan kompetensi peserta, tetapi juga memperkuat jaringan profesional mereka.
 > Festival ini tidak hanya menjadi hiburan, tetapi juga sarana pelestarian budaya.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Peserta dapat sertifikat. Mereka juga dapat akses ke grup alumni yang lumayan aktif.
 
-Aturan: Nyatakan apa sesuatu ITU. Jangan bangun kontras retoris palsu.
+Rule: State what something IS. Don't build fake rhetorical contrasts.
 
-### BI-4. Inflasi Kepentingan "Merupakan Salah Satu"
+### BI-4. "Merupakan Salah Satu" Importance Inflation
 
-AI menggunakan "merupakan salah satu X yang paling Y" sebagai formula untuk menegaskan kepentingan tanpa bukti.
+AI uses "merupakan salah satu X yang paling Y" as a formula to assert importance without evidence.
 
-**Pola AI:**
+**AI pattern:**
 > Jakarta merupakan salah satu kota dengan perkembangan ekonomi yang paling pesat di Asia Tenggara.
 > Teknologi ini merupakan salah satu inovasi terpenting yang pernah ada.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Jakarta tumbuh 5,2% tahun 2023, lebih cepat dari Bangkok dan Manila.
 
-Aturan: Kuantifikasi atau bandingkan secara spesifik. "Salah satu yang terpenting" tidak mengatakan apa-apa — tunjukkan buktinya.
+Rule: Quantify or compare specifically. "Salah satu yang terpenting" says nothing — show the evidence.
 
-### BI-5. Absennya Partikel Wacana
+### BI-5. Missing Discourse Particles
 
-Bahasa Indonesia alami — bahkan dalam tulisan semi-formal — menggunakan partikel wacana yang menandai suara manusia yang nyata: **nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya, lah, mah**. AI hampir tidak pernah menggunakannya. Ini tanda AI nomor satu dalam Bahasa Indonesia.
+Natural Indonesian — even in formal writing — uses discourse particles that signal a real human voice: **nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya**. AI almost never uses these.
 
-**Pola AI:**
+**AI pattern:**
 > Hal ini menunjukkan bahwa pentingnya memahami konteks sosial dalam pengambilan keputusan.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Nah, makanya keputusan itu nggak bisa diambil asal-asalan. Konteks sosialnya beda-beda, kan?
 
-Aturan: Saat menulis dalam konteks apapun kecuali akademis formal, gunakan partikel yang sesuai. Ketiadaan total partikel adalah tanda AI.
+Rule: When writing conversationally in Indonesian, use the particles appropriate to the register. Their total absence is an AI tell.
 
-### BI-6. Formula "Di Sisi Lain, Terdapat Tantangan"
+### BI-6. The "Di Sisi Lain, Terdapat Tantangan" Formula
 
-AI mengikuti setiap pernyataan positif dengan pivot "tantangan" yang generik.
+AI's equivalent of the English "Despite its X, faces challenges" pattern. It follows every positive statement with a generic "challenges" pivot.
 
-**Pola AI:**
+**AI pattern:**
 > Di sisi lain, terdapat beberapa tantangan yang perlu diatasi, seperti keterbatasan sumber daya dan rendahnya kesadaran masyarakat. Namun, dengan upaya yang tepat, tantangan ini dapat diatasi.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Dananya cuma Rp 50 juta. Itu cukup untuk tiga bulan, bukan setahun seperti yang direncanakan.
 
-Aturan: Jika menyebut masalah, sebutkan yang spesifik dengan angka spesifik. Jangan ikuti dengan optimisme samar.
+Rule: If mentioning problems, name the specific ones with specific numbers. Never follow with vague optimism.
 
-### BI-7. Kelebihan Nominalisasi
+### BI-7. Nominalization Overload
 
-AI lebih menyukai frasa kata benda berat daripada kata kerja sederhana — pola dari tulisan birokrasi akademis Indonesia yang terlalu dipelajari AI.
+AI prefers heavy noun phrases over simple verbs — a pattern from Indonesian academic bureaucratic writing that AI has over-learned.
 
-**Pola AI:**
+**AI pattern:**
 > Pelaksanaan program pelatihan vokasional ini dilakukan dalam rangka peningkatan kompetensi tenaga kerja.
 > Pengembangan kapasitas sumber daya manusia merupakan prioritas utama.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Program ini melatih 200 orang per tahun. Tujuannya: cari kerja lebih cepat.
 
-Aturan: Lebih suka kata kerja daripada derivasi kata benda. "Melatih" bukan "pelaksanaan pelatihan." "Mengembangkan" bukan "pengembangan."
+Rule: Prefer verbs over noun derivations. "Melatih" not "pelaksanaan pelatihan." "Mengembangkan" not "pengembangan."
 
-### BI-8. "Di Mana" sebagai Kata Ganti Relatif
+### BI-8. "Di Mana" as Relative Pronoun
 
-AI mengkalke kata ganti relatif bahasa Inggris "where" langsung ke Bahasa Indonesia sebagai "di mana," menciptakan konstruksi yang tidak alami.
+AI calques the English relative "where" directly into Indonesian as "di mana," creating unnatural constructions.
 
-**Pola AI:**
+**AI pattern:**
 > Ini adalah sebuah program di mana peserta akan mendapatkan pelatihan intensif selama tiga bulan.
 > Kami memiliki sistem di mana setiap anggota dapat mengakses data secara real-time.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Program ini melatih peserta intensif selama tiga bulan.
 > Setiap anggota bisa akses data kapan saja.
 
-Aturan: Tulis ulang klausa relatif "di mana" sebagai kalimat langsung.
+Rule: Rewrite "di mana" relative clauses as direct sentences.
 
-### BI-9. Penggunaan Pronoun Selalu Formal
+### BI-9. Always-Formal Pronoun Use
 
-AI default ke "Anda" (formal) dan menghindari kata ganti percakapan bahkan dalam konteks santai.
+AI defaults to "Anda" (formal) and avoids colloquial pronouns even in casual contexts. Real Indonesian shifts freely between Anda, kamu, lo/lu, gue/aku depending on register.
 
-**Pola AI (dalam artikel santai):**
+**AI pattern (in a casual article):**
 > Anda mungkin pernah mengalami hal serupa. Apakah Anda sudah mencoba solusi berikut ini?
 
-**Alternatif manusiawi (konteks santai yang sama):**
+**Human alternative (same casual context):**
 > Pernah ngalamin hal yang sama? Coba deh tiga cara ini dulu.
 
-Aturan: Cocokkan register kata ganti dengan konteks yang sebenarnya. Kunci total AI pada "Anda" adalah tanda langsung.
+Rule: Match pronoun register to the actual context. Casual Indonesian uses kamu/lo/lu. Formal uses Anda. AI's total lock on "Anda" is an immediate tell.
 
-### BI-10. Padding "Dapat Dilihat Bahwa"
+### BI-10. "Dapat Dilihat Bahwa" Padding
 
-AI mengisi ruang dengan konstruksi epistemik pasif yang tidak menambah informasi.
+AI fills space with passive epistemic constructions that add no information.
 
-**Pola AI:**
+**AI pattern:**
 > Dari data tersebut, dapat dilihat bahwa terdapat peningkatan yang signifikan.
 > Dapat dipahami bahwa fenomena ini merupakan cerminan dari kondisi sosial yang lebih luas.
+> Perlu dipahami bahwa konteks ini sangat penting bagi pemahaman kita.
 
-**Alternatif manusiawi:**
+**Human alternative:**
 > Angkanya naik 23% dari tahun lalu.
 
-Aturan: Nyatakan temuan. Hapus "dapat dilihat bahwa," "dapat dipahami bahwa," "perlu dipahami bahwa."
-
-### BI-11. Prefiks Formal dalam Konteks Santai
-
-AI selalu menggunakan bentuk prefiks lengkap (mengerti, mencari, menonton, mengambil) bahkan dalam konteks santai di mana manusia Indonesia memendekkan (ngerti, nyari, nonton, ngambil).
-
-**Pola AI (dalam blog santai):**
-> Anda perlu memahami cara menggunakan fitur ini sebelum mencoba menerapkannya.
-
-**Alternatif manusiawi:**
-> Lo perlu ngerti dulu cara pakainya sebelum nyoba sendiri.
-
-Aturan: Dalam konteks santai, gunakan pemendekan prefiks yang alami.
-
-### BI-12. Tidak Ada Interjeksi atau Ekspresi Emosional
-
-AI tidak pernah menggunakan interjeksi emosional (duh, waduh, astaga, buset, ih, hah, wah) yang alami dalam tulisan Indonesia.
-
-**Pola AI:**
-> Situasi ini cukup mengejutkan mengingat ekspektasi yang ada sebelumnya.
-
-**Alternatif manusiawi:**
-> Waduh, nggak ada yang nyangka bakal segitu parahnya.
-
-Aturan: Dalam konteks santai/semi-formal, masukkan interjeksi yang sesuai. Ketiadaannya membuat tulisan terasa robotik.
-
-### BI-13. Tidak Ada Code-switching
-
-Orang Indonesia secara natural mencampurkan bahasa Indonesia dengan bahasa Inggris, terutama dalam konteks bisnis, teknologi, dan percakapan anak muda. AI jarang melakukan ini.
-
-**Pola AI:**
-> Tim pengembang mengadakan pertemuan untuk membahas tenggat waktu dan memberikan umpan balik.
-
-**Alternatif manusiawi:**
-> Tim dev ngadain meeting buat bahas deadline dan kasih feedback.
-
-Aturan: Jika konteks memungkinkan, gunakan code-switching Indonesia-Inggris yang natural. Jangan paksakan dalam konteks formal murni.
-
-### BI-14. Tanda Baca Terlalu Konsisten
-
-AI menghasilkan tanda baca yang sempurna dan konsisten. Manusia Indonesia bervariasi — terkadang melewatkan koma, menggunakan ellipsis (...) untuk jeda, menambahkan tanda seru/tanya berlebihan ("Masa?!?!"), dan menggunakan huruf kapital untuk penekanan.
-
-**Pola AI:**
-> Program ini memiliki tiga komponen utama. Pertama, pelatihan teknis. Kedua, mentoring. Ketiga, evaluasi berkala.
-
-**Alternatif manusiawi:**
-> Programnya punya tiga bagian... pelatihan teknis, mentoring, terus evaluasi tiap bulan. Yang ketiga ini sering diskip padahal paling penting.
-
-Aturan: Variasikan penggunaan tanda baca. Gunakan ellipsis untuk jeda natural, koma yang kadang hilang, dan tanda baca emosional jika konteks santai.
-
-### BI-15. Over-Passive dengan "Oleh" (Translationese)
-
-AI mengkalke pasif bahasa Inggris "was done by X" langsung ke "dilakukan oleh X." Bahasa Indonesia punya dua jenis pasif, dan manusia lebih sering menggunakan pasif prokletik (pronomina + verba dasar) daripada pasif di- + oleh.
-
-**Pola AI:**
-> Laporan itu ditulis oleh tim riset. Keputusan itu dibuat oleh manajer. Proyek itu disetujui oleh direktur.
-
-**Alternatif manusiawi:**
-> Laporan itu tim riset yang nulis. Manajer yang bikin keputusan itu. Direktur langsung acc proyeknya.
-
-Aturan: Kurangi "oleh" secara drastis. Gunakan pasif prokletik atau kalimat aktif. "Oleh" berlebihan adalah tanda translationese paling jelas.
-
-### BI-16. Tidak Ada Struktur Topik-Komentar
-
-Bahasa Indonesia adalah bahasa topic-prominent — kalimat natural sering menempatkan topik di depan, bukan subjek gramatikal. AI selalu menulis kalimat subject-prominent seperti bahasa Inggris.
-
-**Pola AI:**
-> Pemerintah telah mengalokasikan anggaran untuk program tersebut.
-> Perusahaan itu mengalami kerugian besar tahun lalu.
-
-**Alternatif manusiawi:**
-> Anggarannya, pemerintah udah alokasiinlah.
-> Kalau perusahaan itu, tahun kemarin ruginya gede banget.
-
-Aturan: Gunakan struktur topik-komentar sesekali. Mulai dengan topik yang dibahas, lalu berikan komentar tentangnya.
-
-### BI-17. Subjek Selalu Eksplisit (Tidak Ada Pro-drop)
-
-Bahasa Indonesia membolehkan penghilangan subjek (pro-drop) ketika konteksnya jelas. AI selalu menyatakan subjek — mengkalke aturan bahasa Inggris yang memang mengharuskan subjek.
-
-**Pola AI:**
-> Dia pergi ke toko. Dia membeli roti. Dia kembali ke rumah. Dia makan rotinya.
-
-**Alternatif manusiawi:**
-> Pergi ke toko, beli roti, balik, langsung makan.
-
-Aturan: Hilangkan subjek ketika konteks sudah jelas. Rantai subjek berulang adalah tanda translationese.
-
-### BI-18. Rantai "Yang" Berlebihan
-
-AI menggunakan "yang" secara berlebihan untuk membuat klausa relatif — mengkalke bahasa Inggris "which/that/who." Bahasa Indonesia natural lebih ringkas.
-
-**Pola AI:**
-> Strategi yang dikembangkan oleh tim yang dipimpin oleh direktur yang baru dilantik.
-
-**Alternatif manusiawi:**
-> Strategi dari tim direktur baru.
-
-Aturan: Jika ada lebih dari dua "yang" dalam satu kalimat, susun ulang. Bahasa Indonesia sering bisa menghilangkan "yang" tanpa kehilangan makna.
-
-### BI-19. Penalaran Terlalu Linear (Tidak Ada Pengembangan Sirkuler)
-
-Tulisan Indonesia natural kadang kembali ke poin yang sama dari sudut berbeda — pengembangan sirkuler. AI menulis terlalu linear: poin A → poin B → poin C, tidak pernah kembali.
-
-**Pola AI:**
-> [Paragraf tentang masalah] → [Paragraf tentang solusi] → [Paragraf tentang hasil] → [Kesimpulan]
-
-**Alternatif manusiawi:**
-> [Masalah] → [Konteks budaya] → [Kembali ke masalah dari sudut berbeda] → [Solusi parsial] → [Masalah lain yang terkait] → [Berhenti tanpa penutup formal]
-
-Aturan: Jangan takut kembali ke poin sebelumnya dari perspektif baru. Tulisan yang terlalu linear dan rapi adalah tanda AI.
+Rule: State the finding. Delete "dapat dilihat bahwa," "dapat dipahami bahwa," "perlu dipahami bahwa."
 
 ---
 
-## Pola Stilometri yang Dideteksi (Temuan Riset 2025-2026)
+## Detection Metrics (Why This Matters)
 
-### Distribusi Kata Fungsi
-AI menggunakan set kata fungsi yang lebih sempit. Detektor menganalisis frekuensi kata penghubung, preposisi, dan partikel. Variasikan penggunaan kata fungsi.
+AI detectors measure two primary things:
 
-### Rasio Tipe-Token (Type-Token Ratio)
-AI menghasilkan teks dengan rasio tipe-token rendah (lebih sedikit kata unik relatif terhadap total kata). Tingkatkan dengan: menggunakan kata dari berbagai register, memasukkan istilah domain-spesifik, dan tidak menghindari pengulangan kata demi siklus sinonim.
+1. **Perplexity** — how predictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity (unexpected metaphors, unusual phrasing, creative choices).
 
-### Hapax Legomena
-Kata yang hanya muncul sekali dalam teks. Tulisan manusia memiliki jauh lebih banyak hapax legomena. Tingkatkan dengan: memasukkan istilah teknis, kata daerah, slang, dan bahasa figuratif yang spesifik.
+2. **Burstiness** — variation in sentence length and structure. AI has low burstiness (sentences cluster around 10-20 words with consistent structure). Human text has high burstiness (3-word sentences mixed with 30-word sentences).
 
-### Kedalaman Subordinasi
-AI memiliki variasi kedalaman subordinasi yang rendah — semua kalimat memiliki jumlah klausa subordinat yang serupa. Manusia bervariasi: kalimat tanpa subordinasi (kalimat sederhana) dicampur dengan kalimat yang memiliki 3-4 tingkat subordinasi.
+Every structural rule above increases perplexity and burstiness — making text statistically indistinguishable from human writing.
 
----
+## 16. The Four-Part Sentence DNA (2026)
 
-## Metrik Deteksi (Mengapa Ini Penting)
+Corpus research across Claude, GPT-5, and Gemini found 82% of AI-generated text follows one argument cadence regardless of topic: Opening (context/claim) → Expansion (detail) → Contrast (complication) → Resolution (conclude/transition). Detectable in 3-4 sentences. Prompt instructions reduce vocabulary tells but cannot remove this cadence.
 
-**CATATAN:** Per Maret 2026, Turnitin TIDAK mendukung deteksi AI untuk Bahasa Indonesia — hanya bahasa Inggris dan beberapa bahasa Eropa. Namun, detektor lain (GPTZero, Originality.ai, Copyleaks) mendukung multi-bahasa, dan prinsip stilometri berlaku universal.
+**Rule:** Break the arc at least twice per piece. Open on the complication. Expand without contrasting. End sections on unresolved tension or an abrupt fact. Put conclusions first.
 
-Detektor AI mengukur tiga hal utama:
+## 17. Cadence Uniformity (the #1 tell of 2026)
 
-1. **Perplexity** — seberapa prediktabel pilihan kata. AI menghasilkan teks low-perplexity (halus, tidak mengejutkan). Teks manusia memiliki perplexity lebih tinggi (metafora tak terduga, frasa tidak biasa, pilihan kreatif).
+Sentences landing at 18-24 words, one after another. This survives every cosmetic rewrite and is what burstiness metrics measure.
 
-2. **Burstiness** — variasi panjang dan struktur kalimat. AI memiliki burstiness rendah (kalimat berkisar 10-20 kata dengan struktur konsisten). Teks manusia memiliki burstiness tinggi (kalimat 3 kata dicampur kalimat 30 kata). Ini metrik tunggal yang paling berdampak.
+**30-second tests:**
+- First word of each sentence in a paragraph: if >50% start with "The/This/It/In" → LLM-assisted
+- 3+ consecutive sentences in the 17-23 word band → same conclusion
 
-3. **Stilometri** — sidik jari statistik tulisan. Turnitin 2025-2026 menganalisis ritme paragraf, distribusi kata fungsi, kekayaan kosakata, dan kedalaman sintaktis. Keseragaman dalam metrik-metrik ini adalah sinyal AI.
+**Rule:** Vary lengths irregularly AND vary sentence openers.
 
-Setiap aturan struktural di atas meningkatkan perplexity dan burstiness — membuat teks secara statistik tidak dapat dibedakan dari tulisan manusia.
+## 18. The Bimodal Seesaw (Claude 4.5+ era)
 
-### Tingkat Deteksi Berdasarkan Model (Data 2025-2026)
-- GPT-5: 98-100% deteksi mentah, 20-63% setelah editing
-- Gemini: 98-100% mentah, 20-63% setelah editing
-- Claude 3.5/4.5: 53-60% deteksi mentah (jauh lebih rendah setelah editing)
-- Model open-source: Bervariasi
+Newer models fake burstiness by mechanically alternating punchy fragments with very long sentences. Corpus data: AI coefficient of variation 137% vs human 70%; AI has 39.9% short sentences vs human 23.9%. Humans cluster around medium length (50% of human sentences are 11-25 words).
 
-Implikasi: Bahkan tanpa aturan anti-deteksi, output Claude sudah lebih sulit dideteksi. Dengan aturan-aturan di atas, teks menjadi hampir tidak terdeteksi.
+**Rule:** Don't seesaw. Most sentences medium, with occasional genuine swings.
+
+## 19. Paragraph Over-Fragmentation (newer models)
+
+Older models wrote uniform 3-4 sentence paragraphs. Newer models fragment into many 1-2 sentence paragraphs plus bullet lists (AI: ~18 paragraphs and ~9.5 list items per document; humans: far fewer, longer paragraphs, near-zero bullets in prose).
+
+**Rule:** Combine related ideas. Let paragraphs run to 7-8 sentences when the argument needs it. Convert bullets to prose.
+
+## 20. The Symmetric Two-Clause Hook (GPT-5.x social pattern)
+
+**AI pattern:**
+> Most people think X. The reality is Y.
+> Forget X. Focus on Y.
+> It is not about X. It is about Y.
+
+Fine once. A fingerprint when it opens most pieces or appears three times in one post.
+
+**Rule:** Open with a specific fact, scene, number, or name instead.
+
+## 21. The Sanitized Texture (GPT-5 self-correction era)
+
+GPT-5+ runs an internal cleanup pass that scrubs obvious AI-isms, leaving prose that feels "cleaned": no awkward transitions, no odd word choices, no rough edges anywhere. Perfect smoothness is itself the residue.
+
+**Rule:** Keep one or two genuinely rough moments per piece: an abrupt topic shift that earns context later, a slightly odd but committed metaphor, a self-correction mid-paragraph.

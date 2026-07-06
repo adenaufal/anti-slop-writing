@@ -1,256 +1,308 @@
-# Daftar Larangan Kosakata AI (Bahasa Indonesia)
+# AI Vocabulary Ban List
 
-Daftar lengkap kata dan frasa berbahasa Indonesia yang harus dihindari dalam tulisan bebas-AI. Berdasarkan riset akademis (Kobak et al. 2024, Russell et al. 2025, Fraser et al. 2025), analisis output ChatGPT/Claude/Gemini, dan data deteksi Turnitin 2025-2026.
+Complete list of words and phrases to avoid, organized by category and AI model era.
+
+## By AI Model Era
+
+### 2023 to mid-2024 (GPT-4 era)
+Additionally, boasts, bolstered, crucial, delve/delves/delving, emphasizing, enduring, garner, intricate/intricacies, interplay, key (adjective), landscape (figurative), meticulous/meticulously, pivotal, underscore, tapestry, testament, valuable, vibrant
+
+### Mid-2024 to mid-2025 (GPT-4o era)
+Align with, bolstered, crucial, emphasizing, enhance, enduring, fostering, highlighting, pivotal, showcasing, underscore, vibrant
+
+### Mid-2025 and on (GPT-5 era)
+Emphasizing, enhance, highlighting, showcasing, plus words associated with notability/attribution emphasis
+
+### Late 2025 to mid-2026 (GPT-5.1/5.2 and Claude 4.5-5 era)
+The highest-signal items in current-model output, from humanizer corpus data (80k+ pairs) and Claude Opus 4.5 corpus analysis:
+
+**Padding/hedging verbs (GPT-5.x signature):** ensuring (4.3x, strongest single AI word of 2026), ensures, highlights, supports, reflects, plays a role in, contributes to
+
+**Top trigram:** "plays a [crucial/critical/important] role in shaping" — delete on sight
+
+**Structural word swaps:** capable of → able to | rather than (overused) → rewrite comparison directly | conversely (50x) → but | nevertheless (8x) → still
+
+**Empty intensifiers (adverbial padding):** significantly, effectively, directly, increasingly, remarkably, notably — cut unless backed by a number
+
+**Claude 4.5-5 signature words:** comprehensive (24.5x), nuanced (17x), fundamentally (17x), paradigm (15.1x), in essence, essentially, worth noting, inherent tensions, thoughtful approach, metacognitive
+
+**Claude hedging adverbs (inflated rates):** typically (9.6x), often (4.9x), sometimes (4.2x), potentially (3.4x), usually (3.4x) — fine individually, a tell when clustered
+
+**Closers:** "one thing is clear", "the key takeaway", "at the end of the day", "as X continues to evolve"
+
+**IMPORTANT — legacy tells now absent:** delve, tapestry, vibrant, myriad have been trained OUT of the newest Claude models and largely out of GPT-5.1+. Em dashes are suppressed in GPT-5.1+ (but at 16.9x human rate in Claude Opus 4.5). Do not treat absence of legacy tells as evidence of human writing; the structural patterns are what persist.
+
+## Complete Ban List by Category
+
+### Significance Puffers
+- pivotal
+- crucial
+- vital
+- key (as adjective modifying role/moment/factor)
+- significant/significance
+- essential
+- groundbreaking (figurative)
+- remarkable
+- transformative
+- indelible (mark/impact)
+- profound
+- testament
+- enduring
+- lasting
+- ongoing (legacy/commitment)
+- deep/deeply rooted
+- focal point
+- turning point (key turning point)
+- milestone
+
+### Analytical/Emphasis Verbs
+- underscore
+- highlight (as verb meaning "to emphasize")
+- showcase
+- foster/fostering
+- garner
+- bolster/bolstered
+- delve/delving
+- embark
+- leverage
+- facilitate
+- utilize
+- encompass
+- cultivate
+- emphasize/emphasizing (when used as participial tack-on)
+- illuminate
+- elucidate
+- underscore
+- navigate (figurative, "navigate challenges")
+
+### Promotional/Puffery Adjectives
+- vibrant
+- rich (figurative, "rich history/heritage")
+- comprehensive
+- robust
+- seamless
+- innovative
+- dynamic
+- cutting-edge
+- meticulous/meticulously
+- intricate/intricacies
+- nuanced
+- nestled
+- breathtaking
+- renowned
+- diverse array
+- bustling
+- stunning
+- groundbreaking
+- state-of-the-art
+
+### Figurative/Poetic Nouns
+- tapestry (figurative)
+- landscape (figurative, "evolving landscape")
+- realm
+- paradigm
+- ecosystem (figurative)
+- journey (figurative, "journey of discovery")
+- nexus
+- interplay
+- mosaic
+- fabric (of society/community)
+- bedrock
+- cornerstone (figurative)
+- beacon
+- pillar
+
+### Copula-Avoidance Constructions
+- serves as (a) → use "is"
+- stands as (a) → use "is"
+- marks (a) → describe directly
+- represents (a shift/change) → use "is" or describe directly
+- boasts (meaning "has") → use "has"
+- features (meaning "has") → use "has"
+- offers (meaning "has") → use "has"
+- holds the distinction of → use "is"
+- ventured into → use "entered" or "became"
+
+### Formal Connectives (replace with simple alternatives)
+- furthermore → also, and
+- moreover → also, and
+- consequently → so
+- accordingly → so
+- nonetheless → still, but
+- nevertheless → still, but
+- henceforth → from now on
+- thereby → this way
+- wherein → where, in which
+- thus → so
+- hence → so
+
+### Opening/Closing Crutches
+- "In today's [world/society/landscape]"
+- "In the ever-evolving landscape of"
+- "In conclusion"
+- "In summary"
+- "Overall"
+- "To recap"
+- "It is important to note that"
+- "It's worth noting that"
+- "It should be mentioned that"
+- "At the end of the day"
+- "No discussion of X would be complete without"
+- "Crucially"
+- "As a matter of fact"
+
+### Promotional Phrases
+- "commitment to [excellence/innovation/sustainability]"
+- "natural beauty"
+- "in the heart of"
+- "diverse range of experiences"
+- "rich cultural heritage"
+- "a testament to"
+- "setting the stage for"
+- "contributing to the broader"
+- "reflects broader trends"
+- "shaping the future of"
+- "paving the way for"
+- "at the forefront of"
+- "pushing the boundaries of"
+- "redefining what it means to"
+
+### Vague Attribution Phrases
+- "Experts argue/say/note"
+- "Observers have cited"
+- "Industry reports suggest"
+- "Some critics argue"
+- "Several sources/publications"
+- "Many believe/argue"
+- "According to some"
+- "It is widely regarded"
+- "It is generally accepted"
+- "Research suggests" (without naming specific research)
+
+### Collaborative Chat Artifacts (never include)
+- "I hope this helps!"
+- "Of course!"
+- "Certainly!"
+- "You're absolutely right!"
+- "Would you like me to..."
+- "Is there anything else..."
+- "Let me know if..."
+- "Here is a..."
+- "As an AI language model..."
+
+## Replacement Strategy
+
+When you encounter a banned word, don't just swap it for a synonym. Restructure the sentence to say what you actually mean in plain language.
+
+**Before:** "The festival serves as a vibrant testament to the region's rich cultural heritage, showcasing the intricate tapestry of traditions."
+
+**After:** "The festival has been running since 1987. Locals sell handmade pottery and goat cheese from stalls they build themselves each spring."
+
+The fix is never finding a better adjective. The fix is replacing vague praise with specific facts.
 
 ---
 
-## Daftar Larangan Lengkap per Kategori
+## Bahasa Indonesia Ban List
 
-### Penggelembung Kepentingan (Significance Puffers)
-- sangat penting → jelaskan secara spesifik mengapa penting, atau hilangkan kualifikatornya
-- sangat krusial / krusial → hilangkan; jika sesuatu benar-benar kritis, tunjukkan buktinya
-- sangat signifikan / signifikan → kuantifikasi signifikansinya
-- sangat relevan → jelaskan apa yang membuatnya relevan dalam konteks ini
-- fundamental / mendasar (sebagai pujian samar) → sebutkan apa yang spesifik membuatnya mendasar
-- luar biasa (sebagai pujian generik) → sebutkan apa yang spesifik membuatnya luar biasa
-- mendalam (tanpa substansi) → sertakan kedalaman yang sebenarnya
-- berarti / bermakna (sebagai pujian samar) → jelaskan makna spesifik yang dikandungnya
-- tidak dapat dipungkiri → hapus; jika faktanya jelas, nyatakan saja
-- menjadi sorotan utama → nyatakan apa yang sebenarnya terjadi
-- tidak bisa dipandang sebelah mata → hapus; nyatakan nilainya secara konkret
+AI-generated Indonesian has its own signature vocabulary distinct from AI-English. These are the words and constructions that mark Indonesian text as machine-generated.
 
-### Kata Kerja Analitis yang Dilebih-lebihkan AI
-- menyoroti / menyorot → "menunjukkan" atau deskripsikan temuan secara langsung
-- menggarisbawahi → "menunjukkan" atau hapus komentar meta
-- memfasilitasi → "membantu" atau "memungkinkan"
-- mengoptimalkan → "memperbaiki" atau sebutkan apa yang sedang dioptimalkan
-- memanfaatkan → "menggunakan" (hanya ketika maknanya "to use"; pertahankan "memanfaatkan" ketika artinya "mengambil manfaat dari")
-- mengimplementasikan → "menerapkan" atau "menjalankan"
-- berkontribusi pada → sebutkan kontribusi spesifiknya
-- berperan dalam → sebutkan tindakan spesifik yang dilakukan
+### Significance Puffers (Indonesian)
+- sangat penting → state specifically why it matters or drop the qualifier
+- sangat krusial / krusial → drop; if something is critical, show evidence
+- sangat signifikan / signifikan → quantify the significance instead
+- sangat relevan → specify what makes it relevant to this context
+- fundamental / mendasar (as vague praise) → say what specifically makes it foundational
+- luar biasa (as generic praise) → say what specifically is remarkable
+- mendalam (without substance) → provide the actual depth
+- berarti / bermakna (as vague praise) → specify what meaning it carries
+
+### Analytical Verbs (Indonesian AI overuses)
+- menyoroti / menyorot → "menunjukkan" or describe the finding directly
+- menggarisbawahi → "menunjukkan" or remove the meta-commentary
+- memfasilitasi → "membantu" or "memungkinkan"
+- mengoptimalkan → "memperbaiki" or state what is being optimized
+- memanfaatkan → "menggunakan"
+- mengimplementasikan → "menerapkan" or "menjalankan"
+- berkontribusi pada → state the specific contribution
+- berperan dalam → state the specific action performed
 - mengedepankan → "mengutamakan"
-- mewujudkan → "membuat" atau "menciptakan"
-- merealisasikan → "membuat"
-- menyelami → padanan Indonesia untuk "delve" — tanda AI paling jelas. Gunakan: "membahas," "melihat," atau langsung masuk ke topik
-- memastikan → sering berlebihan; nyatakan apa yang dilakukan secara spesifik
-- menawarkan (berlebihan) → "punya," "ada," atau nyatakan langsung
+- mewujudkan → "membuat" or "menciptakan"
+- merealisasikan → "mewujudkan" → "membuat"
 
-### Kata Sifat Promosi dan Pujian (Puffery)
-- komprehensif → sebutkan apa saja yang sebenarnya dicakup
-- holistik → sebutkan semua bagiannya
-- inovatif → jelaskan apa yang sebenarnya baru
-- dinamis → jelaskan apa yang berubah dan bagaimana caranya
-- inklusif → sebutkan siapa yang disertakan
-- berbagai macam (sebagai pengisi samar) → daftarkan hal-hal yang sebenarnya
-- beragam (sebagai pengisi samar) → daftarkan keragaman yang sebenarnya
-- terkini (tanpa tanggal) → berikan tanggal atau rentang waktu yang sebenarnya
-- kolaboratif → jelaskan siapa yang bekerja sama dan bagaimana
-- berkelanjutan (sebagai buzzword) → jelaskan apa yang berlanjut dan bagaimana
+### Promotional/Puffery Adjectives (Indonesian)
+- komprehensif → state what is actually covered
+- holistik → name all the parts
+- inovatif → state what is actually new
+- dinamis → state what changes and how
+- inklusif → name who is included
+- berbagai macam (as vague filler) → list the actual things
+- beragam (as vague filler) → list the actual variety
+- terkini (without a date) → give the actual date or timeframe
 
-### Buzzword AI Indonesia
-Kata-kata ini muncul jauh lebih sering di output AI daripada tulisan manusia Indonesia:
-- transformasi digital → jelaskan perubahan teknologi spesifik apa
-- ekosistem (figuratif) → sebutkan komponen-komponen yang dimaksud
-- paradigma → "cara pandang" atau "pendekatan"
-- optimalisasi → "perbaikan" atau sebutkan apa yang diperbaiki
-- sinergi → sebutkan siapa yang bekerja sama dan hasilnya apa
-- lanskap (kalke dari "landscape") → jangan pernah gunakan; sebutkan bidang/area spesifiknya
-- kompleksitas → jelaskan apa yang sebenarnya rumit
-- dinamika → jelaskan apa yang berubah
-- stakeholder → "pihak terkait" atau sebutkan siapa saja
-- membangun sinergi → nyatakan apa yang sebenarnya dibangun bersama
+### Formal Connectives AI Overuses in Indonesian
+Replace with simpler alternatives or restructure.
+- selain itu → "juga" or restructure the sentence
+- di sisi lain → "tapi" or "namun" (not as a hollow pivot)
+- lebih lanjut → restructure or continue without the transition
+- dengan demikian → "jadi" or "maka"
+- oleh karena itu → "jadi" or "makanya" (colloquial contexts)
+- tak kalah penting / tidak kalah pentingnya → state what it actually is
+- menariknya → lead with the interesting fact; drop the framing word
+- sehubungan dengan hal tersebut → restructure the sentence entirely
+- berkaitan dengan hal ini → be specific about what "this" is
+- dalam hal ini → specify what "this" means
 
-### Kata Penghubung Formal yang Dilebih-lebihkan AI
-Ganti dengan alternatif yang lebih sederhana atau susun ulang kalimatnya.
-- selain itu → "juga" atau susun ulang kalimat
-- di sisi lain → "tapi" atau "namun" (bukan sebagai pivot kosong)
-- lebih lanjut → susun ulang atau lanjutkan tanpa transisi
-- dengan demikian → "jadi" atau "maka"
-- oleh karena itu → "jadi" atau "makanya" (konteks percakapan)
-- tak kalah penting / tidak kalah pentingnya → nyatakan apa yang sebenarnya ada
-- menariknya → mulai dengan fakta yang menarik; hapus kata framing-nya
-- sehubungan dengan hal tersebut → susun ulang kalimat sepenuhnya
-- berkaitan dengan hal ini → spesifik tentang apa yang dimaksud "ini"
-- dalam hal ini → jelaskan apa maksud "ini"
+### Opening/Closing Crutches (Indonesian)
+- "Di era modern ini," → start with a specific fact
+- "Dalam konteks [X] yang semakin [Y]," → start with the fact, not the framing
+- "Seiring perkembangan zaman," → state the specific change and when
+- "Perlu diketahui bahwa" → drop; just state what follows
+- "Penting untuk diingat" → drop or write "Ingat:" or just state it
+- "Sebagai kesimpulan," → drop or write a conclusion that says something new
+- "Dapat disimpulkan bahwa" → state the conclusion directly
+- "Dengan demikian, dapat disimpulkan" → drop entirely
+- "Pada akhirnya," → restructure or use "Akhirnya" only for actual sequence
 
-### Hedging Berlebihan
-- meskipun demikian → hapus atau ganti dengan "tapi"
-- namun perlu diingat bahwa → potong; langsung nyatakan
-- bisa jadi diargumentasikan bahwa → ambil posisi langsung
-- ada baiknya jika → nyatakan rekomendasi secara langsung
-- tidak menutup kemungkinan → nyatakan kemungkinannya secara langsung
-- perlu dicermati bahwa → hapus; nyatakan temuannya
-
-### Pembuka/Penutup Klise
-- "Di era modern ini," → mulai dengan fakta spesifik
-- "Dalam konteks [X] yang semakin [Y]," → mulai dengan fakta, bukan framing
-- "Seiring perkembangan zaman," → nyatakan perubahan spesifik dan kapan terjadi
-- "Perlu diketahui bahwa" → hapus; langsung nyatakan yang mengikutinya
-- "Penting untuk diingat" → hapus atau tulis "Ingat:" atau langsung nyatakan
-- "Sebagai kesimpulan," → hapus atau tulis kesimpulan yang benar-benar mengatakan sesuatu yang baru
-- "Dapat disimpulkan bahwa" → nyatakan kesimpulan secara langsung
-- "Dengan demikian, dapat disimpulkan" → hapus seluruhnya
-- "Pada akhirnya," → susun ulang atau gunakan "Akhirnya" hanya untuk urutan kejadian yang sebenarnya
-- "Perlu kita sadari bersama" → hapus; langsung nyatakan faktanya
-- "Tidak dapat dipungkiri" → hapus; jika faktanya jelas, nyatakan saja
-
-### Konstruksi Penghindaran Kopula (AI Versi Indonesia)
-AI mengganti frasa kata kerja yang rumit sebagai pengganti "adalah" atau "punya."
-- merupakan → "adalah" jika memungkinkan, atau susun ulang
+### Copula-Avoidance Constructions (Indonesian)
+AI substitutes elaborate verb phrases for simple "adalah" or "punya."
+- merupakan → "adalah" when possible, or restructure
 - berperan sebagai → "adalah"
-- berfungsi sebagai → "adalah" atau "digunakan sebagai"
-- menjadi salah satu... → susun ulang agar lebih spesifik
-- memiliki peran penting → sebutkan apa perannya secara konkret
-- "menjadi [X] yang [Y] dalam/bagi [Z]" → nyatakan secara langsung
+- berfungsi sebagai → "adalah" or "digunakan sebagai"
+- menjadi salah satu... → restructure to be specific
+- memiliki peran penting → state what the role is
+- "menjadi [X] yang [Y] dalam/bagi [Z]" → state directly
 
-### Atribusi Samar (Vague Attribution)
-- "para ahli menyatakan" → sebutkan nama ahlinya
-- "penelitian menunjukkan" → sebutkan nama studi atau penelitinya
-- "banyak kalangan berpendapat" → sebutkan siapa dan sitir mereka
-- "menurut beberapa sumber" → sebutkan sumbernya
-- "studi menunjukkan" → studi mana, kapan, oleh siapa?
-- "komunitas ilmiah sepakat" → siapa secara spesifik?
+### Vague Attribution (Indonesian)
+- "para ahli menyatakan" → name the expert
+- "penelitian menunjukkan" → name the study or researcher
+- "banyak kalangan berpendapat" → name who and cite them
+- "menurut beberapa sumber" → name the sources
+- "studi menunjukkan" → which study, when, by whom?
+- "komunitas ilmiah sepakat" → who specifically?
 
-### Frasa Promosi AI (Bahasa Indonesia)
-- "memiliki komitmen untuk" → nyatakan apa yang mereka benar-benar lakukan
-- "memberikan dampak positif" → sebutkan dampak spesifiknya
-- "berperan penting dalam" → jelaskan caranya secara spesifik
-- "dalam rangka [tujuan positif]" → nyatakan apa yang mereka lakukan
-- "dalam upaya [X]" → nyatakan apa yang mereka lakukan
-- "guna meningkatkan" → nyatakan apa yang sebenarnya meningkat
-- "untuk mencapai tujuan tersebut" → nyatakan apa tujuannya dan apa yang dilakukan
-- "membangun sinergi" → sebutkan siapa bekerja sama menghasilkan apa
-- "memiliki potensi besar" → kuantifikasi potensinya atau hapus
-- "menjadi landasan penting" → nyatakan apa landasannya secara konkret
-- "memberikan kontribusi yang signifikan" → sebutkan kontribusi spesifiknya
-- "tantangan dan peluang" → pisahkan; sebutkan masalah spesifik ATAU manfaat spesifik
+### AI Promotional Phrases (Indonesian)
+- "memiliki komitmen untuk" → state what they actually do
+- "memberikan dampak positif" → state the specific impact
+- "berperan penting dalam" → state how specifically
+- "dalam rangka [positive goal]" → state what they are doing
+- "dalam upaya [X]" → state what they are doing
+- "guna meningkatkan" → state what actually increased
+- "untuk mencapai tujuan tersebut" → state what the goal is and what they did
 
-### Frasa Pengisi AI yang Umum (Potong atau Ganti)
-- "memainkan peran [penting/krusial/kunci]" → nyatakan tindakannya langsung
-- "dalam hal ini" → spesifik tentang apa
-- "dalam rangka untuk" → "untuk"
-- "berbagai macam" → sebutkan apa saja
-- "tidak perlu dikatakan" → potong
-- "sudah jelas bahwa" → potong
-- "lebih sering daripada tidak" → "biasanya" atau beri angka
-- "dalam beberapa tahun terakhir" → berikan tahun atau rentang waktu yang sebenarnya
-- "hal ini menunjukkan betapa pentingnya" → nyatakan faktanya secara langsung
-- "mari kita telusuri lebih dalam" → langsung bahas topiknya
-- "penting untuk dicatat" → hapus, nyatakan saja
-- "perlu diperhatikan" → hapus, nyatakan saja
-- "secara keseluruhan" → hapus atau tulis sesuatu yang baru
-
-### Pasangan Formulaik AI (Jangan Gunakan Bersama)
-AI sering memasangkan konsep ini secara refleks. Jangan gunakan berpasangan:
-- "tantangan dan peluang"
-- "di satu sisi... di sisi lain..."
-- "meskipun demikian... namun perlu diingat bahwa"
-- "kelebihan dan kekurangan"
-- "peluang sekaligus tantangan"
-- "aspek positif dan negatif"
-
-### Artefak Chat Kolaboratif (Bahasa Indonesia — jangan pernah gunakan)
+### Collaborative Chat Artifacts (Indonesian — never include)
 - "Semoga membantu!"
 - "Tentu saja!"
 - "Baik, berikut adalah..."
 - "Apakah ada yang ingin Anda tanyakan?"
 - "Jika ada pertanyaan, jangan ragu untuk bertanya."
 - "Sebagai AI, saya..."
-- "Berikut adalah beberapa..."
-- "Dengan senang hati saya akan..."
 
-### Pola Translationese (Kalke dari Bahasa Inggris)
-AI menulis Bahasa Indonesia yang terdengar seperti terjemahan. Hindari pola-pola ini:
-- "dilakukan oleh [pelaku]" (over-passive dengan "oleh") → gunakan pasif prokletik: "[pelaku] yang [verba]" atau kalimat aktif
-- "...yang...yang...yang..." (rantai relative clause) → susun ulang agar lebih ringkas
-- "adalah" berlebihan → hilangkan; Bahasa Indonesia sering tidak butuh kopula
-- subjek yang diulang terus → gunakan pro-drop ketika konteks jelas
-- "hal ini" / "hal tersebut" → terlalu sering sebagai pengganti "it/this"; sebutkan apa yang dimaksud
-- "berdasarkan" berlebihan → variasikan: "menurut," "dari," atau susun ulang
-- "terkait dengan" → sering tidak perlu; hubungkan langsung
-- "dalam rangka" → "untuk" atau "supaya"
-- "memberikan" (kalke dari "provide/give") → gunakan verba yang lebih spesifik: "kasih," "beri," "sediakan"
+## Indonesian Replacement Strategy
 
-### Ejaan KBBI yang Sering Salah (AI vs Benar)
-- praktek → **praktik**
-- kadaluarsa → **kedaluwarsa**
-- aktifitas → **aktivitas**
-- nasehat → **nasihat**
-- merubah → **mengubah**
-- apotik → **apotek**
-- ijin → **izin**
-- resiko → **risiko**
-- hakekat → **hakikat**
-- karir → **karier**
+Indonesian AI text fails differently from English AI text. The core problem is translationese: AI writes formal Bahasa Indonesia baku that sounds like a government document or a translated Wikipedia article, even for casual contexts.
 
----
-
-## Strategi Penggantian
-
-Teks AI dalam Bahasa Indonesia gagal dengan cara yang berbeda dari AI berbahasa Inggris. Masalah utamanya adalah **translationese**: AI menulis Bahasa Indonesia baku formal yang terdengar seperti dokumen pemerintah atau artikel Wikipedia terjemahan, bahkan untuk konteks santai.
-
-**Sebelum (AI Indonesia):**
+**Before (AI Indonesian):**
 > Festival ini merupakan salah satu momen penting yang tidak hanya menampilkan kekayaan budaya lokal, tetapi juga memperkuat ikatan sosial antar masyarakat, menjadikannya sebagai ajang yang sangat krusial dalam pelestarian tradisi.
 
-**Setelah (Indonesia manusiawi):**
+**After (human Indonesian):**
 > Festival ini sudah jalan sejak 1987. Warga bikin lapak sendiri. Keju kambing dan gerabah habis sebelum tengah hari.
-
-Solusinya bukan mencari kata sifat yang lebih baik. Solusinya adalah mengganti pujian samar dengan fakta spesifik.
-
-**Sebelum (AI Indonesia):**
-> Dalam era transformasi digital yang semakin pesat, inovasi teknologi memainkan peran krusial dalam membangun ekosistem bisnis yang berkelanjutan dan inklusif.
-
-**Setelah (Indonesia manusiawi):**
-> Tahun 2024, 60% UMKM di Jawa Timur mulai pakai pembayaran QR. Setahun sebelumnya, angkanya cuma 23%.
-
-**Sebelum (AI Indonesia):**
-> Selain itu, program ini juga memberikan dampak positif yang signifikan terhadap pengembangan kapasitas sumber daya manusia di daerah tersebut.
-
-**Setelah (Indonesia manusiawi):**
-> Dari 200 peserta pelatihan, 147 dapat kerja dalam enam bulan. Sisanya masih cari.
-
-**Sebelum (AI Indonesia — translationese):**
-> Keputusan tersebut dibuat oleh pihak manajemen yang bertanggung jawab atas operasional perusahaan yang bersangkutan. Hal ini dilakukan dalam rangka meningkatkan efisiensi yang diharapkan oleh para stakeholder.
-
-**Setelah (Indonesia manusiawi — tanpa translationese):**
-> Manajemen yang mutusin. Alasannya simpel: biar lebih efisien. Stakeholder udah lama minta ini.
-
-**Sebelum (AI Indonesia — subjek selalu eksplisit):**
-> Dia datang ke kantor. Dia membuka laptopnya. Dia mulai bekerja. Dia menyelesaikan laporannya sebelum makan siang.
-
-**Setelah (Indonesia manusiawi — pro-drop):**
-> Datang ke kantor, buka laptop, langsung kerja. Laporan kelar sebelum makan siang.
-
----
-
-## Kata-kata yang Manusia Indonesia Gunakan tapi AI Jarang Pakai
-
-### Partikel Wacana
-sih, dong, deh, loh/lho, nih, tuh, kan, kok, ya, nah, lah, mah
-
-### Interjeksi Emosional
-duh, aduh, waduh, astaga, buset/busyet, ih, hah, wah, masa
-
-### Kata Kerja Informal (Prefiks Terpotong)
-ngerti (mengerti), nyari (mencari), nonton (menonton), ngambil (mengambil), bikin (membuat), ngebantu (membantu), ngomongin (membicarakan), ngobrol (berbicara santai), nongkrong (berkumpul santai), nyantai (bersantai), ngemil (makan camilan)
-
-### Intensifier Informal
-parah, gila, edan, buset, banget, pol, abis
-
-### Penanda Humor
-wkwkwk, ngakak, receh (lelucon murahan)
-
-### Konektor Informal
-soalnya (karena/masalahnya), terus (lalu), jadinya (jadi kemudian), makanya (oleh karena itu informal), lagian (lagipula informal)
-
-### Ungkapan Sehari-hari
-omong kosong (nonsense), tahan banting (tangguh), salah langkah (langkah keliru), pecah telur (skor pertama), besar kepala (sombong), keras kepala (bandel), mata duitan (cinta uang)
-
-### Peribahasa/Pepatah (Gunakan Sesekali)
-"Sedikit-sedikit, lama-lama jadi bukit" (usaha kecil konsisten), "Besar pasak daripada tiang" (pengeluaran > kemampuan), "Tong kosong nyaring bunyinya" (paling berisik belum tentu berisi), "Habis manis sepah dibuang" (dibuang setelah tidak berguna), "Air susu dibalas air tuba" (kebaikan dibalas kejahatan), "Seperti katak dalam tempurung" (berpikiran sempit)
-
-### Struktur Kalimat Khas Manusia Indonesia
-- Topik-komentar: "Kalau masalah itu, udah beres kok."
-- Pro-drop: "Pergi ke pasar, beli sayur, langsung masak."
-- Pasif prokletik: "Laporan itu gue yang nulis." (bukan "Laporan itu ditulis oleh saya.")
-- Code-switching: "Meeting-nya diundur. Deadline-nya juga molor."

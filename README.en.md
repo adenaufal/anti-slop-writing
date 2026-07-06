@@ -1,14 +1,27 @@
 # anti-slop-writing
 
+**v3.0** — July 6, 2026
+
 [Bahasa Indonesia](README.md) | English
 
 A universal skill that makes AI output read more human, specific, and less stiff.
 
-Works with **Claude.ai, ChatGPT, Gemini, Copilot, Claude Code, Codex CLI, Gemini CLI, Cursor, Windsurf, Ollama, LM Studio**, and any tool that supports system prompts.
-
-👉 **Need per-platform install steps?** See [INSTALL.md](INSTALL.md) (full guide for ChatGPT, Gemini, Copilot, API, local LLMs).
+Works with **Claude.ai, Claude Code, Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf**, and any tool that supports system prompts.
 
 Based on Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) + AI text detection research. Inspired by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877).
+
+---
+
+## What's New in v3.0
+
+- **2026 Shift:** cadence uniformity as #1 tell, 30-second tests, prompt keyword repetition
+- **Model Fingerprints:** GPT-5.x Motivator dialect, Claude Philosopher dialect (Opus 4.5 corpus data)
+- **New rules:** Break the Four-Part Sentence DNA, bimodal burstiness trap, paragraph over-fragmentation
+- **Two-way passive correction:** newer models use *less* passive than humans
+- **Colon/semicolon density rules**
+- **New 2026 vocabulary bans:** ensuring, plays-a-role-in-shaping, intensifiers
+- **12 new checklist items** (36 total for EN, 48 for ID)
+- **New ID-specific rules:** BI-11 (symmetric hook), BI-12 (prompt repetition), anti-translationese
 
 ---
 
@@ -26,7 +39,7 @@ Based on Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikiped
 
 ### Claude.ai (Web) — Easiest
 
-1. Download `anti-slop-writing.skill` from [latest release](https://github.com/adenaufal/anti-slop-writing/releases/latest)
+1. Download `anti-slop-writing-en.skill` (English) or `anti-slop-writing-id.skill` (Indonesian) from the [latest release](https://github.com/adenaufal/anti-slop-writing/releases/latest)
 2. In Claude.ai: `Settings → Skills → Install from file`
 3. Select the downloaded file
 4. Start a new chat and go
@@ -43,13 +56,9 @@ git clone https://github.com/adenaufal/anti-slop-writing .claude/skills/anti-slo
 
 Skill file: `english/SKILL.md` (English) or `indonesian/SKILL.md` (Bahasa Indonesia).
 
-### ChatGPT / Gemini / Copilot / Others
+### Other Tools (Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf, Aider, ChatGPT)
 
-See [INSTALL.md](INSTALL.md) for the full per-platform guide. Short version:
-
-- **ChatGPT Custom Instructions** (char-limited): use the Lite version `english/SKILL-lite.md`
-- **ChatGPT Projects / Gemini Gems / Copilot Agents**: use the Full `english/system-prompt.md`
-- **CLI tools & editors**: see [Full Installation](#full-installation) below
+See [Full Installation](#full-installation) below.
 
 ---
 
@@ -106,8 +115,7 @@ If output is more concrete and sentence rhythm varies, the rules are active.
 ```text
 anti-slop-writing/
 ├── english/
-│   ├── SKILL.md              ← Full version (~16 KB)
-│   ├── SKILL-lite.md         ← Lite version (~4 KB, for ChatGPT Custom Instructions)
+│   ├── SKILL.md
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
@@ -115,16 +123,16 @@ anti-slop-writing/
 │       ├── vocabulary-banlist.md
 │       └── structural-patterns.md
 ├── indonesian/
-│   ├── SKILL.md              ← Full version with 3-tier tone (formal/semi-formal/informal)
-│   ├── SKILL-lite.md         ← Lite version (~4 KB)
+│   ├── SKILL.md
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
 │   └── references/
 │       ├── vocabulary-banlist.md
 │       └── structural-patterns.md
-├── references/               ← legacy (combined)
-├── INSTALL.md                ← Per-platform install guide (bilingual)
+├── references/              ← legacy (combined)
+├── anti-slop-writing-en.skill   ← ready-to-use for Claude.ai
+├── anti-slop-writing-id.skill   ← ready-to-use for Claude.ai
 ├── README.md
 ├── README.en.md
 └── LICENSE
@@ -132,7 +140,7 @@ anti-slop-writing/
 
 - `AGENTS.md`, `GEMINI.md`, `system-prompt.md` share the same core rules — just different formats per tool.
 - `SKILL.md` is for Claude Code skill format.
-- `anti-slop-writing.skill` is released separately via [Releases](https://github.com/adenaufal/anti-slop-writing/releases).
+- `anti-slop-writing-*.skill` are released separately via [Releases](https://github.com/adenaufal/anti-slop-writing/releases).
 
 ---
 
@@ -145,18 +153,11 @@ This repo includes rules specific to AI patterns in Bahasa Indonesia text:
 - Heavy nominalization
 - Missing discourse particles (nah/sih/dong/kan)
 - Always-formal "Anda" regardless of register
-- Em and en dashes (banned entirely, the #1 AI tell in Indonesian text)
+- Translationese (English-calqued sentence structures)
+- Symmetric two-clause hooks ("Banyak orang mengira X. Kenyataannya Y.")
+- Prompt keyword repetition
 
 Use files from the `indonesian/` folder.
-
-### 3-Tier Tone
-
-The Indonesian version supports three register tiers:
-- **Formal**: academic papers, reports, corporate docs. Pronouns: saya, Anda. No discourse particles.
-- **Semi-formal** (default): blog, opinion pieces, newsletters, LinkedIn. Pronouns: saya/aku, kamu. Occasional particles.
-- **Informal**: Twitter, IG captions, casual blog, TikTok. Pronouns: aku/gw, kamu/lo. Natural particles.
-
-Specify tier in your prompt: "Use semi-formal tier" or "Write in informal tier." Default is semi-formal.
 
 ---
 

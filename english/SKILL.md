@@ -9,8 +9,18 @@ AI writing fails because it optimizes for statistical probability, producing the
 
 These rules target the three metrics AI detectors use most:
 - **Perplexity**: how unpredictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity. Median AI: 21.2. Median human: 35.9.
-- **Burstiness**: variation in sentence length and structure. AI has low burstiness (sentences cluster around 15-25 words). Human text mixes 3-word sentences with 35-word sentences. This single metric most reliably separates human from AI text. Introducing burstiness reduced detection rates by up to 40% in studies.
+- **Burstiness**: variation in sentence length and structure. AI has low burstiness (sentences cluster around 15-25 words). Human text mixes 3-word sentences with 35-word sentences. This single metric most reliably separates human from AI text. Introducing burstiness reduced detection rates by up to 40% in studies. CAUTION (2026): newer models fake burstiness bimodally, see Rule 1.
 - **Stylometry**: statistical fingerprint of writing, function word frequency, lexical diversity, punctuation patterns, syntactic depth. Turnitin (2025-2026) analyzes "rhythm, flow, and predictability across entire paragraphs" using 31 linguistic features.
+
+## The 2026 Shift: Structure Beats Punctuation
+
+As of mid-2026, the tells have moved. OpenAI suppressed em dashes in GPT-5.1, and vocabulary tells ("delve," "tapestry," "vibrant," "myriad") have been trained out of the newest Claude models. Absence of these legacy tells proves nothing. What survives prompt rewrites and model updates is structural:
+
+- **Cadence uniformity is the #1 tell of 2026.** Sentences that land at 18-24 words, one after another, paragraph after paragraph. It survives every cosmetic edit.
+- **The 30-second tests** (readers and editors now apply these by eye):
+  1. Look at the first word of each sentence in a paragraph. If more than half start with "The," "This," "It," or "In," the text reads as LLM-assisted.
+  2. Count sentence lengths. Three or more consecutive sentences in the 17-23 word band = same conclusion.
+- **Punctuation signals migrated to Claude.** Per a Jan 2026 corpus analysis (200 Opus 4.5 samples vs 6,000 human texts): em dash 16.9x human rate, colon 4.1x, semicolon 3.1x. Meanwhile GPT-5.1+ output can be nearly dash-free. Keep the zero-dash rule AND watch colon density.
 
 Before writing anything, load `references/vocabulary-banlist.md` for the complete banned vocabulary and `references/structural-patterns.md` for patterns to avoid.
 
@@ -52,6 +62,8 @@ Before writing anything, load `references/vocabulary-banlist.md` for the complet
 
 **Collaborative chat artifacts (never include):** "I hope this helps!" | "Of course!" | "Certainly!" | "You're absolutely right!" | "Would you like me to..." | "Is there anything else..." | "Let me know if..." | "As an AI language model..." | "I'd be happy to..." | "Great question!"
 
+**2026-era additions (highest-signal in current models):** "ensuring/ensures" as padding (strongest single AI word, 4.3x) → name the concrete action or cut | "plays a [crucial/critical/important] role in shaping" (top AI trigram) → state what it does | "highlights/supports/reflects" as hedging verbs → concrete verb or delete | "capable of X" → "able to X" or just the verb | "rather than" when a direct comparison works → rewrite directly | "conversely" (50x overrepresented) → "but" or restructure | "in essence" / "essentially" / "fundamentally" → cut | intensifiers without numbers ("significantly," "effectively," "directly," "increasingly") → back with data or delete | "one thing is clear" | "the key takeaway" | "inherent tensions" | "this raises important questions about" | hedging adverb clusters ("typically," "often," "usually," "potentially," "sometimes" stacked in one passage) → commit or quantify
+
 ## Replacement Strategy
 
 Use short, common words: "use" not "utilize," "help" not "facilitate," "show" not "demonstrate," "end" not "conclude," "start" not "embark," "dig into" not "delve into."
@@ -66,7 +78,11 @@ Use contractions in conversational contexts: "can't," "don't," "it's," "we're," 
 
 ## 1. Vary Sentence Length Dramatically
 
-Mix very short sentences (3-5 words) with long ones (25+ words). Never write 3+ consecutive sentences of similar length. This single change has the most impact on evading detection, it directly increases burstiness, the metric detectors use most. AI keeps sentences in a narrow 15-25 word band. Humans swing between 3-word punches and 40-word explorations.
+Mix very short sentences (3-5 words) with long ones (25+ words). Never write 3+ consecutive sentences of similar length, and never 3+ consecutive sentences inside the 17-23 word band. This directly increases burstiness, the metric detectors use most.
+
+**The bimodal trap (new, 2026):** newer Claude models (Opus 4.5+) learned to fake burstiness by mechanically alternating a punchy fragment with a very long sentence. "Short. Then a forty-word sentence that winds through three clauses." Repeated, that alternation is itself a fingerprint; corpus data shows AI now has HIGHER length variation than humans, but bimodal. Human writing clusters around medium (50% of human sentences are 11-25 words) with occasional swings in both directions. So: vary irregularly. A medium sentence, another medium one, a fragment, a long one, two mediums. Not a metronome, and not a seesaw either.
+
+**Vary sentence openers too.** Keep "The/This/It/In" openers under half of any paragraph. Start sentences with verbs, names, numbers, subordinate clauses, questions.
 
 ## 2. Break the Rule of Three
 
@@ -94,7 +110,7 @@ Never start paragraphs with "Overall," "In conclusion," "In summary," "To recap.
 
 ## 8. Paragraph Rhythm
 
-Use irregular paragraph lengths. One-sentence paragraphs for emphasis. Longer paragraphs for sustained argument. The rhythm should never feel metronomic. AI tends to write 3-4 sentence paragraphs consistently, break that pattern.
+Use irregular paragraph lengths. One-sentence paragraphs for emphasis. Longer paragraphs for sustained argument. The rhythm should never feel metronomic. Older models wrote uniform 3-4 sentence paragraphs; newer models (Claude 4.5+, GPT-5) over-correct into the opposite tell: **fragmenting text into many tiny 1-2 sentence paragraphs plus bullet spam**. Corpus data shows AI averaging 18+ paragraphs per document where humans write far fewer, longer ones. Combine related ideas into sustained paragraphs. A real writer will happily run a paragraph to 7-8 sentences when the argument needs it. Uniform brevity is as machine-like as uniform length.
 
 ## 9. No Vertical Lists with Bold Headers
 
@@ -102,7 +118,7 @@ Prefer prose over bullet-point lists with bolded inline headers followed by colo
 
 ## 10. Ban All Dashes (Em and En)
 
-No em dashes (`—`) and no en dashes (`–`) anywhere. Zero. The em dash has become "the ChatGPT dash" and is now the single most recognizable AI tell in English prose. Replace with:
+No em dashes (`—`) and no en dashes (`–`) anywhere. Zero. 2026 status update: the em dash is no longer mainly a ChatGPT tell (GPT-5.1 suppresses it) but it is now the single worst Claude tell, with Opus 4.5 using it at 16.9x the human rate, mid-sentence, additively, to attach qualifier clauses. The ban stays. Also new: **watch colons.** Newer Claude uses colons at 4x the human rate to introduce almost any follow-up idea. If a draft has a colon every few sentences, replace most with periods. Same for semicolons (3.1x). Replace dashes with:
 
 - Period (split into two sentences)
 - Comma (if the thought flows)
@@ -156,7 +172,9 @@ AI produces "monolithic mainstream American English", a single consistent regist
 
 ## EN-5. Reduce Agentless Passives
 
-AI overuses passive voice for perceived neutrality: "The decision was made," "It was determined that," "The project was completed." Prefer active voice with clear subjects. Use passive deliberately for emphasis or when the agent is genuinely unknown. If three passives appear in a row, rewrite at least two.
+Older AI overused passive voice for perceived neutrality: "The decision was made," "It was determined that." Avoid strings of agentless passives; if three appear in a row, rewrite at least two.
+
+**But don't over-correct (2026 data).** Newer models actually use LESS passive voice than humans (AI 4.7% vs human 14.9% in corpus analysis). A draft with zero passives and relentlessly active, punchy declaratives reads like GPT-5's Motivator register, not like a person. Humans use passives naturally when the object matters more than the agent ("the file got corrupted," "the venue was booked months ago"). Keep some.
 
 ## EN-6. Kill Staccato Triplets
 
@@ -178,12 +196,49 @@ AI avoids grammatically incomplete sentences. Humans use fragments constantly: "
 
 Don't pile on "may," "might," "could," "would" to avoid committing. "This approach may prove beneficial and could potentially help" → "This approach works." Commit to claims. Use hedging only for genuine uncertainty.
 
-## EN-11. Show Model-Specific Awareness
+## EN-11. Show Model-Specific Awareness (updated mid-2026)
 
-Different LLMs have different tells. Avoid all of these:
-- **ChatGPT tells:** enthusiastic promotional tone, em dash overuse, bold formatting obsession, numbered lists, "Let's dive in"
-- **Claude tells:** excessive hedging ("I think," "There's a case to be made"), over-qualified statements, balanced both-sides framing, copula avoidance
-- **Gemini tells:** purple prose, excessive adjectives, moralizing, explicit theme statements, textbook tone
+Different LLMs have different "aidiolects." The tells below reflect GPT-5.x and Claude 4.5-5 era output. Avoid all of them:
+
+**ChatGPT (GPT-5 / 5.1 / 5.2) tells, the "Motivator" dialect:**
+- Em dashes suppressed since 5.1, so dash-free text is NOT evidence of human authorship. What remains:
+- The negated contrast, roughly one per paragraph: "It's not just X, it's Y" / "This isn't about X. It's about Y." Still the single most GPT-characteristic sentence shape.
+- Symmetric two-clause hooks opening posts: "Most people think X. The reality is Y." / "Forget X. Focus on Y." Fine once; a fingerprint when it opens four out of five pieces.
+- Rigid "Firstly / Secondly / Finally" scaffolding and intro-triplet-recap arcs.
+- Hedging verbs used as padding: "ensuring" (4.3x overrepresented, the strongest single AI word of 2026), "ensures," "highlights," "supports," "reflects." A human says what the thing does.
+- The top AI trigram of 2026: "plays a [crucial/critical/important] role in shaping." Delete on sight.
+- Intensifier adverbs without evidence: "significantly," "effectively," "directly," "increasingly." If no number backs it, cut it.
+- "rather than" overuse (the highest-leverage multi-word edit in humanizer data); "capable of X" instead of "able to X."
+- Assertive overconfident declaratives: "Here's the truth about Z." "The best founders know Y."
+- A "sanitized" texture: GPT-5's self-correction pass scrubs obvious AI-isms but leaves prose that feels cleaned, with no awkward transitions at all. Perfectly smooth = suspicious.
+- Boilerplate closers: "As X continues to evolve, one thing is clear..." Any ending containing "one thing is clear" is a model ending.
+
+**Claude (Sonnet 4.5/4.6, Opus 4.5, Claude 5) tells, the "Philosopher" dialect:**
+- Worst punctuation offender of 2026: em dash at 16.9x human rate (mid-sentence, additive), colon at 4.1x, semicolon at 3.1x.
+- Hedge-and-reassure stacking, sometimes three hedges before saying anything: "While this may vary, generally speaking, in most cases, it's worth noting that..."
+- Signature vocabulary: "worth noting," "nuanced" (17x), "comprehensive" (24.5x), "fundamentally" (17x), "paradigm" (15.1x), "in essence," "essentially," "inherent tensions," "this raises important questions about."
+- Hedging adverbs at inflated rates: "typically" (9.6x), "often" (4.9x), "sometimes," "potentially," "usually."
+- Empathetic framing on autopilot: "understandably, many people feel...," "this can be frustrating for..."
+- Essayistic arc regardless of format: contextualize the question, explore multiple perspectives, add a qualification, close by observing what the analysis "raises" rather than concluding what it means. LinkedIn post or pricing memo, same Hegelian dialectic.
+- Abstract vocabulary inflation: "founders with strong metacognitive awareness often find that" where a human writes "the best founders know."
+- Starting sentences with "And" / "But" as a flow crutch every other paragraph. Occasionally human; as a system, a tell.
+- Bimodal sentence rhythm (see Rule 1) and paragraph over-fragmentation (see Rule 8).
+- Note: "delve," "tapestry," "vibrant," "myriad" are largely absent from newest Claude output. Their absence is not evidence of human writing; check the structural tells instead.
+
+**Gemini tells:** purple prose, excessive adjectives, moralizing, explicit theme statements, textbook "Educator" tone.
+
+## EN-12. Break the Four-Part Sentence DNA
+
+Corpus research (2026) found 82% of AI-generated text follows the same argument cadence regardless of model or topic: **Opening (establish context/claim) → Expansion (supporting detail) → Contrast (acknowledge complication) → Resolution (conclude or transition).** It is detectable within three to four sentences and it is the reason AI text feels "off" even when every word is fine. Prompt instructions do not remove it; the model rebuilds it under any vocabulary.
+
+Break it deliberately, at least a few times per piece:
+- Open with the complication and never circle back to a tidy resolution.
+- Expand without contrasting. Commit to one side.
+- End a section on an unresolved tension or an abrupt concrete fact.
+- Put the conclusion first, then argue backward.
+- Let one paragraph be pure detail with no claim at all.
+
+Humans leave arguments lopsided. Resolution-closers ("At the end of the day...," "The key takeaway here is...") are training artifacts; real endings take a position and stop.
 
 ---
 
@@ -333,8 +388,27 @@ After drafting, run this checklist:
 23. Check for sentence fragments, if none, add at least one for emphasis
 24. Verify specificity, replace any remaining generic claims with specific ones (names, dates, numbers, places)
 
+**2026 Model-Fingerprint Checks:**
+25. Run the sentence-opener test: in each paragraph, if more than half the sentences start with "The," "This," "It," or "In," rewrite openers
+26. Run the cadence test: find any run of 3+ sentences in the 17-23 word band, break it
+27. Check for the bimodal seesaw: if the text mechanically alternates fragment/long sentence, insert medium-length sentences
+28. Count colons. If more than roughly one per 300 words outside lists, replace most with periods
+29. Search for "ensuring," "ensures," "highlights," "supports," "reflects" used as padding; replace with concrete verbs
+30. Search for "plays a * role in shaping" and any "role in" construction; state the action directly
+31. Count "not just X, it's Y" / "not about X, it's about Y" constructions. More than one per piece, rewrite
+32. Check for the two-clause symmetric hook opener ("Most people think X. The reality is Y."); if present, rewrite the opening
+33. Check paragraph count vs length: if the piece is fragmented into many 1-2 sentence paragraphs, merge related ones
+34. Check the ending: if it resolves neatly ("one thing is clear," "the key takeaway," a wrap-up that restates), cut it and end on a position or a concrete fact
+35. Check the argument arc: if every section runs Opening → Expansion → Contrast → Resolution, break the cadence in at least two sections
+36. Check for hedge-and-reassure stacking ("While X, generally speaking, in most cases..."); one hedge max per claim, or none
+
 ---
 
 # Language Support
 
 The structural rules apply to all languages. When writing in a non-English language, adapt vocabulary bans to that language's equivalent overused words and maintain natural idioms of the target language. For Bahasa Indonesia, use `SKILL-id.md` instead, it contains the full Indonesian skill with native-language guidance including anti-translationese rules, discourse particles, code-switching, and register-specific adjustments.
+
+---
+
+**Last Updated:** July 6, 2026 (v3.0)
+**Changelog v3.0:** Version bump from v2.0. All content updated to latest rules.

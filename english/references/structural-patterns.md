@@ -1,16 +1,10 @@
-# Structural Patterns to Avoid (English)
+# Structural Patterns to Avoid
 
-Every pattern here has been documented on Wikipedia's "Signs of AI Writing" page and confirmed by academic research (Kobak et al. 2025 in Science Advances, Russell et al. 2025, Fraser et al. 2025, Paech et al. ICLR 2026, Jiang & Hyland 2025 in Written Communication, Shaib et al. 2025). These are the structural tells that make text read as machine-generated.
+Every pattern here has been documented on Wikipedia's "Signs of AI Writing" page and confirmed by academic research (Kobak et al. 2024, Russell et al. 2025, Fraser et al. 2025). These are the structural tells that make text read as machine-generated.
 
-Turnitin (2025-2026) analyzes "rhythm, flow, and predictability across entire paragraphs" using 31 linguistic features — not just individual words. GPTZero uses perplexity + burstiness + semantic fingerprinting. Detection has shifted from vocabulary to structure.
+## 1. Participial -ing Tack-Ons
 
----
-
-## Universal Patterns (All LLMs, All Languages)
-
-### U-1. Participial -ing Tack-Ons
-
-The single most recognizable AI pattern. A comma followed by an -ing phrase appended to sentence ends to appear analytical.
+The single most recognizable AI pattern. A comma followed by an -ing phrase appended to the end of a sentence to appear analytical.
 
 **AI pattern:**
 > The team launched the product, revolutionizing the industry.
@@ -24,48 +18,42 @@ The single most recognizable AI pattern. A comma followed by an -ing phrase appe
 
 Rule: If the -ing clause adds no concrete information, delete it entirely. If it adds real information, make it a separate sentence.
 
-### U-2. The Rule of Three
+## 2. The Rule of Three
 
-AI defaults to grouping things in threes — three adjectives, three bullet points, three examples, three clauses. This is the "tricolon" compulsion. Real humans list 2, 4, 5, or 7 items erratically.
+AI defaults to grouping things in threes — three adjectives, three bullet points, three examples, three clauses.
 
 **AI pattern:**
 > The conference features keynote sessions, panel discussions, and networking opportunities.
 > The design is bold, innovative, and timeless.
-> Time, resources, and attention.
 
 **Human alternative:**
 > The conference runs keynote sessions and panels. There's time to meet people between talks.
 > The design is bold. It'll still work in ten years.
-> Time and money.
 
 Rule: List two things. Or four. Or one. Never three by default.
 
-### U-3. Negative Parallelisms
+## 3. Negative Parallelisms
 
-"Not just X, but also Y" / "It's not X, it's Y" / "Not only X, but Y" / "It's not about X, it's about Y"
-
-SearchEngineLand's 2026 study of 1,000+ URLs found "not only/but also" constructions showed the **largest negative correlation with engagement.** One blog post used it 12 separate times.
+"Not just X, but also Y" / "It's not X, it's Y" / "Not only X, but Y"
 
 **AI pattern:**
 > This is not just a memoir — it's a love letter to the city.
 > The painting represents not merely an artistic achievement, but a cultural milestone.
-> It's not about the technology, it's about the people.
 
 **Human alternative:**
 > It's a memoir about growing up in the city. You can feel the author's affection for it on every page.
 > The painting became a cultural reference point. People still argue about it.
-> The technology doesn't matter if nobody uses it.
 
 Rule: State what something IS. Don't frame it as a correction of what someone might wrongly think.
 
-### U-4. False Ranges ("From X to Y")
+## 4. False Ranges ("From X to Y")
 
 Vague figurative spectrum using "from X to Y" where no real scale exists.
 
 **AI pattern:**
 > From intimate gatherings to global movements, the organization has made its mark.
 > From beginners to experts, everyone can benefit.
-> Whether you're a student or a CEO, this applies to you.
+> From the singularity of the Big Bang to the grand cosmic web...
 
 **Human alternative:**
 > The organization started with twelve people in a living room. Last year 40,000 showed up to their conference.
@@ -73,7 +61,7 @@ Vague figurative spectrum using "from X to Y" where no real scale exists.
 
 Rule: Only use "from X to Y" when there's a real, identifiable midpoint on a real scale.
 
-### U-5. "Despite Its... Faces Challenges" Formula
+## 5. "Despite Its... Faces Challenges" Formula
 
 The formulaic challenges-and-future-prospects ending.
 
@@ -85,7 +73,7 @@ The formulaic challenges-and-future-prospects ending.
 
 Rule: If you mention problems, name specific ones with specific evidence. Never follow with vague optimism about "ongoing initiatives."
 
-### U-6. Copula Avoidance ("Serves As" / "Stands As")
+## 6. Copula Avoidance ("Serves As" / "Stands As")
 
 AI substitutes elaborate verb phrases for simple "is/are/has."
 
@@ -101,9 +89,9 @@ AI substitutes elaborate verb phrases for simple "is/are/has."
 
 Rule: Use "is," "are," "has," "was." Simple copulas are not boring — they're clear.
 
-### U-7. Superficial Analysis Padding
+## 7. Superficial Analysis Padding
 
-Generic commentary attached to facts that need no commentary. If the analytical statement could apply to literally any subject, it adds nothing.
+Generic commentary attached to facts that need no commentary.
 
 **AI pattern:**
 > The city has a population of 56,998, creating a lively community within its borders.
@@ -117,9 +105,9 @@ Generic commentary attached to facts that need no commentary. If the analytical 
 
 Rule: If the analytical statement could apply to literally any subject, it adds nothing. Delete it.
 
-### U-8. Elegant Variation (Synonym Cycling)
+## 8. Elegant Variation (Synonym Cycling)
 
-AI avoids repeating the same word by cycling through synonyms, even when repetition would be clearer. One text might use: protagonist → main character → central figure → hero → lead.
+AI avoids repeating the same word by cycling through synonyms, even when repetition would be clearer.
 
 **AI pattern:**
 > Soviet artistic constraints... non-conformist artists... their creativity... the confines of state-imposed artistic norms... the artistic aspirations...
@@ -129,9 +117,9 @@ AI avoids repeating the same word by cycling through synonyms, even when repetit
 
 Rule: Repeat words when clarity demands it. Don't cycle through "constraints / confines / norms / limitations" to avoid saying the same word twice.
 
-### U-9. Em Dash Overuse
+## 9. Em Dash Overuse
 
-AI uses em dashes (—) where humans use commas, parentheses, periods, or nothing. The em dash has been called "the ChatGPT dash" — AI training data skews toward 19th/20th century prose that used ~30% more em dashes than contemporary writing.
+AI uses em dashes (—) where humans use commas, parentheses, periods, or nothing.
 
 **AI pattern:**
 > The article complies with policies — including WP:V, WP:RS, and WP:BLP — with all claims supported by multiple sources.
@@ -141,7 +129,7 @@ AI uses em dashes (—) where humans use commas, parentheses, periods, or nothin
 
 Rule: Maximum one em dash per 500 words. When in doubt, use a period and start a new sentence.
 
-### U-10. Vertical Lists with Bold Inline Headers
+## 10. Vertical Lists with Bold Inline Headers
 
 Formatting everything as bullet points with **Bold Header:** description.
 
@@ -153,7 +141,7 @@ Formatting everything as bullet points with **Bold Header:** description.
 **Human alternative:**
 Write it as prose. If a list is genuinely needed, keep it simple without bold headers and colon separators.
 
-### U-11. Undue Emphasis on Notability/Media Coverage
+## 11. Undue Emphasis on Notability/Media Coverage
 
 Painstakingly listing every source that covered the topic to prove it matters.
 
@@ -166,7 +154,7 @@ Painstakingly listing every source that covered the topic to prove it matters.
 
 Rule: Cite sources inline as references. Don't make the existence of coverage into content.
 
-### U-12. Overuse of Boldface
+## 12. Overuse of Boldface
 
 Mechanically bolding every key term, proper noun, or concept.
 
@@ -178,272 +166,195 @@ Mechanically bolding every key term, proper noun, or concept.
 
 Rule: Bold sparingly. In most prose, bold nothing at all.
 
-### U-13. Uniform Syntactic Depth
-
-AI produces sentences of remarkably consistent medium complexity — never very simple, never deeply nested. Humans swing between extremes.
-
-**AI pattern (all sentences medium depth):**
-> The government has allocated funds for a training program. The program is designed to improve the skills of local workers. Participants will receive certificates after completing all training modules.
-
-**Human alternative (depth varies wildly):**
-> Budget: $2 million. From that, 200 people get trained over three months — mostly single mothers who'd never touched a computer before, most of them from villages at the foot of Mount Rainier where broadband only arrived two years ago. Result? 147 got jobs.
-
-Rule: Mix very shallow sentences (subject-verb-object) with very deep ones (multiple subordinate clauses, parenthetical asides, embedded thoughts). AI sticks to the middle.
-
-### U-14. Formulaic Transition Repetition
-
-AI uses the same transitions repeatedly: "Additionally," "Furthermore," "Moreover," "However," "In addition." Real writing uses implicit transitions, questions, fragments, and sudden topic shifts.
-
-**Human alternatives to formulaic transitions:**
-- Implicit transition (no connector — let the idea sequence guide the reader)
-- Question as transition ("So what does that mean in practice?")
-- Fragment as transition ("Same problem. Different decade.")
-- Sudden topic shift that earns its context in the next sentence
-
-### U-15. Uniform Paragraph Structure
-
-AI writes paragraphs with the same arc: claim → evidence → implication. Every paragraph follows this pattern.
-
-Rule: Break the arc at least twice per piece. Start some paragraphs with detail or example. End some before completing the "so what." Vary paragraph length dramatically — one-sentence paragraphs followed by six-sentence ones.
-
 ---
 
-## English-Specific Patterns (EN-1 through EN-14)
+## Bahasa Indonesia: Structural Patterns to Avoid
 
-These patterns appear specifically in English-language AI output. They exploit the specific grammar, punctuation, and register conventions of English.
+AI-generated Indonesian has its own structural tells beyond the English patterns above. These patterns appear consistently across ChatGPT, Claude, Gemini, and other LLMs writing in Indonesian.
 
-### EN-1. "In Today's World" Openers
+### BI-1. The "Kesimpulan" Compulsory Ending
 
-AI opens with temporal framing that sets a broad context before saying anything concrete. This is the English-language equivalent of the universal "era of" opener.
-
-**AI pattern:**
-> In today's fast-paced world, technology plays an increasingly important role in our daily lives.
-> In an era of unprecedented change, businesses must adapt or risk becoming obsolete.
-> As we navigate the complexities of the modern workplace...
-
-**Human alternative:**
-> Last year, 87% of US startups folded within twelve months. That number hasn't moved since 2019.
-
-Rule: Start with a specific fact, a scene, or a claim. Never start with period-of-time framing.
-
-### EN-2. Semicolon Overuse in Non-Academic Writing
-
-AI deploys semicolons frequently for balanced compound sentences. Most contemporary human writers rarely use semicolons outside academic writing or formal legal documents.
+AI almost always ends Indonesian articles or essays with an explicit **"Kesimpulan"** (Conclusion) section. Human writers integrate their conclusion into the final paragraph or just stop.
 
 **AI pattern:**
-> The results were promising; however, further research is needed. The team worked diligently; they completed the project ahead of schedule.
+> ## Kesimpulan
+> Dengan demikian, dapat disimpulkan bahwa festival ini memiliki peran penting dalam melestarikan budaya lokal dan memperkuat kohesi sosial masyarakat.
 
 **Human alternative:**
-> The results looked good. But we need more data. The team finished early.
+> Festival itu masih jalan sampai sekarang. Itu yang penting.
 
-Rule: In non-academic prose, avoid semicolons. Use periods. Use commas. Use "and" or "but." Semicolons in casual writing are an AI tell.
+Rule: Never add a section titled "Kesimpulan." If the piece needs a conclusion, write it as prose that says something new.
 
-### EN-3. Perfect Punctuation Uniformity
+### BI-2. The "Di Era Modern Ini" Opening
 
-AI produces perfectly consistent punctuation throughout. Real humans have natural punctuation inconsistencies — occasional comma splices in casual prose, missing Oxford commas, varied punctuation ratios across paragraphs.
-
-**AI tells:**
-- Never produces comma splices (humans do them casually all the time)
-- Perfect Oxford comma consistency throughout
-- Uniform punctuation density across all paragraphs
-- No exclamation points or ellipses in informal writing
-- No punctuation "mistakes" that humans routinely make
-
-Rule: Allow natural punctuation variation. Use exclamation points sparingly but naturally. Use ellipses for trailing thoughts in informal writing. Don't sanitize every comma splice out of casual prose.
-
-### EN-4. Monolithic Register (No Code-Switching)
-
-AI produces what University of Western Australia researchers call "monolithic mainstream American English." It erases sociolinguistic variation — dialects, register shifts, generational language, professional jargon. The result reads like an average of all internet text rather than one specific person's voice.
+AI opens with temporal-framing sentences that set up a broad context before saying anything real.
 
 **AI pattern:**
-> The implementation of the new policy has yielded significant improvements in operational efficiency, though certain challenges remain to be addressed.
+> Di era modern ini, teknologi memainkan peran yang semakin krusial dalam kehidupan manusia.
+> Seiring perkembangan zaman, semakin banyak orang yang menyadari pentingnya...
+> Dalam konteks globalisasi yang terus berkembang...
 
 **Human alternative:**
-> The new policy actually works. Efficiency is up 23%. Still a mess in accounting, though — their system can't handle the new format.
+> Tahun lalu, 87% startup Indonesia tutup di tahun pertama.
 
-Rule: Shift registers within a document. Mix formal analysis with casual observation. Use informal language where it fits. Show that the writer has a specific background and perspective, not a generic one.
+Rule: Start with a specific fact, scene, or claim. Never with a time-period frame.
 
-### EN-5. Agentless Passive Construction Overuse
+### BI-3. "Tidak Hanya... Tetapi Juga" Parallelism
 
-AI overuses passive voice to achieve a perceived neutral tone, creating "agentless" prose that hides who did what. While passive voice has legitimate uses, AI defaults to it far more than human writers.
+The Indonesian equivalent of "Not only X, but also Y." AI loves this construction. It adds length without adding meaning.
 
 **AI pattern:**
-> The decision was made to restructure the department. It was determined that additional resources were needed. The project was completed ahead of schedule.
+> Pelatihan ini tidak hanya meningkatkan kompetensi peserta, tetapi juga memperkuat jaringan profesional mereka.
+> Festival ini tidak hanya menjadi hiburan, tetapi juga sarana pelestarian budaya.
 
 **Human alternative:**
-> Management restructured the department. They decided they needed more people. The team finished a week early.
+> Peserta dapat sertifikat. Mereka juga dapat akses ke grup alumni yang lumayan aktif.
 
-Rule: Prefer active voice with clear subjects. Use passive voice deliberately and sparingly — for emphasis or when the agent is genuinely unknown. If you find three passives in a row, rewrite at least two.
+Rule: State what something IS. Don't build fake rhetorical contrasts.
 
-### EN-6. Staccato Triplet Pattern
+### BI-4. "Merupakan Salah Satu" Importance Inflation
 
-A newer AI pattern: three punchy short sentences in a row, often starting with "No" or using parallel structure for fake emphasis. This has become a social media AI tell.
+AI uses "merupakan salah satu X yang paling Y" as a formula to assert importance without evidence.
 
 **AI pattern:**
-> No meetings. No bureaucracy. Just results.
-> No fluff. No filler. Just actionable insights.
-> Simple. Elegant. Powerful.
+> Jakarta merupakan salah satu kota dengan perkembangan ekonomi yang paling pesat di Asia Tenggara.
+> Teknologi ini merupakan salah satu inovasi terpenting yang pernah ada.
 
 **Human alternative:**
-> They cut the meetings. That was enough.
+> Jakarta tumbuh 5,2% tahun 2023, lebih cepat dari Bangkok dan Manila.
 
-Rule: Never write three punchy parallel sentences in a row. This is now a recognized AI pattern, especially on LinkedIn and social media.
+Rule: Quantify or compare specifically. "Salah satu yang terpenting" says nothing — show the evidence.
 
-### EN-7. Contraction Avoidance
+### BI-5. Missing Discourse Particles
 
-Contractions appear in about half of spoken English sentences. AI tools frequently avoid them or use them inconsistently, creating an unnaturally stiff register.
+Natural Indonesian — even in formal writing — uses discourse particles that signal a real human voice: **nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya**. AI almost never uses these.
 
 **AI pattern:**
-> It is important to understand that this is not a simple problem. We cannot ignore the implications. You should not underestimate the complexity involved.
+> Hal ini menunjukkan bahwa pentingnya memahami konteks sosial dalam pengambilan keputusan.
 
 **Human alternative:**
-> It's not simple. We can't ignore what it means. Don't underestimate how complicated this gets.
+> Nah, makanya keputusan itu nggak bisa diambil asal-asalan. Konteks sosialnya beda-beda, kan?
 
-Rule: Use contractions naturally in all but the most formal academic writing. "Don't," "can't," "it's," "won't," "we're," "they'll" — these signal human warmth. Stiffness reads as machine.
+Rule: When writing conversationally in Indonesian, use the particles appropriate to the register. Their total absence is an AI tell.
 
-### EN-8. No Genuine Questions
+### BI-6. The "Di Sisi Lain, Terdapat Tantangan" Formula
 
-AI writes almost exclusively in declarative sentences because its training objective is to answer, not to wonder. Human writing includes genuine questions that show a thinking mind.
-
-**AI writes:**
-> There are several factors to consider when evaluating this approach. The first factor is cost...
-
-**Human writes:**
-> But does it actually work? I looked at the numbers, and honestly, I'm not sure.
-
-Rule: Ask real questions. Not empty rhetorical questions immediately followed by their answers ("What makes this important? The answer is..."), but genuine questions that show you're thinking alongside the reader.
-
-### EN-9. No Sentence Fragments
-
-AI avoids grammatically incomplete sentences. Humans use fragments constantly for emphasis, rhythm, and voice.
-
-**Fragments humans use:**
-- Afterthoughts: "Which is saying something." "Not that it matters."
-- Emphasis: "Every. Single. Time."
-- Reaction: "Obviously." "Exactly." "Right."
-- Observation: "Big difference." "Same old story." "Not ideal."
-
-Rule: Use sentence fragments for emphasis and rhythm. A well-placed fragment ("Nope.") reads as more human than any perfectly constructed sentence.
-
-### EN-10. Modal Verb Hedging Clusters
-
-AI piles on hedging modals — "may," "might," "could," "would" — to avoid committing to claims. This creates text that says nothing definitive.
+AI's equivalent of the English "Despite its X, faces challenges" pattern. It follows every positive statement with a generic "challenges" pivot.
 
 **AI pattern:**
-> This approach may prove beneficial and could potentially help organizations that might be looking to improve their processes.
+> Di sisi lain, terdapat beberapa tantangan yang perlu diatasi, seperti keterbatasan sumber daya dan rendahnya kesadaran masyarakat. Namun, dengan upaya yang tepat, tantangan ini dapat diatasi.
 
 **Human alternative:**
-> This approach works. We tried it at two companies and saw 15% improvement in both.
+> Dananya cuma Rp 50 juta. Itu cukup untuk tiga bulan, bukan setahun seperti yang direncanakan.
 
-Rule: Commit to claims where evidence supports them. Use hedging language sparingly and only for genuine uncertainty, not as a default mode.
+Rule: If mentioning problems, name the specific ones with specific numbers. Never follow with vague optimism.
 
-### EN-11. Excessive Passive Hedging Constructions
+### BI-7. Nominalization Overload
 
-Beyond simple passive voice, AI uses specific passive hedging constructions that are rare in human writing.
-
-**AI constructions to avoid:**
-- "It should be noted that..." → Cut it. State the fact.
-- "It must be emphasized that..." → Cut it. Just emphasize.
-- "It has been observed that..." → Say who observed it.
-- "It can be argued that..." → Argue it, or don't.
-- "It is important to remember that..." → Cut it.
-- "There are several factors that..." → Name the factors.
-
-Rule: If a sentence starts with "It is/should/can/must be [past participle] that," rewrite it with a real subject.
-
-### EN-12. Title Case in Headings
-
-AI often uses Title Case For Every Heading (capitalizing every significant word). Most modern style guides and human writers use sentence case (only capitalize the first word).
-
-Rule: Use sentence case in headings unless the publication's style guide requires Title Case.
-
-### EN-13. Colon Overuse for Definitions
-
-AI uses colons formulaically to introduce definitions and explanations. Human writers use them more sparingly.
+AI prefers heavy noun phrases over simple verbs — a pattern from Indonesian academic bureaucratic writing that AI has over-learned.
 
 **AI pattern:**
-> AI detection: the process of identifying machine-generated text. Burstiness: the variation in sentence length and complexity. Perplexity: a measure of how predictable text is.
+> Pelaksanaan program pelatihan vokasional ini dilakukan dalam rangka peningkatan kompetensi tenaga kerja.
+> Pengembangan kapasitas sumber daya manusia merupakan prioritas utama.
 
 **Human alternative:**
-Write definitions into the flow of prose rather than using colon-separated definition lists.
+> Program ini melatih 200 orang per tahun. Tujuannya: cari kerja lebih cepat.
 
-### EN-14. No Emotional Texture
+Rule: Prefer verbs over noun derivations. "Melatih" not "pelaksanaan pelatihan." "Mengembangkan" not "pengembangan."
 
-AI maintains "professional distance from all subjects" (Jiang & Hyland 2025). It never gets angry, sarcastic, tender, or vulnerable. It treats quantum physics the same way it treats sandwich recipes.
+### BI-8. "Di Mana" as Relative Pronoun
+
+AI calques the English relative "where" directly into Indonesian as "di mana," creating unnatural constructions.
 
 **AI pattern:**
-> This situation presents certain challenges that warrant careful consideration.
+> Ini adalah sebuah program di mana peserta akan mendapatkan pelatihan intensif selama tiga bulan.
+> Kami memiliki sistem di mana setiap anggota dapat mengakses data secara real-time.
 
 **Human alternative:**
-> This is a mess. I've been staring at these numbers for three hours and they still don't make sense.
+> Program ini melatih peserta intensif selama tiga bulan.
+> Setiap anggota bisa akses data kapan saja.
 
-Rule: Show genuine emotion — excitement about what interests you, frustration with problems, humor where it fits, uncertainty where it's honest. AI's uniform emotional distance is one of its strongest tells.
+Rule: Rewrite "di mana" relative clauses as direct sentences.
 
----
+### BI-9. Always-Formal Pronoun Use
 
-## Stylometric Patterns That Detectors Measure
+AI defaults to "Anda" (formal) and avoids colloquial pronouns even in casual contexts. Real Indonesian shifts freely between Anda, kamu, lo/lu, gue/aku depending on register.
 
-Based on StyloAI (2024-2025), Northeastern University's 68-feature analysis, and Jiang & Hyland (2025).
+**AI pattern (in a casual article):**
+> Anda mungkin pernah mengalami hal serupa. Apakah Anda sudah mencoba solusi berikut ini?
 
-### Function Word Distribution
-AI uses a narrower set of function words (the, of, and, to, a, in, is, that, it, for). Detectors analyze the frequency distribution of these words. Varying your function word usage is a strong human signal.
+**Human alternative (same casual context):**
+> Pernah ngalamin hal yang sama? Coba deh tiga cara ini dulu.
 
-**How to increase function word diversity:**
-- Don't always use "and" — use "plus," "as well as," "along with," or just use a comma
-- Don't always use "but" — use "though," "still," "yet," "except," "only"
-- Vary prepositions: "for" → "toward," "in service of"; "about" → "on," "regarding," "concerning"
+Rule: Match pronoun register to the actual context. Casual Indonesian uses kamu/lo/lu. Formal uses Anda. AI's total lock on "Anda" is an immediate tell.
 
-### Type-Token Ratio (TTR)
-Measures lexical diversity = unique words / total words. AI text has lower TTR (more repetitive vocabulary). Human text has higher TTR.
+### BI-10. "Dapat Dilihat Bahwa" Padding
 
-**How to increase TTR:**
-- Use domain-specific terminology
-- Mix registers (formal + informal in the same piece)
-- Include specific proper nouns, place names, dates
-- Use figurative language that's specific rather than generic
-- Don't avoid repeating a word by cycling through synonyms — that's a different AI tell. Instead, use MORE unique words overall.
+AI fills space with passive epistemic constructions that add no information.
 
-### Hapax Legomena
-Words that appear only once in a text. Human writing contains far more hapax legomena than AI writing. This reflects "active lexical retrieval and metacognitive self-monitoring" (psycholinguistic research, 2025).
+**AI pattern:**
+> Dari data tersebut, dapat dilihat bahwa terdapat peningkatan yang signifikan.
+> Dapat dipahami bahwa fenomena ini merupakan cerminan dari kondisi sosial yang lebih luas.
+> Perlu dipahami bahwa konteks ini sangat penting bagi pemahaman kita.
 
-**How to increase hapax legomena:**
-- Include technical terms relevant to the topic
-- Use specific, precise descriptors rather than generic ones
-- Include one-off references, comparisons, or metaphors
-- Don't sanitize unusual word choices during editing
+**Human alternative:**
+> Angkanya naik 23% dari tahun lalu.
 
-### Syntactic Depth Variation
-Measures the complexity of sentence parse trees. Human writing shows greater variation — some very simple sentences, some deeply nested. AI keeps to consistent medium complexity.
-
-**Target:** Mix sentences with 0 subordinate clauses (simple) with sentences containing 3-4 levels of subordination (complex). The variation itself is the signal.
+Rule: State the finding. Delete "dapat dilihat bahwa," "dapat dipahami bahwa," "perlu dipahami bahwa."
 
 ---
 
 ## Detection Metrics (Why This Matters)
 
-AI detectors measure three primary things:
+AI detectors measure two primary things:
 
-1. **Perplexity** — how predictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity (unexpected metaphors, unusual phrasing, creative choices). Median AI perplexity: 21.2. Median human perplexity: 35.9.
+1. **Perplexity** — how predictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity (unexpected metaphors, unusual phrasing, creative choices).
 
-2. **Burstiness** — variation in sentence length and structure. AI has low burstiness (sentences cluster around 15-25 words with consistent structure). Human text has high burstiness (3-word sentences mixed with 35-word sentences). This is the single metric that most reliably separates human from AI text. Introducing burstiness through varied sentence lengths reduced detection rates by up to 40% in studies.
-
-3. **Stylometry** — statistical fingerprint of writing. Turnitin (2025-2026) analyzes paragraph rhythm, function word distribution, lexical diversity (TTR), hapax legomena, and syntactic depth. Uniformity in any of these metrics is an AI signal.
+2. **Burstiness** — variation in sentence length and structure. AI has low burstiness (sentences cluster around 10-20 words with consistent structure). Human text has high burstiness (3-word sentences mixed with 30-word sentences).
 
 Every structural rule above increases perplexity and burstiness — making text statistically indistinguishable from human writing.
 
-### Detection Rates by Model (2025-2026 Data)
-- **GPT-5:** 98-100% raw detection, 20-63% after human editing
-- **Gemini 2.5:** 98-100% raw, 20-63% after editing
-- **Claude 4/4.5:** 53-60% raw detection (significantly lower after editing)
-- **With anti-slop rules applied:** Text approaches human baseline on perplexity and burstiness
+## 16. The Four-Part Sentence DNA (2026)
 
-### Detection Tool Accuracy (2026 Benchmarks)
-| Detector | Accuracy | False Positive Rate |
-|---|---|---|
-| Originality.ai | 96% | 2% |
-| Turnitin | 94% | 3.8% |
-| Copyleaks | 94% | ~3% |
-| GPTZero | 90-99% (varies) | 1% |
-| Free tools | 68-78% | 10-50% |
+Corpus research across Claude, GPT-5, and Gemini found 82% of AI-generated text follows one argument cadence regardless of topic: Opening (context/claim) → Expansion (detail) → Contrast (complication) → Resolution (conclude/transition). Detectable in 3-4 sentences. Prompt instructions reduce vocabulary tells but cannot remove this cadence.
 
-Note: Manual identification by trained humans outperforms all automated detectors. Expert annotators fail to predict the correct label on only 1 out of 300 articles (Wikipedia AI Cleanup finding).
+**Rule:** Break the arc at least twice per piece. Open on the complication. Expand without contrasting. End sections on unresolved tension or an abrupt fact. Put conclusions first.
+
+## 17. Cadence Uniformity (the #1 tell of 2026)
+
+Sentences landing at 18-24 words, one after another. This survives every cosmetic rewrite and is what burstiness metrics measure.
+
+**30-second tests:**
+- First word of each sentence in a paragraph: if >50% start with "The/This/It/In" → LLM-assisted
+- 3+ consecutive sentences in the 17-23 word band → same conclusion
+
+**Rule:** Vary lengths irregularly AND vary sentence openers.
+
+## 18. The Bimodal Seesaw (Claude 4.5+ era)
+
+Newer models fake burstiness by mechanically alternating punchy fragments with very long sentences. Corpus data: AI coefficient of variation 137% vs human 70%; AI has 39.9% short sentences vs human 23.9%. Humans cluster around medium length (50% of human sentences are 11-25 words).
+
+**Rule:** Don't seesaw. Most sentences medium, with occasional genuine swings.
+
+## 19. Paragraph Over-Fragmentation (newer models)
+
+Older models wrote uniform 3-4 sentence paragraphs. Newer models fragment into many 1-2 sentence paragraphs plus bullet lists (AI: ~18 paragraphs and ~9.5 list items per document; humans: far fewer, longer paragraphs, near-zero bullets in prose).
+
+**Rule:** Combine related ideas. Let paragraphs run to 7-8 sentences when the argument needs it. Convert bullets to prose.
+
+## 20. The Symmetric Two-Clause Hook (GPT-5.x social pattern)
+
+**AI pattern:**
+> Most people think X. The reality is Y.
+> Forget X. Focus on Y.
+> It is not about X. It is about Y.
+
+Fine once. A fingerprint when it opens most pieces or appears three times in one post.
+
+**Rule:** Open with a specific fact, scene, number, or name instead.
+
+## 21. The Sanitized Texture (GPT-5 self-correction era)
+
+GPT-5+ runs an internal cleanup pass that scrubs obvious AI-isms, leaving prose that feels "cleaned": no awkward transitions, no odd word choices, no rough edges anywhere. Perfect smoothness is itself the residue.
+
+**Rule:** Keep one or two genuinely rough moments per piece: an abrupt topic shift that earns context later, a slightly odd but committed metaphor, a self-correction mid-paragraph.

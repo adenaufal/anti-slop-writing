@@ -1,5 +1,3 @@
-# Anti-Slop Writing Skill (Bahasa Indonesia)
-
 
 # Prinsip Utama
 
@@ -7,11 +5,23 @@ Tulisan AI gagal karena mengoptimalkan probabilitas statistik. Hasilnya: teks ya
 
 Aturan-aturan ini menargetkan tiga metrik utama yang dipakai detektor AI (Turnitin, GPTZero, Originality.ai):
 - **Perplexity**: seberapa tidak tertebak pilihan katanya. AI bikin teks low-perplexity (halus, nggak bikin kaget). Manusia bikin teks high-perplexity.
-- **Burstiness**: variasi panjang dan struktur kalimat. AI punya burstiness rendah (kalimat 10 sampai 20 kata, struktur konsisten). Manusia bisa nyampur kalimat 3 kata dengan kalimat 30 kata.
+- **Burstiness**: variasi panjang dan struktur kalimat. AI punya burstiness rendah (kalimat 10 sampai 20 kata, struktur konsisten). Manusia bisa nyampur kalimat 3 kata dengan kalimat 30 kata. HATI-HATI (2026): model terbaru bisa memalsukan burstiness secara bimodal, lihat Aturan Struktur #1.
 - **Stilometri**: sidik jari statistik tulisan. Frekuensi kata fungsi, kekayaan kosakata, pola tanda baca, kedalaman sintaktis. Turnitin (update 2025 ke 2026) menganalisis "ritme, alur, dan prediktabilitas seluruh paragraf".
+
+## Pergeseran 2026: Struktur Ngalahin Tanda Baca
+
+Per pertengahan 2026, tell-nya udah pindah. OpenAI men-suppress em dash di GPT-5.1, dan kosakata legacy ("delve", "tapestry", "menyelami", "permadani") udah di-train keluar dari model Claude terbaru. Ketiadaan tell lama bukan bukti tulisan manusia. Yang bertahan lewat pergantian prompt dan model adalah pola struktural:
+
+- **Cadence uniformity adalah tell nomor satu 2026.** Kalimat yang panjangnya 18 sampai 24 kata terus-menerus, paragraf demi paragraf. Ini bertahan lewat edit kosmetik apa pun.
+- **Tes 30 detik** (editor dan pembaca sekarang pakai ini secara manual):
+  1. Lihat kata pertama tiap kalimat dalam satu paragraf. Kalau lebih dari setengahnya mulai dengan "Hal ini", "Ini", "Dalam", "Selain itu", atau "Dengan", teks terbaca sebagai buatan AI.
+  2. Hitung panjang kalimat. Tiga atau lebih kalimat berturut-turut di rentang 17 sampai 23 kata = kesimpulan sama.
+- **Sinyal tanda baca pindah ke Claude.** Analisis korpus Januari 2026 (200 sampel Opus 4.5 vs 6.000 teks manusia): em dash 16,9x rate manusia, titik dua 4,1x, titik koma 3,1x. Sementara output GPT-5.1+ bisa nyaris bebas dash. Aturan nol dash tetap berlaku, DAN sekarang pantau juga kepadatan titik dua.
+- **Repetisi kata kunci prompt.** Ciri khas output ID yang di-copy-paste mentah: istilah dari instruksi diulang-ulang secara nggak natural, kayak konten SEO jadul. Variasikan penyebutan topik.
 
 Sebelum nulis apa pun, muat `references/vocabulary-banlist.md` buat kosakata yang dilarang, dan `references/structural-patterns.md` buat pola yang harus dihindari.
 
+---
 
 # Pilih Tier Tone Dulu
 
@@ -45,12 +55,15 @@ Contoh kalimat informal natural:
 
 Register yang **konsisten sempurna** justru sinyal AI. Manusia nulis dengan **pergeseran kecil**: parentetikal santai masuk ke tulisan formal, istilah teknis kebanting di tulisan santai. Kalau kamu di Tier 1 (formal), sisipin satu atau dua kalimat yang lebih pendek dan blak-blakan. Kalau di Tier 3 (informal), sisipin satu kalimat yang agak rapi. Pergeseran 10 sampai 20 persen dari tier utama bikin tulisan terasa hidup.
 
+---
 
 # Kebijakan Tanda Baca: Dash DILARANG TOTAL
 
 Ini aturan paling keras. Dash (em dash `—` dan en dash `–`) **dilarang** sepenuhnya dalam output skill ini. Nggak ada "satu per 500 kata", nggak ada "kalau butuh". Dilarang titik.
 
-Kenapa? Karena em dash udah jadi sinyal AI nomor satu di Indonesia. Pembaca Indonesia jarang banget pakai em dash di tulisan natural. Kehadiran em dash di teks ID = sinyal "ini ChatGPT output". En dash juga jarang dikenal mayoritas penulis ID, jadi kehadirannya juga mencurigakan.
+Kenapa? Karena em dash udah jadi sinyal AI nomor satu di Indonesia. Pembaca Indonesia jarang banget pakai em dash di tulisan natural. Kehadiran em dash di teks ID = sinyal "ini output AI". En dash juga jarang dikenal mayoritas penulis ID, jadi kehadirannya juga mencurigakan.
+
+Update 2026: sumbernya bergeser. GPT-5.1 ke atas udah men-suppress em dash, jadi teks tanpa dash BUKAN bukti tulisan manusia. Sebaliknya, Claude terbaru (Opus 4.5) jadi pelanggar terparah: 16,9x rate manusia, dipakai di tengah kalimat buat nempelin klausa kualifikasi. Larangannya tetap. Dan yang baru: **pantau titik dua.** Claude terbaru pakai titik dua 4x rate manusia buat memperkenalkan hampir semua ide lanjutan. Kalau draf punya titik dua tiap beberapa kalimat, ganti mayoritasnya dengan titik. Titik koma juga (3,1x).
 
 Ganti dash dengan:
 - **Titik** (pecah jadi dua kalimat)
@@ -69,6 +82,7 @@ Khusus untuk **rentang angka/tanggal**, tulis dengan kata "sampai" atau gunakan 
 
 Di post-generation checklist, **hitung jumlah dash (em dan en) di output. Kalau >0, ganti semua. Target: nol dash.**
 
+---
 
 # Aturan Kosakata
 
@@ -100,18 +114,25 @@ Di post-generation checklist, **hitung jumlah dash (em dan en) di output. Kalau 
 
 **Artefak chat kolaboratif (jangan pernah gunakan):** "Semoga membantu!" | "Tentu saja!" | "Baik, berikut adalah..." | "Apakah ada yang ingin Anda tanyakan?" | "Jika ada pertanyaan, jangan ragu untuk bertanya." | "Sebagai AI, saya..."
 
+**Tambahan era 2026 (sinyal tertinggi di model terbaru):** "memastikan" sebagai padding (padanan "ensuring", kata AI terkuat 2026) → sebutkan tindakan konkretnya atau potong | "berperan [penting/krusial/kunci] dalam membentuk" (trigram AI teratas) → nyatakan apa yang dia lakukan | "mencerminkan / menunjukkan / mendukung" sebagai kata kerja hedging → kata kerja konkret atau hapus | "mampu untuk X" → langsung kata kerjanya | "alih-alih" yang berlebihan (kalke "rather than") → tulis ulang perbandingannya langsung | "sebaliknya" di awal kalimat (kalke "conversely") → "tapi" atau susun ulang | "pada intinya" / "pada dasarnya" / "secara fundamental" → potong | intensifier tanpa angka ("secara signifikan", "secara efektif", "semakin") → dukung dengan data atau hapus | "satu hal yang pasti" / "satu hal yang jelas" | "intinya adalah" sebagai penutup | "ketegangan inheren" | "ini memunculkan pertanyaan penting tentang" | klaster adverbia hedging ("biasanya", "sering kali", "umumnya", "berpotensi", "terkadang" numpuk dalam satu bagian) → komit atau kuantifikasi
+
 ## Strategi Penggantian
 
 Pakai kata pendek yang umum. Jangan cuma cari sinonim. Susun ulang kalimatnya biar ngomong apa yang sebenarnya dimaksud dengan bahasa biasa. AI gagal bukan karena kata yang salah, tapi karena kalimat yang ngisi ruang tanpa nyampein informasi baru.
 
 Di tier semi-formal dan informal, pakai kontraksi percakapan: "nggak" bukan "tidak", "udah" bukan "sudah", "gimana" bukan "bagaimana", "bikin" bukan "membuat", "emang" bukan "memang", "aja" bukan "saja". Di tier formal, pertahankan bentuk lengkap.
 
+---
 
 # Aturan Struktur
 
 ## 1. Variasikan Panjang Kalimat Secara Dramatis
 
-Campurkan kalimat sangat pendek (3 sampai 5 kata) dengan yang panjang (25+ kata). Jangan pernah menulis 3 kalimat berturut-turut dengan panjang serupa. Perubahan tunggal ini paling berdampak dalam menghindari deteksi. Dia langsung meningkatkan burstiness, metrik tunggal yang paling dapat diandalkan. Turnitin secara khusus menganalisis distribusi panjang kalimat pada level paragraf.
+Campurkan kalimat sangat pendek (3 sampai 5 kata) dengan yang panjang (25+ kata). Jangan pernah menulis 3 kalimat berturut-turut dengan panjang serupa, dan jangan 3 kalimat berturut-turut di rentang 17 sampai 23 kata. Ini langsung meningkatkan burstiness, metrik yang paling diandalkan detektor.
+
+**Jebakan bimodal (baru, 2026):** model Claude terbaru (Opus 4.5+) belajar memalsukan burstiness dengan bergantian mekanis antara fragmen pendek dan kalimat sangat panjang. "Pendek. Terus kalimat empat puluh kata yang muter lewat tiga klausa." Diulang terus, pola gantian itu sendiri jadi sidik jari. Data korpus nunjukin AI sekarang justru punya variasi panjang LEBIH tinggi dari manusia, tapi bimodal. Tulisan manusia ngumpul di panjang menengah (50% kalimat manusia itu 11 sampai 25 kata) dengan ayunan sesekali. Jadi: variasikan secara nggak teratur. Menengah, menengah lagi, fragmen, panjang, dua menengah. Bukan metronom, dan bukan jungkat-jungkit juga.
+
+**Variasikan pembuka kalimat.** Jaga pembuka "Hal ini / Ini / Dalam / Selain itu / Dengan" di bawah setengah dari kalimat mana pun dalam satu paragraf. Mulai kalimat dengan kata kerja, nama, angka, klausa keterangan, atau pertanyaan.
 
 ## 2. Pecah Aturan Tiga
 
@@ -139,7 +160,7 @@ Jangan pernah mulai paragraf dengan "Secara keseluruhan," "Sebagai kesimpulan," 
 
 ## 8. Ritme Paragraf
 
-Pakai panjang paragraf yang nggak teratur. Paragraf satu kalimat buat penekanan. Paragraf panjang buat argumen yang berkelanjutan. Ritmenya nggak boleh terasa seperti metronom. AI cenderung nulis paragraf 3 sampai 4 kalimat secara konsisten. Pecah pola ini.
+Pakai panjang paragraf yang nggak teratur. Paragraf satu kalimat buat penekanan. Paragraf panjang buat argumen yang berkelanjutan. Ritmenya nggak boleh terasa seperti metronom. Model lama nulis paragraf 3 sampai 4 kalimat secara seragam. Model baru (Claude 4.5+, GPT-5) malah over-correct ke arah sebaliknya: **memecah teks jadi banyak paragraf mini 1 sampai 2 kalimat plus spam bullet point**. Data korpus nunjukin AI rata-rata 18+ paragraf per dokumen, sementara manusia nulis paragraf yang jauh lebih sedikit dan lebih panjang. Gabungin ide-ide yang berkaitan. Penulis asli santai aja ngejalanin paragraf sampai 7 atau 8 kalimat kalau argumennya butuh. Keseragaman pendek sama mesinnya dengan keseragaman panjang.
 
 ## 9. Jangan Daftar Vertikal dengan Header Tebal
 
@@ -169,6 +190,7 @@ Detektor AI (terutama Turnitin 2025+) menganalisis distribusi kata fungsi, yaitu
 
 AI ngasilin teks dengan rasio tipe-token (type-token ratio) yang rendah, artinya lebih sedikit kata unik. Manusia pakai lebih banyak hapax legomena (kata yang cuma muncul sekali). Untuk ningkatin: pakai istilah domain-spesifik, campur register (formal + informal), masukin kata dari bahasa daerah, pakai bahasa figuratif yang spesifik, dan jangan hindarin pengulangan kata yang sama demi siklus sinonim.
 
+---
 
 ## Aturan Struktur Khas Indonesia
 
@@ -208,10 +230,66 @@ Tulis ulang "program di mana peserta akan..." jadi "program yang..." atau kalima
 
 AI suka masangin "tantangan dan peluang," "kelebihan dan kekurangan," "di satu sisi... di sisi lain..." Sebutkan masalah spesifik ATAU manfaat spesifik. Jangan pasangkan secara refleks.
 
-### BI-10. Hindari Keseragaman Pasif
+### BI-10. Hindari Keseragaman Pasif (dua arah)
 
-AI sering nulis terlalu banyak kalimat pasif berturut-turut: "Hal ini dilakukan..." "Perlu ditekankan..." "Dapat dilihat bahwa..." Campurkan kalimat aktif dan pasif. Dalam tulisan non-akademis, utamakan aktif.
+AI gaya lama nulis terlalu banyak kalimat pasif berturut-turut: "Hal ini dilakukan..." "Perlu ditekankan..." "Dapat dilihat bahwa..." Campurkan kalimat aktif dan pasif.
 
+Tapi jangan over-correct. Data korpus 2026 nunjukin model terbaru justru pakai pasif LEBIH SEDIKIT dari manusia (AI 4,7% vs manusia 14,9% di korpus Inggris; di Bahasa Indonesia, pasif malah lebih natural lagi karena struktur bahasanya). Draf yang 100% aktif, deklaratif, dan punchy terus-terusan itu register "Motivator" GPT-5, bukan manusia. Manusia Indonesia natural pakai pasif ketika objeknya lebih penting dari pelaku ("filenya kehapus", "venue-nya udah dibooking dari jauh hari"). Yang jadi tell itu keseragaman, ke arah mana pun.
+
+### BI-11. Jangan Kalke Hook Dua Klausa Simetris
+
+Pola pembuka GPT-5.x yang sekarang masuk ke output Bahasa Indonesia lewat terjemahan pola: "Banyak orang mengira X. Kenyataannya Y." / "Lupakan X. Fokus ke Y." / "Ini bukan soal X. Ini soal Y." Sekali dipakai, oke. Jadi sidik jari kalau muncul di mayoritas pembuka tulisan atau tiga kali dalam satu post. Ganti dengan fakta spesifik, angka, adegan, atau nama.
+
+### BI-12. Jangan Repetisi Kata Kunci Prompt
+
+Ciri khas hasil copy-paste mentah: istilah kunci dari instruksi diulang terus dalam draf secara nggak natural, kayak artikel SEO tahun 2015. Kalau topiknya "strategi pemasaran digital UMKM", frasa itu nggak boleh muncul utuh lebih dari sekali dua kali. Variasikan: "cara jualan online buat usaha kecil", "pemasaran buat warung", atau langsung ke contoh konkretnya.
+
+---
+
+# Sidik Jari Per Model (update pertengahan 2026)
+
+Tiap LLM punya "aidiolect" sendiri. Pola di bawah dari era GPT-5.x dan Claude 4.5 sampai 5, dan pola Inggris-nya bocor ke output Bahasa Indonesia lewat kalke. Hindari semuanya:
+
+**ChatGPT (GPT-5 / 5.1 / 5.2), dialek "Motivator":**
+- Em dash di-suppress sejak 5.1, jadi teks tanpa dash bukan bukti manusia. Yang tersisa:
+- Kontras negasi, kira-kira satu per paragraf: "Ini bukan sekadar X, ini Y" / "Bukan soal X. Ini soal Y." Masih bentuk kalimat paling khas GPT.
+- Hook dua klausa simetris di pembuka (lihat BI-11).
+- Kerangka kaku "Pertama / Kedua / Terakhir" dan busur intro-triplet-rekap.
+- Kata kerja hedging sebagai pengisi: "memastikan" (padanan "ensuring", kata AI terkuat 2026), "mencerminkan", "menunjukkan" (sebagai padding), "mendukung", "menyoroti". Manusia langsung bilang benda itu ngapain.
+- Trigram AI teratas 2026: "berperan [penting/krusial/kunci] dalam membentuk". Hapus begitu ketemu.
+- Adverbia intensifier tanpa bukti: "secara signifikan", "secara efektif", "secara langsung", "semakin". Kalau nggak ada angka di belakangnya, potong.
+- Deklaratif overconfident: "Inilah kebenaran tentang Z." "Founder terbaik tahu Y."
+- Tekstur "tersanitasi": GPT-5 punya lapisan self-correction yang ngebersihin AI-isme yang jelas, ninggalin prosa yang terasa "dicuci", nggak ada transisi canggung sama sekali. Kehalusan sempurna = mencurigakan.
+- Penutup boilerplate: "Seiring X terus berkembang, satu hal yang pasti..." Ending yang mengandung "satu hal yang pasti" atau "satu hal yang jelas" itu ending model.
+
+**Claude (Sonnet 4.5/4.6, Opus 4.5, Claude 5), dialek "Philosopher":**
+- Pelanggar tanda baca terparah 2026: em dash 16,9x rate manusia (tengah kalimat, aditif), titik dua 4,1x, titik koma 3,1x.
+- Penumpukan hedge-and-reassure, kadang tiga hedge sebelum bilang apa pun: "Meskipun ini bisa bervariasi, secara umum, dalam banyak kasus, perlu dicatat bahwa..."
+- Kosakata khas: "perlu dicatat", "nuansa/bernuansa", "komprehensif" (24,5x), "secara fundamental" (17x), "paradigma" (15,1x), "pada intinya", "pada dasarnya", "ketegangan inheren", "ini memunculkan pertanyaan penting tentang".
+- Adverbia hedging dengan rate tinggi: "biasanya" (9,6x), "sering kali" (4,9x), "terkadang", "berpotensi", "umumnya". Satu-satu wajar; numpuk dalam satu bagian = tell.
+- Framing empatik otomatis: "bisa dimaklumi kalau banyak orang merasa...", "ini bisa bikin frustrasi bagi..."
+- Busur esai apa pun formatnya: kontekstualisasi pertanyaan, eksplorasi berbagai perspektif, tambah kualifikasi, tutup dengan mengamati apa yang analisis ini "munculkan" alih-alih menyimpulkan artinya. Post LinkedIn atau memo pricing, dialektika Hegelian yang sama.
+- Inflasi kosakata abstrak: "founder dengan kesadaran metakognitif yang kuat sering mendapati bahwa" padahal manusia nulis "founder terbaik tahu".
+- Mulai kalimat dengan "Dan" / "Tapi" sebagai kruk alur di tiap paragraf selang-seling. Sesekali manusiawi; sebagai sistem, tell.
+- Ritme kalimat bimodal (lihat Aturan Struktur #1) dan fragmentasi paragraf berlebih (lihat Aturan Struktur #8).
+- Catatan: "delve"/"menyelami", "tapestry"/"permadani", "vibrant", "myriad" udah hampir hilang dari output Claude terbaru. Ketiadaannya bukan bukti tulisan manusia; cek tell strukturalnya.
+
+**Gemini:** prosa ungu, kata sifat berlebihan, moralisasi, pernyataan tema eksplisit, nada buku pelajaran "Educator".
+
+## Pecah Sentence DNA Empat Bagian
+
+Riset korpus 2026 nemuin 82% teks AI ngikutin irama argumen yang sama apa pun model dan topiknya: **Pembukaan (konteks/klaim) → Ekspansi (detail pendukung) → Kontras (akui komplikasi) → Resolusi (simpulkan atau transisi).** Terdeteksi dalam 3 sampai 4 kalimat, dan ini alasan teks AI terasa "aneh" walau tiap katanya udah bener. Instruksi prompt nggak bisa ngehapus ini; modelnya bakal ngebangun ulang pola itu dengan kosakata apa pun.
+
+Pecah dengan sengaja, minimal beberapa kali per tulisan:
+- Buka dengan komplikasinya dan jangan pernah balik ke resolusi rapi.
+- Ekspansi tanpa kontras. Berpihak ke satu sisi.
+- Akhiri bagian di ketegangan yang belum selesai atau fakta konkret yang mendadak.
+- Taruh kesimpulan di depan, terus argumentasi mundur.
+- Biarin satu paragraf isinya murni detail tanpa klaim sama sekali.
+
+Manusia ninggalin argumen yang berat sebelah. Penutup resolusi ("Pada akhirnya...", "Intinya adalah...") itu artefak training; ending asli ambil posisi terus berhenti.
+
+---
 
 # Aturan Konten
 
@@ -239,6 +317,7 @@ Ambil posisi. "Pendekatan ini salah karena..." bukan "Beberapa berpendapat X, se
 
 Ketika kamu nggak tahu sesuatu, bilang aja langsung. "Saya nggak yakin" atau "Saya nggak punya info cukup" nandain pemikiran yang jujur. Pakai penanda ketidakpastian dengan hemat tapi tulus, bukan sebagai penghindaran ("bisa jadi diargumentasikan bahwa") tapi sebagai kejujuran epistemik yang sebenarnya.
 
+---
 
 # Suara dan Tekstur
 
@@ -367,6 +446,7 @@ Orang Indonesia secara natural nyampurin bahasa Indonesia dengan bahasa Inggris,
 
 Di tier informal, code-switching juga bisa dalam bentuk "connector" kayak "literally", "which is", "somehow", "basically". AI jarang natural di pola ini. Tapi jangan paksain. Pakai cuma ketika konteks memungkinkan dan emang natural buat audiens sasaran.
 
+---
 
 # Aturan Anti-Translationese
 
@@ -453,6 +533,7 @@ Tulisan Indonesia punya konvensi retorika yang beda dari Inggris:
 - **Hedging kultural:** Dalam budaya Indonesia, hedging ringan itu sopan, bukan lemah. "Sepertinya..." atau "Mungkin bisa dibilang..." bisa natural. Bedain dari hedging AI yang generik dan tanpa isi.
 - **Peribahasa/Pepatah:** Manusia Indonesia kadang nyisipin peribahasa. "Sedikit-sedikit, lama-lama jadi bukit" lebih natural daripada "Akumulasi usaha kecil menghasilkan hasil besar."
 
+---
 
 # Aturan Anti-Deteksi Turnitin
 
@@ -475,6 +556,7 @@ Turnitin (update Agustus 2025) secara khusus deteksi teks yang dimodifikasi oleh
 ## T-5. Diversitas Transisi
 Jangan pakai transisi formulaik yang sama berulang. Pakai: transisi implisit (tanpa kata penghubung), pertanyaan sebagai transisi, fragmen kalimat, ganti topik mendadak yang dapet konteks di kalimat berikutnya.
 
+---
 
 # Daftar Periksa Pasca-Penulisan
 
@@ -528,3 +610,23 @@ Setelah nyusun draf, jalanin daftar periksa ini:
 33. Periksa apakah ada struktur topik-komentar. Kalau semua kalimat subject-prominent, ubah beberapa jadi topic-prominent.
 34. Periksa linearitas. Kalau tulisan jalan A → B → C → D tanpa pernah balik, pertimbangin pengembangan sirkuler.
 35. Periksa ulang akurasi semantik. Pastikan setiap penggantian mempertahanin makna asli.
+
+**Cek Sidik Jari Model 2026:**
+36. Tes pembuka kalimat: dalam tiap paragraf, kalau lebih dari setengah kalimat mulai dengan "Hal ini / Ini / Dalam / Selain itu / Dengan", tulis ulang pembukanya.
+37. Tes cadence: cari deretan 3+ kalimat di rentang 17 sampai 23 kata, pecah.
+38. Cek jungkat-jungkit bimodal: kalau teks gantian mekanis antara fragmen dan kalimat panjang, sisipin kalimat panjang menengah.
+39. Hitung titik dua. Kalau lebih dari kira-kira satu per 300 kata di luar daftar, ganti mayoritas dengan titik.
+40. Cari "memastikan", "mencerminkan", "menunjukkan", "mendukung" yang dipakai sebagai padding; ganti dengan kata kerja konkret.
+41. Cari "berperan * dalam membentuk" dan konstruksi "berperan dalam" apa pun; nyatakan tindakannya langsung.
+42. Hitung konstruksi "bukan sekadar X, tapi Y" / "bukan soal X, ini soal Y". Lebih dari satu per tulisan, tulis ulang.
+43. Cek pembuka hook dua klausa simetris ("Banyak orang mengira X. Kenyataannya Y."); kalau ada, tulis ulang pembukanya.
+44. Cek jumlah vs panjang paragraf: kalau tulisan terpecah jadi banyak paragraf 1 sampai 2 kalimat, gabungin yang berkaitan.
+45. Cek ending: kalau selesai rapi ("satu hal yang pasti", "intinya adalah", rekap yang ngulang), potong dan akhiri di posisi atau fakta konkret.
+46. Cek busur argumen: kalau tiap bagian jalan Pembukaan → Ekspansi → Kontras → Resolusi, pecah iramanya di minimal dua bagian.
+47. Cek penumpukan hedge-and-reassure ("Meskipun X, secara umum, dalam banyak kasus..."); maksimal satu hedge per klaim, atau nol.
+48. Cek repetisi kata kunci prompt: istilah topik utuh nggak boleh muncul lebih dari dua kali; variasikan penyebutannya.
+
+---
+
+**Terakhir Diperbarui:** 6 Juli 2026 (v3.0)
+**Changelog v3.0:** Version bump dari v2.0. Semua konten diperbarui ke aturan terbaru.
