@@ -1,28 +1,24 @@
 ---
 name: anti-slop-writing
-description: Write text that avoids all known AI writing patterns and passes human detection. Use when writing articles, essays, blog posts, social media copy, or any content that must read as authentically human. Triggers on requests to write naturally, avoid AI slop, avoid AI detection, humanize writing, write like a human, or make text sound authentic.
+description: Edit English prose for clarity, specificity, natural flow, and fit to the requested voice. Use for writing or revising articles, essays, posts, and other text that feels generic or padded.
 ---
 
 # Core Principle
 
-AI writing fails because it optimizes for statistical probability, producing the most expected, safe, broadly palatable text. Human writing comes from a single mind with history, opinions, specific context, and goals. Every instruction below exists to break the probability optimization and inject the specificity, imperfection, and personality that marks real human writing.
+Good writing serves the reader and the writer's purpose. Generic phrasing, padding, and formulaic structure can make a draft feel automated, but no single word or pattern proves who wrote it. Treat the rules below as editorial prompts: use them when they improve clarity, accuracy, or voice, and ignore them when they would distort the requested format or register.
 
-These rules target the three metrics AI detectors use most:
-- **Perplexity**: how unpredictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity. Median AI: 21.2. Median human: 35.9.
-- **Burstiness**: variation in sentence length and structure. AI has low burstiness (sentences cluster around 15-25 words). Human text mixes 3-word sentences with 35-word sentences. This single metric most reliably separates human from AI text. Introducing burstiness reduced detection rates by up to 40% in studies. CAUTION (2026): newer models fake burstiness bimodally, see Rule 1.
-- **Stylometry**: statistical fingerprint of writing, function word frequency, lexical diversity, punctuation patterns, syntactic depth. Turnitin (2025-2026) analyzes "rhythm, flow, and predictability across entire paragraphs" using 31 linguistic features.
+## Model coverage (reviewed September 27, 2026)
 
-## The 2026 Shift: Structure Beats Punctuation
+The model names below identify recent versions, not reliable writing fingerprints. Providers update products and route requests across models; an API model ID may not match the model selected in a consumer product. Check the optional [model coverage reference](references/model-coverage.md) for dated release notes and product/API distinctions when a version-specific request requires them.
 
-As of mid-2026, the tells have moved. OpenAI suppressed em dashes in GPT-5.1, and vocabulary tells ("delve," "tapestry," "vibrant," "myriad") have been trained out of the newest Claude models. Absence of these legacy tells proves nothing. What survives prompt rewrites and model updates is structural:
+- **ChatGPT / OpenAI:** Recent coverage includes GPT-5.6 Sol/Terra/Luna and GPT-6 Astra. GPT-6 Pro is an Astra-powered ChatGPT offering; GPT-6 Sol and Luna are documented separately for API, ChatGPT Work, and Codex. Availability depends on product and plan.
+- **Claude / Anthropic:** Recent releases include Opus 5, Fable and restricted Mythos 5.1, then Opus 5.5. Sonnet and Haiku 5.5 were announced as upcoming, not released as of this update.
+- **Gemini / Google:** Recent releases include Gemini 3.6 Flash and 3.5 Flash-Lite, Gemini 3.7 Flash, and Gemini 3.8 Flash stable.
+- **Grok / xAI:** Recent releases include Grok 4.5, 4.6, and 4.7. Product rollout and availability can differ by surface.
 
-- **Cadence uniformity is the #1 tell of 2026.** Sentences that land at 18-24 words, one after another, paragraph after paragraph. It survives every cosmetic edit.
-- **The 30-second tests** (readers and editors now apply these by eye):
-  1. Look at the first word of each sentence in a paragraph. If more than half start with "The," "This," "It," or "In," the text reads as LLM-assisted.
-  2. Count sentence lengths. Three or more consecutive sentences in the 17-23 word band = same conclusion.
-- **Punctuation signals migrated to Claude.** Per a Jan 2026 corpus analysis (200 Opus 4.5 samples vs 6,000 human texts): em dash 16.9x human rate, colon 4.1x, semicolon 3.1x. Meanwhile GPT-5.1+ output can be nearly dash-free. Keep the zero-dash rule AND watch colon density.
+These facts describe release coverage. They do not establish distinctive prose habits for any model. Use the checks in EN-11 to edit what is actually present in a draft.
 
-Before writing anything, load `references/vocabulary-banlist.md` for the complete banned vocabulary and `references/structural-patterns.md` for patterns to avoid.
+Before writing, consult `references/vocabulary-banlist.md` for the optional vocabulary preferences and `references/structural-patterns.md` for editorial examples. Apply both in context rather than as a detector test.
 
 ---
 
@@ -54,7 +50,7 @@ Before writing anything, load `references/vocabulary-banlist.md` for the complet
 
 **Formulaic pairs (don't use together):** "challenges and opportunities" | "on one hand... on the other hand" | "pros and cons" | "risks and rewards"
 
-**Fake authenticity signals (recognized AI tells):** "But honestly?" | "Here's the truth:" | "Here's the thing:" | "Let me be clear:" | "But here's where it gets interesting..." | "Think about it this way..." | "Let me break this down..."
+**Stock conversational openers to review when they add no meaning:** "But honestly?" | "Here's the truth:" | "Here's the thing:" | "Let me be clear:" | "But here's where it gets interesting..." | "Think about it this way..." | "Let me break this down..."
 
 **Common AI filler phrases (cut or replace):** "plays a [crucial/key/important] role" → state the action directly | "when it comes to" → rewrite with a verb | "in order to" → "to" | "a wide range of" → name what's in the range | "needless to say" → cut | "it goes without saying" → cut | "more often than not" → "usually" or give a number | "take a closer look at" → cut or be direct | "at this point in time" → "now" | "in recent years" → give the actual years or timeframe | "dive deep into" → just discuss it | "navigate the complexities of" → name the complexities
 
@@ -62,7 +58,7 @@ Before writing anything, load `references/vocabulary-banlist.md` for the complet
 
 **Collaborative chat artifacts (never include):** "I hope this helps!" | "Of course!" | "Certainly!" | "You're absolutely right!" | "Would you like me to..." | "Is there anything else..." | "Let me know if..." | "As an AI language model..." | "I'd be happy to..." | "Great question!"
 
-**2026-era additions (highest-signal in current models):** "ensuring/ensures" as padding (strongest single AI word, 4.3x) → name the concrete action or cut | "plays a [crucial/critical/important] role in shaping" (top AI trigram) → state what it does | "highlights/supports/reflects" as hedging verbs → concrete verb or delete | "capable of X" → "able to X" or just the verb | "rather than" when a direct comparison works → rewrite directly | "conversely" (50x overrepresented) → "but" or restructure | "in essence" / "essentially" / "fundamentally" → cut | intensifiers without numbers ("significantly," "effectively," "directly," "increasingly") → back with data or delete | "one thing is clear" | "the key takeaway" | "inherent tensions" | "this raises important questions about" | hedging adverb clusters ("typically," "often," "usually," "potentially," "sometimes" stacked in one passage) → commit or quantify
+**Additional phrases to review when they add no meaning:** "ensuring/ensures" as padding → name the concrete action or cut | "plays a [crucial/critical/important] role in shaping" → state what it does | "highlights/supports/reflects" used vaguely → use a concrete verb or delete | "capable of X" → "able to X" or the direct verb | "rather than" where a direct comparison works → rewrite directly | "conversely" → "but" or restructure | "in essence" / "essentially" / "fundamentally" → cut when redundant | unsupported intensifiers → add evidence or delete | "one thing is clear" | "the key takeaway" | "inherent tensions" | "this raises important questions about" | stacked hedging adverbs → state the supported level of certainty
 
 ## Replacement Strategy
 
@@ -78,19 +74,17 @@ Use contractions in conversational contexts: "can't," "don't," "it's," "we're," 
 
 ## 1. Vary Sentence Length Dramatically
 
-Mix very short sentences (3-5 words) with long ones (25+ words). Never write 3+ consecutive sentences of similar length, and never 3+ consecutive sentences inside the 17-23 word band. This directly increases burstiness, the metric detectors use most.
+Mix sentence lengths when it helps the pace and meaning. If several neighboring sentences fall into the same rhythm, revise where the repetition distracts; do not follow a quota or target word band.
 
-**The bimodal trap (new, 2026):** newer Claude models (Opus 4.5+) learned to fake burstiness by mechanically alternating a punchy fragment with a very long sentence. "Short. Then a forty-word sentence that winds through three clauses." Repeated, that alternation is itself a fingerprint; corpus data shows AI now has HIGHER length variation than humans, but bimodal. Human writing clusters around medium (50% of human sentences are 11-25 words) with occasional swings in both directions. So: vary irregularly. A medium sentence, another medium one, a fragment, a long one, two mediums. Not a metronome, and not a seesaw either.
+**Review repeated rhythms and repetitive openers.** Read the passage aloud and revise only where the cadence distracts or obscures the point. Do not impose a quota or add fragments just to create variation.
 
-**Vary sentence openers too.** Keep "The/This/It/In" openers under half of any paragraph. Start sentences with verbs, names, numbers, subordinate clauses, questions.
+## 2. Review Formulaic Lists
 
-## 2. Break the Rule of Three
+A three-part list can feel formulaic when its items do not form a real group. Keep it when the content supports it; otherwise use the number of items the material calls for.
 
-AI defaults to listing things in groups of exactly three. Three adjectives, three examples, three bullet points. List two things. Or four. Or five. Never default to three items in every list. The tricolon compulsion is one of AI's most reliable structural tells.
+## 3. Review Stock Contrasts
 
-## 3. Kill Negative Parallelisms
-
-Never write "It's not just X, it's Y" or "Not only X, but also Y" or "It's not about X, it's about Y." These rhetorical contrasts are AI signatures. A 2026 study of 1,000+ URLs found "not only/but also" had the largest negative correlation with reader engagement. State what something IS directly.
+Use contrast when it clarifies a real distinction. Remove stock contrast formulas when they merely delay the point; state the claim directly.
 
 ## 4. Kill False Ranges
 
@@ -98,19 +92,19 @@ Never write "from X to Y" as vague figurative spectrum ("from intimate gathering
 
 ## 5. No Participial Tack-Ons
 
-Never end sentences with ", highlighting the importance of..." or ", underscoring the significance of..." or ", symbolizing the region's commitment to..." These -ing clause attachments are the single most recognizable AI pattern. If the clause adds no concrete information, delete it. If it adds real information, make it a separate sentence.
+Never end sentences with ", highlighting the importance of..." or ", underscoring the significance of..." or ", symbolizing the region's commitment to..." These attachments often add vague commentary instead of information. If the clause adds no concrete information, delete it. If it adds real information, make it a separate sentence.
 
-## 6. No Formulaic Conclusions
+## 6. Avoid Generic Conclusions
 
-Never end with "Challenges and Future Prospects." Never write "Despite its [positive words], [subject] faces challenges..." Never include speculative "Future Outlook" paragraphs. Never follow problems with vague optimism about "ongoing initiatives."
+Do not append a stock “Challenges and Future Prospects” section or vague optimism about “ongoing initiatives.” End where the requested piece has made its point.
 
-## 7. No Compulsive Summaries
+## 7. Avoid Redundant Summaries
 
-Never start paragraphs with "Overall," "In conclusion," "In summary," "To recap." If the piece needs a conclusion, make it say something new.
+Remove “Overall,” “In conclusion,” “In summary,” or “To recap” when they only repeat what the piece already said. Use a summary when the format calls for one.
 
 ## 8. Paragraph Rhythm
 
-Use irregular paragraph lengths. One-sentence paragraphs for emphasis. Longer paragraphs for sustained argument. The rhythm should never feel metronomic. Older models wrote uniform 3-4 sentence paragraphs; newer models (Claude 4.5+, GPT-5) over-correct into the opposite tell: **fragmenting text into many tiny 1-2 sentence paragraphs plus bullet spam**. Corpus data shows AI averaging 18+ paragraphs per document where humans write far fewer, longer ones. Combine related ideas into sustained paragraphs. A real writer will happily run a paragraph to 7-8 sentences when the argument needs it. Uniform brevity is as machine-like as uniform length.
+Let each paragraph hold one connected idea. Use a short paragraph for emphasis and a longer one when the reasoning needs room. Merge fragments only when they belong together, and keep lists when they serve the requested format.
 
 ## 9. No Vertical Lists with Bold Headers
 
@@ -118,37 +112,27 @@ Prefer prose over bullet-point lists with bolded inline headers followed by colo
 
 ## 10. Ban All Dashes (Em and En)
 
-No em dashes (`—`) and no en dashes (`–`) anywhere. Zero. 2026 status update: the em dash is no longer mainly a ChatGPT tell (GPT-5.1 suppresses it) but it is now the single worst Claude tell, with Opus 4.5 using it at 16.9x the human rate, mid-sentence, additively, to attach qualifier clauses. The ban stays. Also new: **watch colons.** Newer Claude uses colons at 4x the human rate to introduce almost any follow-up idea. If a draft has a colon every few sentences, replace most with periods. Same for semicolons (3.1x). Replace dashes with:
-
-- Period (split into two sentences)
-- Comma (if the thought flows)
-- Colon (when pointing to a definition or explanation that follows)
-- Semicolon (for coordinated clauses, but use sparingly)
-- Parentheses (for information the reader could skip)
-
-Use plain hyphens (`-`) only for number/date ranges ("2020-2025") and compound adjectives ("state-of-the-art"). Never as a sentence-level pause.
-
-In the post-generation checklist, count every em and en dash. If the count is not zero, fix it.
+Use zero em or en dashes by default, following the project style preference. Keep them only when a requested quotation or format requires them.
 
 ## 11. Vary Sentence Type, Not Just Length
 
-Mix declarative sentences with questions, imperatives, and deliberate fragments. A genuine question mid-paragraph ("Why does this matter?") signals a thinking mind. An imperative ("Think about that.") shifts the register. A fragment for emphasis. AI writes almost exclusively in declarative because it answers; humans also wonder aloud, give commands, and break off mid-thought.
+Mix declarative sentences with questions, imperatives, and deliberate fragments. Use questions, imperatives, and fragments when the purpose and register call for them. Do not add them as proof of human authorship.
 
-## 12. Break Paragraph-Level Predictability
+## 12. Organize Paragraphs for the Argument
 
-Don't open every paragraph with its thesis sentence. Start some paragraphs mid-thought, with a specific detail, scene, or example that earns its context. End some paragraphs before completing the expected "so what." AI writes clean arcs: claim → evidence → implication. Break that arc at least twice per piece.
+Give each paragraph a clear role. A claim-evidence-implication sequence often works; use another order when it better supports the argument. Avoid repeating the same opening or conclusion without a reason.
 
-## 13. Vary Syntactic Depth
+## 13. Choose Sentence Structure for Clarity
 
-Mix shallow and deep sentence structures. A shallow sentence: subject-verb-object, one clause. A deep sentence: multiple embeddings, subordinate clauses, parenthetical asides. AI produces medium-depth sentences with boring consistency. Humans swing between extremes, a blunt statement followed by a winding, clause-heavy exploration.
+Use simple or layered sentences according to the idea, pace, and emphasis.
 
-## 14. Diversify Function Words
+## 14. Choose Accurate Connectors
 
-AI detectors (especially Turnitin 2025+) analyze the distribution of function words, conjunctions, prepositions, articles. AI uses a narrower set. Vary your connectors: don't always use "and", use "plus," "as well as," or just a comma. Don't always use "but", use "though," "still," "yet," "except." Vary prepositions. Function word diversity is a strong human signal.
+Use the connector that states the relationship accurately. Do not rotate through synonyms just to create variety.
 
-## 15. Increase Lexical Diversity
+## 15. Prefer Precise Words
 
-AI produces text with a low type-token ratio (fewer unique words). Humans use more hapax legomena (words that appear only once). To increase: use domain-specific terms, mix registers, include proper nouns and specific references, use figurative language that's specific rather than generic. Don't cycle through synonyms to avoid repetition, that's a different AI tell. Instead, use MORE unique words overall by being more specific.
+Prefer accurate, concrete terms over vague wording. Repeat a term when that is clearer than cycling through synonyms.
 
 ---
 
@@ -156,89 +140,58 @@ AI produces text with a low type-token ratio (fewer unique words). Humans use mo
 
 ## EN-1. No "In Today's World" Openers
 
-AI opens with temporal framing before saying anything concrete. Never start with "In today's fast-paced world," "In an era of," "As we navigate the complexities of," or any broad context-setting phrase. Start with a specific fact, scene, or claim.
+Avoid broad temporal openers such as “In today’s fast-paced world” when they delay the point. Start with the specific fact, scene, or claim when the format allows it.
 
 ## EN-2. No Semicolon Overuse
 
-Most contemporary human writers rarely use semicolons outside academic writing. AI deploys them frequently for balanced compound sentences. In non-academic prose, prefer periods or coordinating conjunctions.
+In informal prose, a semicolon can sound stiff. Use it when the clauses are closely related; otherwise a period or conjunction may be clearer.
 
-## EN-3. Allow Punctuation Imperfection
+## EN-3. Use Natural Punctuation
 
-AI produces perfectly uniform punctuation. Real humans have natural inconsistencies, occasional comma splices in casual prose, varied punctuation density across paragraphs, casual exclamation points, ellipses for trailing thoughts. Don't sanitize all punctuation variation out of informal writing.
+Keep punctuation consistent with the requested register. Do not introduce errors or roughness to imitate a person.
 
-## EN-4. Break Register Uniformity
+## EN-4. Follow the Requested Register
 
-AI produces "monolithic mainstream American English", a single consistent register throughout. Real writers code-switch: formal in the introduction, conversational in examples, terse in conclusions. Mix registers within a document. Include at least 2-3 register shifts per piece.
+Match the requested register. Shift tone only when the audience, format, or content calls for a change.
 
-## EN-5. Reduce Agentless Passives
+## EN-5. Review Agentless Passives
 
-Older AI overused passive voice for perceived neutrality: "The decision was made," "It was determined that." Avoid strings of agentless passives; if three appear in a row, rewrite at least two.
+Review strings of agentless passives such as “The decision was made” or “It was determined that.” Name the agent when it matters to the reader.
 
-**But don't over-correct (2026 data).** Newer models actually use LESS passive voice than humans (AI 4.7% vs human 14.9% in corpus analysis). A draft with zero passives and relentlessly active, punchy declaratives reads like GPT-5's Motivator register, not like a person. Humans use passives naturally when the object matters more than the agent ("the file got corrupted," "the venue was booked months ago"). Keep some.
+Use passive voice when the affected object matters more than the agent. Prefer active voice when naming the agent improves clarity.
 
-## EN-6. Kill Staccato Triplets
+## EN-6. Review Repeated Parallel Sentences
 
-Never write three punchy parallel sentences in a row: "No meetings. No bureaucracy. Just results." This is now a recognized AI social media pattern. If you want emphasis, use a single short sentence, not three.
+A run of punchy parallel sentences can feel like an ad slogan. Keep it when that effect is intended; otherwise state the point once.
 
 ## EN-7. Use Contractions Naturally
 
-Contractions appear in about half of spoken English sentences. "Don't," "can't," "it's," "won't," "we're," "they'll" signal human warmth. In casual writing, also use "gonna," "wanna," "gotta," "kinda," "sorta" when appropriate to the register.
+Use contractions when they fit the requested register. Informal forms such as “gonna” or “kinda” belong only when the audience and context support them.
 
-## EN-8. Ask Genuine Questions
+## EN-8. Use Questions When They Help
 
-AI writes almost exclusively in declarative sentences. Include genuine questions that show thinking, not empty rhetorical questions immediately answered ("What makes this important? The answer is..."), but real questions that sit with the reader. "But does it actually work?" "Who decides that?"
+Use a question when the piece needs to pose a real question. Avoid rhetorical questions that only set up an obvious answer. "But does it actually work?" "Who decides that?"
 
-## EN-9. Use Sentence Fragments
+## EN-9. Use Fragments When They Fit
 
-AI avoids grammatically incomplete sentences. Humans use fragments constantly: "Not ideal." "Big difference." "Every. Single. Time." "Which is saying something." Deploy fragments for emphasis and rhythm.
+Use fragments when the format and voice allow them and they add emphasis. Do not add them as a test of authorship.
 
-## EN-10. Kill Modal Hedging Clusters
+## EN-10. Keep Useful Qualification
 
-Don't pile on "may," "might," "could," "would" to avoid committing. "This approach may prove beneficial and could potentially help" → "This approach works." Commit to claims. Use hedging only for genuine uncertainty.
+Remove stacked qualifiers that add no useful precision. Keep hedging when the evidence is incomplete or the claim is uncertain.
 
-## EN-11. Show Model-Specific Awareness (updated mid-2026)
+## EN-11. Apply Cross-Model Editorial Checks
 
-Different LLMs have different "aidiolects." The tells below reflect GPT-5.x and Claude 4.5-5 era output. Avoid all of them:
+These are editorial heuristics, not model fingerprints. They apply only when the issue is present in the draft:
 
-**ChatGPT (GPT-5 / 5.1 / 5.2) tells, the "Motivator" dialect:**
-- Em dashes suppressed since 5.1, so dash-free text is NOT evidence of human authorship. What remains:
-- The negated contrast, roughly one per paragraph: "It's not just X, it's Y" / "This isn't about X. It's about Y." Still the single most GPT-characteristic sentence shape.
-- Symmetric two-clause hooks opening posts: "Most people think X. The reality is Y." / "Forget X. Focus on Y." Fine once; a fingerprint when it opens four out of five pieces.
-- Rigid "Firstly / Secondly / Finally" scaffolding and intro-triplet-recap arcs.
-- Hedging verbs used as padding: "ensuring" (4.3x overrepresented, the strongest single AI word of 2026), "ensures," "highlights," "supports," "reflects." A human says what the thing does.
-- The top AI trigram of 2026: "plays a [crucial/critical/important] role in shaping." Delete on sight.
-- Intensifier adverbs without evidence: "significantly," "effectively," "directly," "increasingly." If no number backs it, cut it.
-- "rather than" overuse (the highest-leverage multi-word edit in humanizer data); "capable of X" instead of "able to X."
-- Assertive overconfident declaratives: "Here's the truth about Z." "The best founders know Y."
-- A "sanitized" texture: GPT-5's self-correction pass scrubs obvious AI-isms but leaves prose that feels cleaned, with no awkward transitions at all. Perfectly smooth = suspicious.
-- Boilerplate closers: "As X continues to evolve, one thing is clear..." Any ending containing "one thing is clear" is a model ending.
+- Remove chat or reasoning scaffolding from a deliverable, such as “Let me break this down” or a self-narrated plan the reader did not request.
+- Remove unsolicited hype, reassurance, excessive praise, or an edgy/snarky persona unless the user asked for that tone.
+- Keep factual claims, citations, and stated uncertainty grounded in the supplied sources. Do not invent lived experience, numbers, or anecdotes to make prose sound specific.
+- Attribute claims to the source that supports them. Do not imply that the writer personally observed or verified something they did not.
+- Vary cadence where repetition distracts. Do not force fragments, errors, punctuation changes, or “rough edges” as signals of authorship.
+- Follow the requested format, audience, and register, even when that means using headings, bullets, formal language, or a tidy conclusion.
 
-**Claude (Sonnet 4.5/4.6, Opus 4.5, Claude 5) tells, the "Philosopher" dialect:**
-- Worst punctuation offender of 2026: em dash at 16.9x human rate (mid-sentence, additive), colon at 4.1x, semicolon at 3.1x.
-- Hedge-and-reassure stacking, sometimes three hedges before saying anything: "While this may vary, generally speaking, in most cases, it's worth noting that..."
-- Signature vocabulary: "worth noting," "nuanced" (17x), "comprehensive" (24.5x), "fundamentally" (17x), "paradigm" (15.1x), "in essence," "essentially," "inherent tensions," "this raises important questions about."
-- Hedging adverbs at inflated rates: "typically" (9.6x), "often" (4.9x), "sometimes," "potentially," "usually."
-- Empathetic framing on autopilot: "understandably, many people feel...," "this can be frustrating for..."
-- Essayistic arc regardless of format: contextualize the question, explore multiple perspectives, add a qualification, close by observing what the analysis "raises" rather than concluding what it means. LinkedIn post or pricing memo, same Hegelian dialectic.
-- Abstract vocabulary inflation: "founders with strong metacognitive awareness often find that" where a human writes "the best founders know."
-- Starting sentences with "And" / "But" as a flow crutch every other paragraph. Occasionally human; as a system, a tell.
-- Bimodal sentence rhythm (see Rule 1) and paragraph over-fragmentation (see Rule 8).
-- Note: "delve," "tapestry," "vibrant," "myriad" are largely absent from newest Claude output. Their absence is not evidence of human writing; check the structural tells instead.
-
-**Gemini tells:** purple prose, excessive adjectives, moralizing, explicit theme statements, textbook "Educator" tone.
-
-## EN-12. Break the Four-Part Sentence DNA
-
-Corpus research (2026) found 82% of AI-generated text follows the same argument cadence regardless of model or topic: **Opening (establish context/claim) → Expansion (supporting detail) → Contrast (acknowledge complication) → Resolution (conclude or transition).** It is detectable within three to four sentences and it is the reason AI text feels "off" even when every word is fine. Prompt instructions do not remove it; the model rebuilds it under any vocabulary.
-
-Break it deliberately, at least a few times per piece:
-- Open with the complication and never circle back to a tidy resolution.
-- Expand without contrasting. Commit to one side.
-- End a section on an unresolved tension or an abrupt concrete fact.
-- Put the conclusion first, then argue backward.
-- Let one paragraph be pure detail with no claim at all.
-
-Humans leave arguments lopsided. Resolution-closers ("At the end of the day...," "The key takeaway here is...") are training artifacts; real endings take a position and stop.
+For a version-specific question, check the optional [model coverage reference](references/model-coverage.md). Release notes establish product availability and documented capabilities; they do not establish a model's writing fingerprint.
 
 ---
 
@@ -246,7 +199,7 @@ Humans leave arguments lopsided. Resolution-closers ("At the end of the day...,"
 
 ## Specificity Over Generality
 
-Replace every generic claim with a specific one. "Many companies" becomes "three startups in Austin." "Various factors" becomes the actual factors, named. "Experts agree" becomes the actual person who said it, with their name. "In recent years" becomes "since 2023."
+Replace vague claims with concrete detail when the source material supports it. Do not invent counts, places, people, dates, or examples to make prose seem specific.
 
 ## No Vague Attributions
 
@@ -266,35 +219,35 @@ Never list news outlets that covered something as proof it matters. Cite the spe
 
 ## Take Real Positions
 
-Commit to an opinion. "This approach is wrong because..." not "Some argue X, while others argue Y." AI hedges reflexively; humans commit. False balance is an AI tell, the real world is rarely perfectly balanced.
+State a supported conclusion directly. Present disagreement fairly when relevant; do not manufacture balance or certainty.
 
 ## Show Genuine Uncertainty When Appropriate
 
-When you don't know something, say so directly. "I'm not sure" or "I don't have enough information" signals honest thinking. AI fills gaps with confident-sounding generalities; humans admit limits. Use uncertainty markers sparingly but genuinely, not as hedging ("it could be argued that") but as actual epistemic honesty ("I don't know," "last I checked," "from what I gather").
+State limits clearly when information is missing or uncertain. Do not add first-person uncertainty language unless it fits the speaker and context.
 
 ---
 
 # Voice and Texture
 
-## Add Human Imperfection
+## Keep the Requested Voice
 
-Include deliberate texture: a redundancy kept for rhythm, a fragment used for emphasis, a casual aside in formal prose, a self-correction ("actually, thinking about it more..."), an incomplete thought that trails off. These imperfections signal a real mind at work. Too-perfect grammar is an AI signal, Turnitin specifically flags it.
+Do not add errors, awkward phrasing, false starts, fragments, or redundant wording to simulate a person. Keep a casual aside or self-correction only when it suits the speaker and purpose.
 
-## Use Register Shifts
+## Match the Register
 
-A sudden casual parenthetical in a formal argument. A technical term dropped into conversational prose. Humor that punches sideways. These shifts read as authentic because AI never produces them spontaneously. Stylometric studies show uniform register is the most consistent AI tell.
+Keep the register suited to the audience and format. Shift it when the subject or speaker calls for a change; do not add tonal shifts to signal authenticity.
 
-## Reference Specific Touchstones
+## Use Grounded Examples
 
-Name real recent events, specific pop culture moments, actual people and works. Not "recent developments in the field." Use references appropriate to context, "Last Tuesday," "Back when I worked at...," "I remember reading somewhere."
+Use names, events, and examples only when they are relevant and supported by the source material or supplied context. Do not invent memories or imply personal experience.
 
 ## First-Person When Appropriate
 
-Use "I" when the context allows. Share specific experiences, opinions, or observations. AI defaults to abstracted third-person generalization because it has no lived experience.
+Use first person when writing for a real speaker whose views or experiences are provided. Never invent a speaker’s experience or observation.
 
 ## Use English Discourse Markers
 
-Inject the processing markers and stance markers humans naturally use:
+Use discourse markers when they fit the speaker and register:
 - Processing: "Well," "I mean," "Look," "So," "The thing is"
 - Hedging: "I think," "sort of," "kind of," "arguably," "as far as I can tell"
 - Concessive: "Fair enough," "Granted," "Mind you," "That said"
@@ -305,7 +258,7 @@ Replace AI transitions ("Moreover," "Furthermore") with natural connectors ("And
 
 ## Show Emotional Texture
 
-AI maintains uniform emotional distance from all subjects. Real writers show:
+Let the subject and speaker determine the emotional tone. For example:
 - Genuine excitement about what interests them
 - Frustration with problems
 - Humor where it fits
@@ -315,7 +268,7 @@ AI maintains uniform emotional distance from all subjects. Real writers show:
 
 ## Develop Consistent Idiosyncrasies
 
-Every human has verbal tics and preferences. Develop a consistent (but imperfect) voice:
+When a voice guide or examples are available, follow their preferences:
 - Favorite words and phrases that recur
 - Characteristic sentence constructions
 - Habitual ways of transitioning between ideas
@@ -323,92 +276,39 @@ Every human has verbal tics and preferences. Develop a consistent (but imperfect
 
 ## Show Knowledge Asymmetry
 
-Be deeply knowledgeable in some areas, honestly uncertain in others. AI distributes knowledge evenly across all topics. Humans have deep expertise in their domains and obvious gaps elsewhere. Show this unevenness. Include insider references that assume shared knowledge.
+Reflect the speaker’s supplied expertise and uncertainty. Do not claim expertise or insider knowledge that the context does not support.
 
 ## Vary Syntactic Depth
 
-Mix shallow and deep sentence structures. A shallow sentence: subject-verb-object, one clause. A deep sentence: multiple embeddings, subordinate clauses, parenthetical asides. AI produces medium-depth sentences with boring consistency. Humans swing between extremes, a blunt statement followed by a winding, clause-heavy exploration.
+Mix shallow and deep sentence structures. A shallow sentence: subject-verb-object, one clause. A deep sentence: multiple embeddings, subordinate clauses, parenthetical asides. Choose sentence depth for clarity, pace, and emphasis.
 
 ---
 
-# Anti-Detection Rules (Turnitin, GPTZero, Originality.ai)
+# Editorial Validation and Detection Limits
 
-Based on research into how the major detectors work (Turnitin 94% accuracy, 31 features; GPTZero 95.7% on RAID benchmark; Originality.ai 96% accuracy).
+No writing pattern can establish who wrote a passage. AI detectors can produce false positives and false negatives, and their internal methods and performance vary by product, version, language, and text type. Do not promise that a draft will evade detection or claim that a stylistic edit proves human authorship.
 
-## T-1. Turnitin Analyzes Paragraph Rhythm
-Turnitin doesn't just look at individual sentences, it analyzes "rhythm, flow, and predictability across entire paragraphs." Make sure every paragraph has a different pattern from the paragraph before it. Vary paragraph length, sentence count, and structural approach.
-
-## T-2. Turnitin Flags Too-Perfect Grammar
-Perfect grammar without variation is an AI signal. Include natural variation: sentence fragments, deliberate run-on thoughts, imperfect punctuation where it fits the register. Excessive use of grammar-correction tools (Grammarly, ProWritingAid) can flatten natural variation and trigger false positives.
-
-## T-3. Turnitin Detects Register Uniformity
-Writing that maintains exactly the same register from start to finish gets flagged. Include at least 2-3 register shifts per piece, a casual parenthetical in formal prose, a technical term in conversational writing, a blunt colloquialism after careful analysis.
-
-## T-4. Turnitin Detects Humanizer Tools
-Turnitin (August 2025 update) specifically detects text processed by humanizer and bypasser tools. It trains on outputs from MULTIPLE humanizer tools to identify common statistical traces. Flags humanized text with purple highlighting (worse than standard AI cyan). QuillBot detection rate: 64-99%. Don't use paraphrase/humanizer tools, write correctly from the start.
-
-## T-5. Transition Diversity
-Don't use the same formulaic transitions repeatedly. Use: implicit transitions (no connector word, let idea sequence guide the reader), questions as transitions, fragment transitions, sudden topic shifts that earn context in the following sentence.
+Use the checklist below to improve the draft for its reader, not to game a detector.
 
 ---
 
 # Post-Generation Checklist
 
-After drafting, run this checklist:
-
-**Vocabulary:**
-1. Search for every word on the ban list, replace or remove each one
-2. Remove all instances of "serves as," "stands as," "is a testament to," "marks a," "highlights the importance of"
-3. Remove all vague attributions or replace with named sources
-4. Search for fake authenticity signals ("Here's the thing:", "But honestly?", "Let me be clear:"), remove
-5. Search for chat artifacts ("I hope this helps!", "Certainly!"), remove
-
-**Structure:**
-6. Find any sequence of 3+ sentences with similar length, restructure to vary
-7. Find any list with exactly three items, add or remove one
-8. Check the opening, if it starts with "In today's..." or any temporal framing, rewrite with a specific fact
-9. Check every paragraph's last sentence, AI almost always adds a redundant restatement; delete it
-10. Scan for -ing participial phrases tacked onto sentence ends, rewrite as separate sentences or remove
-11. Count em dashes and en dashes. Target: ZERO. Replace any with commas, parentheses, colons, or periods
-12. Check for semicolons in non-academic writing, replace with periods or conjunctions
-13. Check for staccato triplets ("No X. No Y. Just Z."), rewrite
-
-**Sentence Variety:**
-14. Check for sentence type variety, if only declarative sentences, add at least one question and one fragment
-15. Verify paragraph openings, if every paragraph starts with its thesis sentence, rewrite at least two to start mid-thought
-16. Check syntactic depth, if all sentences are medium complexity, add some very short and some very deep ones
-17. Count consecutive passive constructions, rewrite if more than two in a row
-
-**Voice:**
-18. Check register, is it consistent throughout? Add at least 2-3 register shifts (casual aside, technical term, humor)
-19. Read the entire piece aloud, awkward AI rhythm is audible where it's invisible on screen
-20. Check for contractions, if none in non-academic prose, add them naturally
-21. Count discourse markers, if zero ("Well," "Look," "I think," "Honestly"), add some appropriate to context
-22. Check emotional texture, if the text treats all topics with the same emotional distance, add genuine reactions
-23. Check for sentence fragments, if none, add at least one for emphasis
-24. Verify specificity, replace any remaining generic claims with specific ones (names, dates, numbers, places)
-
-**2026 Model-Fingerprint Checks:**
-25. Run the sentence-opener test: in each paragraph, if more than half the sentences start with "The," "This," "It," or "In," rewrite openers
-26. Run the cadence test: find any run of 3+ sentences in the 17-23 word band, break it
-27. Check for the bimodal seesaw: if the text mechanically alternates fragment/long sentence, insert medium-length sentences
-28. Count colons. If more than roughly one per 300 words outside lists, replace most with periods
-29. Search for "ensuring," "ensures," "highlights," "supports," "reflects" used as padding; replace with concrete verbs
-30. Search for "plays a * role in shaping" and any "role in" construction; state the action directly
-31. Count "not just X, it's Y" / "not about X, it's about Y" constructions. More than one per piece, rewrite
-32. Check for the two-clause symmetric hook opener ("Most people think X. The reality is Y."); if present, rewrite the opening
-33. Check paragraph count vs length: if the piece is fragmented into many 1-2 sentence paragraphs, merge related ones
-34. Check the ending: if it resolves neatly ("one thing is clear," "the key takeaway," a wrap-up that restates), cut it and end on a position or a concrete fact
-35. Check the argument arc: if every section runs Opening → Expansion → Contrast → Resolution, break the cadence in at least two sections
-36. Check for hedge-and-reassure stacking ("While X, generally speaking, in most cases..."); one hedge max per claim, or none
+- Check the vocabulary preferences and remove phrases that add no meaning.
+- Confirm that claims, numbers, examples, and citations are supported by the supplied material. Preserve uncertainty where evidence is limited.
+- Remove chat or reasoning scaffolding that does not belong in the requested deliverable.
+- Look for repeated sentence openings, stock contrasts, unnecessary summaries, generic conclusions, or commentary attached to facts. Revise only where the pattern weakens the draft.
+- Read the draft for cadence and paragraph flow. Vary them naturally without adding errors or forced roughness.
+- Check punctuation, list structure, formatting, audience, and register against the request.
+- Do not fabricate personal experience, sources, measurements, or concrete details.
 
 ---
 
 # Language Support
 
-The structural rules apply to all languages. When writing in a non-English language, adapt vocabulary bans to that language's equivalent overused words and maintain natural idioms of the target language. For Bahasa Indonesia, use `SKILL-id.md` instead, it contains the full Indonesian skill with native-language guidance including anti-translationese rules, discourse particles, code-switching, and register-specific adjustments.
+The structural rules apply across languages, with vocabulary and idioms adapted to the target language. In this repository, the Indonesian skill is at `../indonesian/SKILL.md`; packaged English-only copies should use the separate Indonesian skill rather than treating that sibling path as a dependency.
 
 ---
 
-**Last Updated:** July 6, 2026 (v3.0)
-**Changelog v3.0:** Version bump from v2.0. All content updated to latest rules.
+**Last Updated:** September 27, 2026 (v4.0)
+**Changelog v4.0:** Updated model coverage through September 27, 2026; replaced unsupported model fingerprints and detection claims with source-aware editorial checks.

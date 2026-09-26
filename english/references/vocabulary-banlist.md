@@ -1,36 +1,36 @@
 # AI Vocabulary Ban List
 
-Complete list of words and phrases to avoid, organized by category and AI model era.
+Editorial vocabulary preferences, organized by category. These are phrases to review in context, not a detector or a measured fingerprint of any model. Preserve technical terms, quotations, and wording required by the user.
 
-## By AI Model Era
+## Legacy review lists retained from earlier versions
 
-### 2023 to mid-2024 (GPT-4 era)
+### Original review list
 Additionally, boasts, bolstered, crucial, delve/delves/delving, emphasizing, enduring, garner, intricate/intricacies, interplay, key (adjective), landscape (figurative), meticulous/meticulously, pivotal, underscore, tapestry, testament, valuable, vibrant
 
-### Mid-2024 to mid-2025 (GPT-4o era)
+### Additional review list
 Align with, bolstered, crucial, emphasizing, enhance, enduring, fostering, highlighting, pivotal, showcasing, underscore, vibrant
 
-### Mid-2025 and on (GPT-5 era)
+### Attribution and emphasis
 Emphasizing, enhance, highlighting, showcasing, plus words associated with notability/attribution emphasis
 
-### Late 2025 to mid-2026 (GPT-5.1/5.2 and Claude 4.5-5 era)
-The highest-signal items in current-model output, from humanizer corpus data (80k+ pairs) and Claude Opus 4.5 corpus analysis:
+### v4.0 cross-model review (September 27, 2026)
+Apply these preferences to drafts from ChatGPT, Claude, Gemini, and Grok when wording is vague or repetitive. Release documentation does not establish vocabulary frequency ratios for the current models; see [model coverage and evidence](model-coverage.md).
 
-**Padding/hedging verbs (GPT-5.x signature):** ensuring (4.3x, strongest single AI word of 2026), ensures, highlights, supports, reflects, plays a role in, contributes to
+**Possible padding:** ensuring, ensures, highlights, supports, reflects, plays a role in, contributes to. Keep the verb when it describes a real action; otherwise name the action.
 
-**Top trigram:** "plays a [crucial/critical/important] role in shaping" — delete on sight
+**Vague role claims:** "plays a [crucial/critical/important] role in shaping". Explain the role instead of asserting importance.
 
-**Structural word swaps:** capable of → able to | rather than (overused) → rewrite comparison directly | conversely (50x) → but | nevertheless (8x) → still
+**Plain-language options:** capable of → able to | rather than → a direct comparison when clearer | conversely → but | nevertheless → still
 
-**Empty intensifiers (adverbial padding):** significantly, effectively, directly, increasingly, remarkably, notably — cut unless backed by a number
+**Intensifiers to check:** significantly, effectively, directly, increasingly, remarkably, notably. Retain only when the evidence or context supports their meaning.
 
-**Claude 4.5-5 signature words:** comprehensive (24.5x), nuanced (17x), fundamentally (17x), paradigm (15.1x), in essence, essentially, worth noting, inherent tensions, thoughtful approach, metacognitive
+**Abstract wording to check:** comprehensive, nuanced, fundamentally, paradigm, in essence, essentially, worth noting, inherent tensions, thoughtful approach, metacognitive. Preserve precise domain terms; cut vague praise or commentary.
 
-**Claude hedging adverbs (inflated rates):** typically (9.6x), often (4.9x), sometimes (4.2x), potentially (3.4x), usually (3.4x) — fine individually, a tell when clustered
+**Qualification to check:** typically, often, sometimes, potentially, usually. Keep genuine uncertainty; remove stacked qualifications that add no information.
 
 **Closers:** "one thing is clear", "the key takeaway", "at the end of the day", "as X continues to evolve"
 
-**IMPORTANT — legacy tells now absent:** delve, tapestry, vibrant, myriad have been trained OUT of the newest Claude models and largely out of GPT-5.1+. Em dashes are suppressed in GPT-5.1+ (but at 16.9x human rate in Claude Opus 4.5). Do not treat absence of legacy tells as evidence of human writing; the structural patterns are what persist.
+Presence or absence of a word or punctuation mark does not establish authorship. Do not extrapolate a legacy model's alleged habits to a newer release.
 
 ## Complete Ban List by Category
 
@@ -204,7 +204,7 @@ The fix is never finding a better adjective. The fix is replacing vague praise w
 
 ## Bahasa Indonesia Ban List
 
-AI-generated Indonesian has its own signature vocabulary distinct from AI-English. These are the words and constructions that mark Indonesian text as machine-generated.
+Indonesian prose can sound bureaucratic or translated when these words and constructions add no useful meaning. Review them in context; they do not establish machine authorship.
 
 ### Significance Puffers (Indonesian)
 - sangat penting → state specifically why it matters or drop the qualifier

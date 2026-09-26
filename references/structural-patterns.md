@@ -1,6 +1,6 @@
 # Structural Patterns to Avoid
 
-Every pattern here has been documented on Wikipedia's "Signs of AI Writing" page and confirmed by academic research (Kobak et al. 2024, Russell et al. 2025, Fraser et al. 2025). These are the structural tells that make text read as machine-generated.
+Legacy combined examples from earlier versions. The maintained v4.0 guides are [English](../english/references/structural-patterns.md) and [Indonesian](../indonesian/references/structural-patterns.md). Treat the examples below as editorial prompts, not empirically validated tests of authorship. Current guidance takes precedence over the old fixed quotas and model stereotypes.
 
 ## 1. Participial -ing Tack-Ons
 
@@ -304,12 +304,8 @@ Rule: State the finding. Delete "dapat dilihat bahwa," "dapat dipahami bahwa," "
 
 ---
 
-## Detection Metrics (Why This Matters)
+## v4.0 editorial scope
 
-AI detectors measure two primary things:
+This is the legacy combined reference. Use the maintained [English structural guidance](../english/references/structural-patterns.md) or [Indonesian structural guidance](../indonesian/references/structural-patterns.md) for current instructions, and [model coverage](../english/references/model-coverage.md) for release evidence.
 
-1. **Perplexity** — how predictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity (unexpected metaphors, unusual phrasing, creative choices).
-
-2. **Burstiness** — variation in sentence length and structure. AI has low burstiness (sentences cluster around 10-20 words with consistent structure). Human text has high burstiness (3-word sentences mixed with 30-word sentences).
-
-Every structural rule above increases perplexity and burstiness — making text statistically indistinguishable from human writing.
+Structural examples are editing prompts, not reliable attribution tests. Apply them when they improve meaning and flow; do not change a correct list size, add errors, or erase supported uncertainty to meet a detector target. No punctuation or sentence-length rule guarantees human classification.

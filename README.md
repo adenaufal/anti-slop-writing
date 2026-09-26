@@ -1,27 +1,33 @@
 # anti-slop-writing
 
-**v3.0** — 6 Juli 2026
+**v4.0** — 27 September 2026
 
 Bahasa Indonesia (default) | [English](README.en.md)
 
 Skill universal biar output AI gak terdengar kayak AI. Lebih manusia, lebih spesifik, gak kaku.
 
-Cocok untuk **Claude.ai, Claude Code, Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf**, dan tool lain yang support system prompt.
+Cocok untuk **ChatGPT, Claude, Gemini, Grok, Claude Code, Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf**, dan tool lain yang support instruksi menulis.
 
 Berdasarkan Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) + riset deteksi teks AI. Terinspirasi dari [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877).
 
 ---
 
-## Yang Baru di v3.0
+## Yang Baru di v4.0
 
-- **Pergeseran 2026:** cadence uniformity sebagai tell #1, tes 30 detik, repetisi kata kunci prompt
-- **Sidik Jari Per Model:** dialek Motivator GPT-5.x, dialek Philosopher Claude (data korpus Opus 4.5)
-- **Aturan baru:** Pecah Sentence DNA Empat Bagian, jebakan burstiness bimodal, fragmentasi paragraf
-- **Koreksi pasif dua arah:** model baru pakai pasif *lebih sedikit* dari manusia
-- **Aturan kepadatan titik dua/titik koma**
-- **Larangan kosakata baru era 2026:** ensuring, plays-a-role-in-shaping, intensifiers
-- **13 item checklist baru** (total 36 untuk EN, 48 untuk ID)
-- **Aturan khas Indonesia baru:** BI-11 (hook dua klausa), BI-12 (repetisi prompt), anti-translationese
+- **Cakupan empat provider:** pembaruan setelah v3.0 (6 Juli 2026) sampai 27 September 2026, dengan sumber resmi dan status akses.
+- **Panduan untuk output model terbaru:** cek scaffolding asisten, hype/reassurance, persona tempelan, sitasi, repetisi, dan format sesuai permintaan.
+- **Batas bukti diperjelas:** fakta rilis dipisahkan dari panduan editing. Rasio kosakata/tanda baca dan klaim sidik jari lama yang tidak didukung sumber dihapus.
+- **Fakta tetap utuh:** detail, angka, kutipan, dan pengalaman tidak boleh dikarang untuk membuat tulisan terasa manusiawi. Skill tidak menjamin lolos detektor AI.
+- **Full, Lite, dan adapter sinkron:** versi English dan Indonesia, termasuk `AGENTS.md`, `GEMINI.md`, dan `system-prompt.md`.
+
+| Provider | Rilis teks yang dicakup sejak v3.0 |
+|---|---|
+| ChatGPT / OpenAI | GPT-5.6 Sol/Terra/Luna; GPT-6 Astra; GPT-6 Sol/Luna di API, Work, dan Codex. GPT-6 Pro memakai Astra. |
+| Claude / Anthropic | Opus 5, Fable 5.1, Mythos 5.1 (akses terbatas), Opus 5.5. |
+| Gemini / Google | 3.6 Flash, 3.5 Flash-Lite, 3.7 Flash, 3.8 Flash. |
+| Grok / xAI | 4.5, 4.6, 4.7. |
+
+Nama dan akses aplikasi chat bisa berbeda dari API. Sonnet/Haiku 5.5 masih rilis mendatang pada tanggal pemeriksaan. Lihat [cakupan model, tanggal, dan sumber](indonesian/references/model-coverage.md). Ini pembaruan instruksi berdasarkan dokumentasi resmi; belum ada uji langsung perbandingan model.
 
 ---
 
@@ -38,6 +44,8 @@ Berdasarkan Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wiki
 ## Mulai Cepat
 
 ### Claude.ai (Web) — Cara Paling Gampang
+
+Paket Full dan Lite v4.0 tersedia lewat [Release v4.0](https://github.com/adenaufal/anti-slop-writing/releases/tag/v4.0).
 
 1. Download `anti-slop-writing-id.skill` (Indonesia) atau `anti-slop-writing-en.skill` (English) dari [Releases terbaru](https://github.com/adenaufal/anti-slop-writing/releases/latest)
 2. Di Claude.ai: `Settings → Skills → Install from file`
@@ -56,7 +64,7 @@ git clone https://github.com/adenaufal/anti-slop-writing .claude/skills/anti-slo
 
 Skill: `indonesian/SKILL.md` (Bahasa Indonesia) atau `english/SKILL.md` (English).
 
-### Tool Lain (Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf, Aider, ChatGPT)
+### Tool Lain (Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf, Aider, ChatGPT, Grok)
 
 Lihat [Instalasi Lengkap](#instalasi-lengkap) di bawah.
 
@@ -104,7 +112,7 @@ Kalau hasilnya lebih konkret dan ritme kalimatnya bervariasi, berarti aturannya 
 | **Cursor** | `cp /tmp/anti-slop-writing/indonesian/AGENTS.md .cursor/rules/anti-slop-writing.mdc` |
 | **Windsurf** | `cp /tmp/anti-slop-writing/indonesian/AGENTS.md .windsurf/rules/anti-slop-writing.md` |
 | **Aider** | `aider --system-prompt "$(cat indonesian/system-prompt.md)"` |
-| **ChatGPT / tool lain** | Copy isi `indonesian/system-prompt.md` → paste ke System Prompt |
+| **ChatGPT / Grok / tool lain** | Pakai instruksi menulis dari `indonesian/SKILL-lite.md`; untuk API atau proyek yang mendukungnya, gunakan `system-prompt.md` beserta referensi. Sesuaikan dengan batas kolom. |
 
 > Ganti `indonesian/` dengan `english/` kalau mau versi English.
 
@@ -116,23 +124,29 @@ Kalau hasilnya lebih konkret dan ritme kalimatnya bervariasi, berarti aturannya 
 anti-slop-writing/
 ├── english/
 │   ├── SKILL.md
+│   ├── SKILL-lite.md
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
 │   └── references/
 │       ├── vocabulary-banlist.md
-│       └── structural-patterns.md
+│       ├── structural-patterns.md
+│       └── model-coverage.md
 ├── indonesian/
 │   ├── SKILL.md
+│   ├── SKILL-lite.md
 │   ├── AGENTS.md
 │   ├── GEMINI.md
 │   ├── system-prompt.md
 │   └── references/
 │       ├── vocabulary-banlist.md
-│       └── structural-patterns.md
+│       ├── structural-patterns.md
+│       └── model-coverage.md
 ├── references/              ← legacy (gabungan)
-├── anti-slop-writing-en.skill   ← siap pakai untuk Claude.ai
-├── anti-slop-writing-id.skill   ← siap pakai untuk Claude.ai
+├── anti-slop-writing-en.skill   ← paket Full English (build lokal)
+├── anti-slop-writing-id.skill   ← paket Full Indonesia (build lokal)
+├── anti-slop-writing-en-lite.skill
+├── anti-slop-writing-id-lite.skill
 ├── README.md
 ├── README.en.md
 └── LICENSE
@@ -141,6 +155,7 @@ anti-slop-writing/
 - `AGENTS.md`, `GEMINI.md`, `system-prompt.md` isinya sama — beda format aja sesuai tool.
 - `SKILL.md` khusus format skill Claude Code.
 - `anti-slop-writing-*.skill` dirilis terpisah via [Releases](https://github.com/adenaufal/anti-slop-writing/releases).
+- Release v4.0 menyertakan empat paket: Full dan Lite untuk English dan Indonesia.
 
 ---
 
@@ -163,6 +178,7 @@ Pakai file dari folder `indonesian/`.
 
 ## Sumber
 
+- Rilis model Juli-September 2026: [riwayat dan sumber resmi empat provider](indonesian/references/model-coverage.md).
 - Wikipedia: [Signs of AI Writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 - Kobak et al. (2024): *Delving into LLM-assisted writing* ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016))
 - Russell, Karpinska & Iyyer (2025): *People who frequently use ChatGPT are accurate detectors of AI-generated text*

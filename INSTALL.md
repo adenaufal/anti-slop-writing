@@ -10,12 +10,14 @@ Repo ini punya dua versi:
 
 | Versi | Ukuran | Untuk Platform |
 |---|---|---|
-| **Full** (`SKILL.md` / `system-prompt.md`) | ~12-16 KB | Claude Projects, Gemini Gems, Copilot agents, API dengan system prompt besar |
-| **Lite** (`SKILL-lite.md`) | ~4 KB | ChatGPT Custom Instructions, platform dengan batas karakter ketat |
+| **Full** (`SKILL.md` / `system-prompt.md`) | sekitar 20 KB (English) / 40 KB (Indonesia) saat ini | Projects, Gems, agents, API, atau platform yang menerima file referensi |
+| **Lite** (`SKILL-lite.md`) | sekitar 2 KB (English) / 4 KB (Indonesia) | Chat atau kolom instruksi dengan batas lebih ketat; periksa batas karakter |
 
-Aturan umum: **coba Full dulu**. Kalau dapat error "system prompt too long" atau kepotong, ganti ke Lite.
+Lite tetap lebih dari 1.500 karakter, jadi mungkin tidak muat di kolom instruksi akun ChatGPT Free/Go. Pilih dan tempel hanya aturan yang sesuai dengan batas platform, atau unggah Full sebagai file referensi bila platform mendukungnya. Tidak ada versi yang dijamin muat di semua kolom instruksi.
 
 Bahasa: pilih folder `indonesian/` (Bahasa Indonesia) atau `english/` (English).
+
+Cakupan model dan sumber rilis v4: [Bahasa Indonesia](indonesian/references/model-coverage.md) | [English](english/references/model-coverage.md).
 
 ---
 
@@ -23,31 +25,27 @@ Bahasa: pilih folder `indonesian/` (Bahasa Indonesia) atau `english/` (English).
 
 ### Custom Instructions (gratis + Plus + Team)
 
-1. Buka ChatGPT → klik avatar kanan atas → **Customize ChatGPT**
-2. Di kolom **"What traits should ChatGPT have?"** atau **"Anything else ChatGPT should know"**: paste isi file.
-   - **Disarankan pakai Lite**: `indonesian/SKILL-lite.md` atau `english/SKILL-lite.md`
-   - Kalau muat (biasanya limit 1500-3000 karakter per kolom), isi Full `system-prompt.md`
+1. Buka **Settings → Personalization → Custom Instructions** (nama/menu dapat berbeda antar perangkat).
+2. Tempel aturan pilihan. Batas resmi saat ini: Free dan Go hingga 1.500 karakter; Plus, Pro, Enterprise, Business, dan Education hingga 5.000 karakter. Lite English sekitar 2 KB dan Lite Indonesia sekitar 4 KB; keduanya melampaui 1.500 karakter. Pilih beberapa aturan utama agar sesuai dengan batas akun Anda.
 3. Klik **Save**
 4. Tiap chat baru otomatis pakai instruksi ini
 
-**Catatan**: ChatGPT Custom Instructions punya batas karakter. Kalau kena "too long", pakai Lite.
+Sumber batas dan langkah UI: [ChatGPT Custom Instructions](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions).
 
 ### ChatGPT Projects (Plus + Team + Enterprise)
 
-Projects punya sistem prompt yang lebih longgar (sekitar 8000 karakter).
-
 1. Bikin Project baru: sidebar kiri → **New project**
 2. Klik Project → **Instructions** (atau "Add instructions")
-3. Paste isi `indonesian/system-prompt.md` atau `english/system-prompt.md` (Full version muat di sini)
-4. Upload juga file `references/vocabulary-banlist.md` dan `references/structural-patterns.md` kalau mau aturan lebih komplit (via **Files** di Project)
+3. Tambahkan aturan pilihan ke Project instructions.
+4. Upload `indonesian/SKILL.md` atau `english/SKILL.md`, serta file referensi yang diperlukan, sebagai project sources.
 
-Tiap chat dalam Project itu otomatis pakai instructions-nya.
+Project instructions berlaku di dalam project; file sumber dapat dipakai sebagai referensi. Batas bergantung pada akun. [Panduan Projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt).
 
 ### ChatGPT Custom GPTs (Plus + Team)
 
 1. **Explore GPTs** → **Create**
-2. Di tab **Configure**, kolom **Instructions**: paste `system-prompt.md`
-3. Di **Knowledge**, upload file `references/` kalau perlu
+2. Di tab **Configure**, tambahkan aturan pilihan ke **Instructions**.
+3. Di **Knowledge**, unggah Full dan file referensi bila tersedia dan sesuai batas akun.
 4. Set nama, deskripsi, publish
 
 ---
@@ -66,7 +64,7 @@ Gems = custom Gemini dengan system instructions.
 
 Pakai Gem itu tiap kali mau nulis tanpa slop.
 
-**Catatan**: Gemini Gems support system instructions yang cukup panjang (sekitar 8000 karakter). Full version muat.
+Jangan mengandalkan batas karakter tetap; periksa batas akun Anda. Jika Full tidak muat, tambahkan aturan pilihan dan unggah berkas sebagai sumber bila tersedia.
 
 ### Gemini API (developers)
 
@@ -76,16 +74,18 @@ Kalau lo pakai Gemini via API:
 from google import genai
 from google.genai import types
 
-with open("english/system-prompt.md") as f:
+with open("english/system-prompt.md", encoding="utf-8") as f:
     sp = f.read()
 
 client = genai.Client()
 response = client.models.generate_content(
-    model="gemini-2.5-pro",
+    model="gemini-3.8-flash",
     config=types.GenerateContentConfig(system_instruction=sp),
     contents="Tulis artikel tentang kopi specialty di Bandung, 600 kata.",
 )
 ```
+
+Model ID: [Gemini API model catalog](https://ai.google.dev/gemini-api/docs/models).
 
 Untuk Bahasa Indonesia, pakai `indonesian/system-prompt.md`.
 
@@ -140,25 +140,27 @@ Kalau Custom Instructions belum available di tenant lo, workaround: mulai prompt
 
 ---
 
-## Generic/API (OpenAI, Anthropic, Local LLM)
+## Generic/API (OpenAI, Anthropic, xAI, Local LLM)
 
 ### OpenAI API
 
 ```python
 from openai import OpenAI
 
-with open("english/system-prompt.md") as f:
+with open("english/system-prompt.md", encoding="utf-8") as f:
     sp = f.read()
 
 client = OpenAI()
 response = client.chat.completions.create(
-    model="gpt-5",
+    model="gpt-6-sol",
     messages=[
         {"role": "system", "content": sp},
         {"role": "user", "content": "Tulis artikel 500 kata tentang kopi Aceh Gayo."}
     ]
 )
 ```
+
+Model ID: [`gpt-6-sol` API docs](https://developers.openai.com/api/docs/models/gpt-6-sol).
 
 Untuk Indonesian: pakai `indonesian/system-prompt.md`.
 
@@ -167,17 +169,47 @@ Untuk Indonesian: pakai `indonesian/system-prompt.md`.
 ```python
 import anthropic
 
-with open("english/system-prompt.md") as f:
+with open("english/system-prompt.md", encoding="utf-8") as f:
     sp = f.read()
 
 client = anthropic.Anthropic()
 response = client.messages.create(
-    model="claude-opus-4-7",
+    model="claude-opus-5-5",
     max_tokens=4096,
     system=sp,
     messages=[{"role": "user", "content": "Tulis essay 800 kata..."}]
 )
 ```
+
+Model ID: [Claude Opus 5.5](https://www.anthropic.com/claude/opus).
+
+### xAI API (Grok)
+
+Pakai model API `grok-4.7` dengan klien OpenAI-compatible. Simpan API key di environment variable `XAI_API_KEY`; jangan tempel key langsung di kode.
+
+```python
+import os
+from openai import OpenAI
+
+with open("indonesian/system-prompt.md", encoding="utf-8") as f:
+    sp = f.read()
+
+client = OpenAI(base_url="https://api.x.ai/v1", api_key=os.environ["XAI_API_KEY"])
+response = client.chat.completions.create(
+    model="grok-4.7",
+    messages=[
+        {"role": "system", "content": sp},
+        {"role": "user", "content": "Tulis artikel 500 kata tentang kopi Aceh Gayo."},
+    ],
+)
+print(response.choices[0].message.content)
+```
+
+Model ID dan contoh klien: [Grok 4.7 API docs](https://docs.x.ai/developers/grok-4-7).
+
+### Grok (chat konsumen)
+
+Di awal chat, tempel isi `indonesian/SKILL-lite.md` sebagai instruksi menulis. Jika akun atau aplikasi Anda menyediakan kolom instruksi khusus, Anda juga bisa menaruh aturan pilihan di sana. Nama menu dan ketersediaannya dapat berbeda; bila teks terlalu panjang, pilih aturan yang paling penting.
 
 ### Ollama (local LLM)
 
@@ -270,12 +302,14 @@ This repo has two versions:
 
 | Version | Size | Best For |
 |---|---|---|
-| **Full** (`SKILL.md` / `system-prompt.md`) | ~12-16 KB | Claude Projects, Gemini Gems, Copilot agents, APIs with generous system prompts |
-| **Lite** (`SKILL-lite.md`) | ~4 KB | ChatGPT Custom Instructions, platforms with strict char limits |
+| **Full** (`SKILL.md` / `system-prompt.md`) | about 20 KB (English) / 40 KB (Indonesian) currently | Projects, Gems, agents, APIs, or platforms that accept reference files |
+| **Lite** (`SKILL-lite.md`) | about 2 KB (English) / 4 KB (Indonesian) | Chats or instruction fields with tighter limits; check the character limit |
 
-General rule: **try Full first**. If you get "system prompt too long" or it gets truncated, switch to Lite.
+Lite still exceeds 1,500 characters, so it may not fit ChatGPT Free/Go instruction fields. Select and paste only rules that fit the platform's displayed limit, or upload Full as a reference file where supported. No version is guaranteed to fit every instruction field.
 
 Language: pick `english/` or `indonesian/` folder.
+
+For v4 model coverage and release sources, see [English](english/references/model-coverage.md) | [Bahasa Indonesia](indonesian/references/model-coverage.md).
 
 ---
 
@@ -283,31 +317,27 @@ Language: pick `english/` or `indonesian/` folder.
 
 ### Custom Instructions (Free + Plus + Team)
 
-1. Open ChatGPT, click your avatar top-right, **Customize ChatGPT**
-2. In **"What traits should ChatGPT have?"** or **"Anything else ChatGPT should know"**: paste contents.
-   - **Recommended: Lite** (`english/SKILL-lite.md`)
-   - If it fits (1500-3000 char limit per field), try `english/system-prompt.md`
+1. Open **Settings → Personalization → Custom Instructions** (menu labels may vary by device).
+2. Paste selected rules. Current official limits: up to 1,500 characters for Free and Go; up to 5,000 for Plus, Pro, Enterprise, Business, and Education. The English Lite file is about 2 KB and the Indonesian Lite file about 4 KB; both exceed 1,500 characters. Select a few core rules that fit your account's limit.
 3. Click **Save**
 4. Every new chat uses these instructions
 
-**Note**: ChatGPT Custom Instructions has a character limit. If you hit "too long", switch to Lite.
+Source for current limits and steps: [ChatGPT Custom Instructions](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions).
 
 ### ChatGPT Projects (Plus + Team + Enterprise)
 
-Projects have a much larger system prompt (around 8000 chars).
-
 1. Create a new Project: sidebar, **New project**
 2. Click Project, **Instructions** (or "Add instructions")
-3. Paste `english/system-prompt.md` (Full version fits)
-4. Upload `references/vocabulary-banlist.md` and `references/structural-patterns.md` via **Files** for complete coverage
+3. Add selected rules to Project instructions.
+4. Upload `english/SKILL.md` and needed reference files as project sources.
 
-Every chat inside the Project uses these instructions.
+Project instructions apply inside the project; uploaded sources can provide reference material. Limits depend on your account. [Projects guide](https://help.openai.com/en/articles/10169521-projects-in-chatgpt).
 
 ### ChatGPT Custom GPTs (Plus + Team)
 
 1. **Explore GPTs**, **Create**
-2. In **Configure** tab, **Instructions** field: paste `system-prompt.md`
-3. In **Knowledge**, upload `references/` files if needed
+2. In **Configure**, add selected rules to **Instructions**.
+3. In **Knowledge**, upload Full and reference files where available and supported by your account limits.
 4. Set name, description, publish
 
 ---
@@ -326,7 +356,7 @@ Gems are custom Gemini personalities with system instructions.
 
 Use that Gem whenever you want non-slop writing.
 
-**Note**: Gemini Gems support fairly long instructions (~8000 chars). Full version fits.
+Do not assume a fixed character limit. Check what your account accepts. If the full skill does not fit, add selected rules and attach the file as a source if the interface supports it.
 
 ### Gemini API (developers)
 
@@ -334,16 +364,18 @@ Use that Gem whenever you want non-slop writing.
 from google import genai
 from google.genai import types
 
-with open("english/system-prompt.md") as f:
+with open("english/system-prompt.md", encoding="utf-8") as f:
     sp = f.read()
 
 client = genai.Client()
 response = client.models.generate_content(
-    model="gemini-2.5-pro",
+    model="gemini-3.8-flash",
     config=types.GenerateContentConfig(system_instruction=sp),
     contents="Write a 600-word essay on specialty coffee.",
 )
 ```
+
+Model ID: [Gemini API model catalog](https://ai.google.dev/gemini-api/docs/models).
 
 ### Gemini in Workspace (Docs, Gmail, etc)
 
@@ -392,19 +424,19 @@ If Custom Instructions isn't available, workaround: start prompts with "Use anti
 
 ---
 
-## Generic/API (OpenAI, Anthropic, Local LLM)
+## Generic/API (OpenAI, Anthropic, xAI, Local LLM)
 
 ### OpenAI API
 
 ```python
 from openai import OpenAI
 
-with open("english/system-prompt.md") as f:
+with open("english/system-prompt.md", encoding="utf-8") as f:
     sp = f.read()
 
 client = OpenAI()
 response = client.chat.completions.create(
-    model="gpt-5",
+    model="gpt-6-sol",
     messages=[
         {"role": "system", "content": sp},
         {"role": "user", "content": "Write a 500-word article on specialty coffee."}
@@ -412,22 +444,54 @@ response = client.chat.completions.create(
 )
 ```
 
+Model ID: [`gpt-6-sol` API docs](https://developers.openai.com/api/docs/models/gpt-6-sol).
+
 ### Anthropic API (Claude)
 
 ```python
 import anthropic
 
-with open("english/system-prompt.md") as f:
+with open("english/system-prompt.md", encoding="utf-8") as f:
     sp = f.read()
 
 client = anthropic.Anthropic()
 response = client.messages.create(
-    model="claude-opus-4-7",
+    model="claude-opus-5-5",
     max_tokens=4096,
     system=sp,
     messages=[{"role": "user", "content": "Write an 800-word essay..."}]
 )
 ```
+
+Model ID: [Claude Opus 5.5](https://www.anthropic.com/claude/opus).
+
+### xAI API (Grok)
+
+Use the `grok-4.7` model through the OpenAI-compatible client. Store your API key in the `XAI_API_KEY` environment variable; do not paste the key into code.
+
+```python
+import os
+from openai import OpenAI
+
+with open("english/system-prompt.md", encoding="utf-8") as f:
+    sp = f.read()
+
+client = OpenAI(base_url="https://api.x.ai/v1", api_key=os.environ["XAI_API_KEY"])
+response = client.chat.completions.create(
+    model="grok-4.7",
+    messages=[
+        {"role": "system", "content": sp},
+        {"role": "user", "content": "Write a 500-word article on specialty coffee."},
+    ],
+)
+print(response.choices[0].message.content)
+```
+
+For the model ID and client example, see [Grok 4.7 API docs](https://docs.x.ai/developers/grok-4-7).
+
+### Grok (consumer chat)
+
+At the start of a chat, paste `english/SKILL-lite.md` as your writing instruction. If your account or app provides a custom-instructions field, you can put selected rules there too. Menu names and availability may vary; if the text is too long, select the rules that matter most.
 
 ### Ollama (local LLM)
 

@@ -1,16 +1,16 @@
 # AI Vocabulary Ban List
 
-Complete list of words and phrases to avoid, organized by category and AI model era.
+Legacy combined vocabulary reference. For maintained v4.0 guidance, use [English](../english/references/vocabulary-banlist.md) or [Indonesian](../indonesian/references/vocabulary-banlist.md), with their model coverage references. These are editorial preferences, not proof of authorship; preserve precise terms and quotations.
 
-## By AI Model Era
+## Legacy review lists retained from earlier versions
 
-### 2023 to mid-2024 (GPT-4 era)
+### Original review list
 Additionally, boasts, bolstered, crucial, delve/delves/delving, emphasizing, enduring, garner, intricate/intricacies, interplay, key (adjective), landscape (figurative), meticulous/meticulously, pivotal, underscore, tapestry, testament, valuable, vibrant
 
-### Mid-2024 to mid-2025 (GPT-4o era)
+### Additional review list
 Align with, bolstered, crucial, emphasizing, enhance, enduring, fostering, highlighting, pivotal, showcasing, underscore, vibrant
 
-### Mid-2025 and on (GPT-5 era)
+### Attribution and emphasis
 Emphasizing, enhance, highlighting, showcasing, plus words associated with notability/attribution emphasis
 
 ## Complete Ban List by Category

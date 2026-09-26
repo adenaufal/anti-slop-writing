@@ -1,46 +1,46 @@
 # Structural Patterns to Avoid
 
-Every pattern here has been documented on Wikipedia's "Signs of AI Writing" page and confirmed by academic research (Kobak et al. 2024, Russell et al. 2025, Fraser et al. 2025). These are the structural tells that make text read as machine-generated.
+These examples show patterns that can make prose feel generic or padded. They are editorial prompts, not reliable tests of authorship; revise them only when doing so improves clarity, accuracy, or fit for the reader.
 
 ## 1. Participial -ing Tack-Ons
 
-The single most recognizable AI pattern. A comma followed by an -ing phrase appended to the end of a sentence to appear analytical.
+One pattern to review is a comma followed by an -ing phrase appended to a sentence to add commentary.
 
-**AI pattern:**
+**Formulaic example:**
 > The team launched the product, revolutionizing the industry.
 > The temple was built in 1850, symbolizing the community's enduring faith.
 > As of 2008, the population stood at 56,998, creating a lively community.
 
-**Human alternative:**
+**More direct alternative:**
 > The team launched the product. The industry changed.
 > The temple was built in 1850.
 > As of 2008, the population was 56,998.
 
 Rule: If the -ing clause adds no concrete information, delete it entirely. If it adds real information, make it a separate sentence.
 
-## 2. The Rule of Three
+## 2. Formulaic Lists
 
-AI defaults to grouping things in threes — three adjectives, three bullet points, three examples, three clauses.
+A three-part list can feel formulaic when the items do not form a real group.
 
-**AI pattern:**
+**Formulaic example:**
 > The conference features keynote sessions, panel discussions, and networking opportunities.
 > The design is bold, innovative, and timeless.
 
-**Human alternative:**
+**More direct alternative:**
 > The conference runs keynote sessions and panels. There's time to meet people between talks.
 > The design is bold. It'll still work in ten years.
 
-Rule: List two things. Or four. Or one. Never three by default.
+Rule: Choose the number of items that fits the content. Do not change a useful list just to avoid three.
 
-## 3. Negative Parallelisms
+## 3. Stock Contrasts
 
 "Not just X, but also Y" / "It's not X, it's Y" / "Not only X, but Y"
 
-**AI pattern:**
+**Formulaic example:**
 > This is not just a memoir — it's a love letter to the city.
 > The painting represents not merely an artistic achievement, but a cultural milestone.
 
-**Human alternative:**
+**More direct alternative:**
 > It's a memoir about growing up in the city. You can feel the author's affection for it on every page.
 > The painting became a cultural reference point. People still argue about it.
 
@@ -50,12 +50,12 @@ Rule: State what something IS. Don't frame it as a correction of what someone mi
 
 Vague figurative spectrum using "from X to Y" where no real scale exists.
 
-**AI pattern:**
+**Formulaic example:**
 > From intimate gatherings to global movements, the organization has made its mark.
 > From beginners to experts, everyone can benefit.
 > From the singularity of the Big Bang to the grand cosmic web...
 
-**Human alternative:**
+**More direct alternative:**
 > The organization started with twelve people in a living room. Last year 40,000 showed up to their conference.
 > Works whether you've been doing this for a week or a decade.
 
@@ -65,24 +65,24 @@ Rule: Only use "from X to Y" when there's a real, identifiable midpoint on a rea
 
 The formulaic challenges-and-future-prospects ending.
 
-**AI pattern:**
+**Formulaic example:**
 > Despite its industrial prosperity, Korattur faces challenges typical of urban areas, including... With its strategic location and ongoing initiatives, Korattur continues to thrive.
 
-**Human alternative:**
+**More direct alternative:**
 > Korattur's water supply can't keep up with the population. The pipes are from the 1970s.
 
 Rule: If you mention problems, name specific ones with specific evidence. Never follow with vague optimism about "ongoing initiatives."
 
 ## 6. Copula Avoidance ("Serves As" / "Stands As")
 
-AI substitutes elaborate verb phrases for simple "is/are/has."
+Elaborate verb phrases can obscure a simple relationship expressed by "is/are/has."
 
-**AI pattern:**
+**Formulaic example:**
 > Gallery 825 serves as LAAA's exhibition space for contemporary art.
 > The gallery features four separate spaces.
 > She holds the distinction of being the first female director.
 
-**Human alternative:**
+**More direct alternative:**
 > Gallery 825 is LAAA's exhibition space.
 > The gallery has four separate spaces.
 > She was the first female director.
@@ -93,12 +93,12 @@ Rule: Use "is," "are," "has," "was." Simple copulas are not boring — they're c
 
 Generic commentary attached to facts that need no commentary.
 
-**AI pattern:**
+**Formulaic example:**
 > The city has a population of 56,998, creating a lively community within its borders.
 > The inscriptions offer valuable insights into the construction of the mosque.
 > These citations illustrate the enduring relevance of his work.
 
-**Human alternative:**
+**More direct alternative:**
 > The city has a population of 56,998.
 > The inscriptions name the craftsmen who built the mosque.
 > His work keeps getting cited.
@@ -107,49 +107,49 @@ Rule: If the analytical statement could apply to literally any subject, it adds 
 
 ## 8. Elegant Variation (Synonym Cycling)
 
-AI avoids repeating the same word by cycling through synonyms, even when repetition would be clearer.
+Synonym cycling can make a passage less clear when repeating the original term would be simpler.
 
-**AI pattern:**
+**Formulaic example:**
 > Soviet artistic constraints... non-conformist artists... their creativity... the confines of state-imposed artistic norms... the artistic aspirations...
 
-**Human alternative:**
+**More direct alternative:**
 > The Soviet government told artists what they could and couldn't paint. Yankilevsky painted what he wanted anyway.
 
 Rule: Repeat words when clarity demands it. Don't cycle through "constraints / confines / norms / limitations" to avoid saying the same word twice.
 
-## 9. Em Dash Overuse
+## 9. Repeated Em Dashes
 
-AI uses em dashes (—) where humans use commas, parentheses, periods, or nothing.
+An em dash can become distracting when it replaces a comma, parenthesis, or period in every sentence.
 
-**AI pattern:**
+**Formulaic example:**
 > The article complies with policies — including WP:V, WP:RS, and WP:BLP — with all claims supported by multiple sources.
 
-**Human alternative:**
+**More direct alternative:**
 > The article complies with WP:V, WP:RS, and WP:BLP. All claims have sources.
 
-Rule: Maximum one em dash per 500 words. When in doubt, use a period and start a new sentence.
+Rule: Use the punctuation that fits the requested style. The project vocabulary preference avoids em dashes; do not treat punctuation as proof of authorship.
 
 ## 10. Vertical Lists with Bold Inline Headers
 
 Formatting everything as bullet points with **Bold Header:** description.
 
-**AI pattern:**
+**Formulaic example:**
 > - **SEO:** Traditional methods for improving visibility...
 > - **AEO:** Techniques focused on optimizing content...
 > - **GIO:** Strategies for ensuring businesses are cited...
 
-**Human alternative:**
+**More direct alternative:**
 Write it as prose. If a list is genuinely needed, keep it simple without bold headers and colon separators.
 
 ## 11. Undue Emphasis on Notability/Media Coverage
 
 Painstakingly listing every source that covered the topic to prove it matters.
 
-**AI pattern:**
+**Formulaic example:**
 > Her views have been cited in The New York Times, BBC, Financial Times, and The Hindu.
 > The mall maintains a strong digital presence, particularly on Instagram.
 
-**Human alternative:**
+**More direct alternative:**
 > She wrote a piece for the Times about it. [cite the actual piece]
 
 Rule: Cite sources inline as references. Don't make the existence of coverage into content.
@@ -158,10 +158,10 @@ Rule: Cite sources inline as references. Don't make the existence of coverage in
 
 Mechanically bolding every key term, proper noun, or concept.
 
-**AI pattern:**
+**Formulaic example:**
 > A **leveraged buyout (LBO)** uses **debt financing** to let **private equity firms** control businesses using the company's **assets and future cash flows** as collateral.
 
-**Human alternative:**
+**More direct alternative:**
 > A leveraged buyout uses debt to buy a company. The company's own assets and cash flow back the loans.
 
 Rule: Bold sparingly. In most prose, bold nothing at all.
@@ -170,107 +170,107 @@ Rule: Bold sparingly. In most prose, bold nothing at all.
 
 ## Bahasa Indonesia: Structural Patterns to Avoid
 
-AI-generated Indonesian has its own structural tells beyond the English patterns above. These patterns appear consistently across ChatGPT, Claude, Gemini, and other LLMs writing in Indonesian.
+These Indonesian examples illustrate wording that may sound formulaic in some contexts. They are prompts for editing specific passages, not universal claims about models or writers.
 
 ### BI-1. The "Kesimpulan" Compulsory Ending
 
-AI almost always ends Indonesian articles or essays with an explicit **"Kesimpulan"** (Conclusion) section. Human writers integrate their conclusion into the final paragraph or just stop.
+An explicit **"Kesimpulan"** (Conclusion) heading can feel formulaic when the format does not call for one.
 
-**AI pattern:**
+**Formulaic example:**
 > ## Kesimpulan
 > Dengan demikian, dapat disimpulkan bahwa festival ini memiliki peran penting dalam melestarikan budaya lokal dan memperkuat kohesi sosial masyarakat.
 
-**Human alternative:**
+**More direct alternative:**
 > Festival itu masih jalan sampai sekarang. Itu yang penting.
 
 Rule: Never add a section titled "Kesimpulan." If the piece needs a conclusion, write it as prose that says something new.
 
 ### BI-2. The "Di Era Modern Ini" Opening
 
-AI opens with temporal-framing sentences that set up a broad context before saying anything real.
+A broad time frame can delay the point when the sentence does not give relevant context.
 
-**AI pattern:**
+**Formulaic example:**
 > Di era modern ini, teknologi memainkan peran yang semakin krusial dalam kehidupan manusia.
 > Seiring perkembangan zaman, semakin banyak orang yang menyadari pentingnya...
 > Dalam konteks globalisasi yang terus berkembang...
 
-**Human alternative:**
+**More direct alternative:**
 > Tahun lalu, 87% startup Indonesia tutup di tahun pertama.
 
 Rule: Start with a specific fact, scene, or claim. Never with a time-period frame.
 
 ### BI-3. "Tidak Hanya... Tetapi Juga" Parallelism
 
-The Indonesian equivalent of "Not only X, but also Y." AI loves this construction. It adds length without adding meaning.
+This parallels "Not only X, but also Y." It can add length without adding meaning when the contrast is not needed.
 
-**AI pattern:**
+**Formulaic example:**
 > Pelatihan ini tidak hanya meningkatkan kompetensi peserta, tetapi juga memperkuat jaringan profesional mereka.
 > Festival ini tidak hanya menjadi hiburan, tetapi juga sarana pelestarian budaya.
 
-**Human alternative:**
+**More direct alternative:**
 > Peserta dapat sertifikat. Mereka juga dapat akses ke grup alumni yang lumayan aktif.
 
 Rule: State what something IS. Don't build fake rhetorical contrasts.
 
 ### BI-4. "Merupakan Salah Satu" Importance Inflation
 
-AI uses "merupakan salah satu X yang paling Y" as a formula to assert importance without evidence.
+The phrase "merupakan salah satu X yang paling Y" may assert importance without giving evidence.
 
-**AI pattern:**
+**Formulaic example:**
 > Jakarta merupakan salah satu kota dengan perkembangan ekonomi yang paling pesat di Asia Tenggara.
 > Teknologi ini merupakan salah satu inovasi terpenting yang pernah ada.
 
-**Human alternative:**
+**More direct alternative:**
 > Jakarta tumbuh 5,2% tahun 2023, lebih cepat dari Bangkok dan Manila.
 
 Rule: Quantify or compare specifically. "Salah satu yang terpenting" says nothing — show the evidence.
 
 ### BI-5. Missing Discourse Particles
 
-Natural Indonesian — even in formal writing — uses discourse particles that signal a real human voice: **nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya**. AI almost never uses these.
+In conversational Indonesian, particles such as **nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya** may fit the voice. Their presence or absence does not establish authorship.
 
-**AI pattern:**
+**Formulaic example:**
 > Hal ini menunjukkan bahwa pentingnya memahami konteks sosial dalam pengambilan keputusan.
 
-**Human alternative:**
+**More direct alternative:**
 > Nah, makanya keputusan itu nggak bisa diambil asal-asalan. Konteks sosialnya beda-beda, kan?
 
-Rule: When writing conversationally in Indonesian, use the particles appropriate to the register. Their total absence is an AI tell.
+Rule: When writing conversationally in Indonesian, use particles that fit the register. Their presence or absence does not establish authorship.
 
 ### BI-6. The "Di Sisi Lain, Terdapat Tantangan" Formula
 
-AI's equivalent of the English "Despite its X, faces challenges" pattern. It follows every positive statement with a generic "challenges" pivot.
+This resembles the English "Despite its X, faces challenges" formula. It becomes padding when every positive statement receives a generic challenges pivot.
 
-**AI pattern:**
+**Formulaic example:**
 > Di sisi lain, terdapat beberapa tantangan yang perlu diatasi, seperti keterbatasan sumber daya dan rendahnya kesadaran masyarakat. Namun, dengan upaya yang tepat, tantangan ini dapat diatasi.
 
-**Human alternative:**
+**More direct alternative:**
 > Dananya cuma Rp 50 juta. Itu cukup untuk tiga bulan, bukan setahun seperti yang direncanakan.
 
 Rule: If mentioning problems, name the specific ones with specific numbers. Never follow with vague optimism.
 
 ### BI-7. Nominalization Overload
 
-AI prefers heavy noun phrases over simple verbs — a pattern from Indonesian academic bureaucratic writing that AI has over-learned.
+Heavy noun phrases can make Indonesian prose sound bureaucratic when a direct verb would be clearer.
 
-**AI pattern:**
+**Formulaic example:**
 > Pelaksanaan program pelatihan vokasional ini dilakukan dalam rangka peningkatan kompetensi tenaga kerja.
 > Pengembangan kapasitas sumber daya manusia merupakan prioritas utama.
 
-**Human alternative:**
+**More direct alternative:**
 > Program ini melatih 200 orang per tahun. Tujuannya: cari kerja lebih cepat.
 
 Rule: Prefer verbs over noun derivations. "Melatih" not "pelaksanaan pelatihan." "Mengembangkan" not "pengembangan."
 
 ### BI-8. "Di Mana" as Relative Pronoun
 
-AI calques the English relative "where" directly into Indonesian as "di mana," creating unnatural constructions.
+The English relative "where" can be calqued as "di mana" in Indonesian, creating an unnatural construction in some contexts.
 
-**AI pattern:**
+**Formulaic example:**
 > Ini adalah sebuah program di mana peserta akan mendapatkan pelatihan intensif selama tiga bulan.
 > Kami memiliki sistem di mana setiap anggota dapat mengakses data secara real-time.
 
-**Human alternative:**
+**More direct alternative:**
 > Program ini melatih peserta intensif selama tiga bulan.
 > Setiap anggota bisa akses data kapan saja.
 
@@ -278,83 +278,30 @@ Rule: Rewrite "di mana" relative clauses as direct sentences.
 
 ### BI-9. Always-Formal Pronoun Use
 
-AI defaults to "Anda" (formal) and avoids colloquial pronouns even in casual contexts. Real Indonesian shifts freely between Anda, kamu, lo/lu, gue/aku depending on register.
+Choose Indonesian pronouns to fit the relationship and register. Avoid locking into formal or colloquial forms when context calls for another choice.
 
-**AI pattern (in a casual article):**
+**Formulaic example (in a casual article):**
 > Anda mungkin pernah mengalami hal serupa. Apakah Anda sudah mencoba solusi berikut ini?
 
-**Human alternative (same casual context):**
+**More direct alternative (same casual context):**
 > Pernah ngalamin hal yang sama? Coba deh tiga cara ini dulu.
 
-Rule: Match pronoun register to the actual context. Casual Indonesian uses kamu/lo/lu. Formal uses Anda. AI's total lock on "Anda" is an immediate tell.
+Rule: Match pronoun register to the actual context. Casual Indonesian uses kamu/lo/lu. Formal uses Anda. Choose pronouns according to the relationship and register; no single choice proves authorship.
 
 ### BI-10. "Dapat Dilihat Bahwa" Padding
 
-AI fills space with passive epistemic constructions that add no information.
+Passive epistemic constructions can add words without information.
 
-**AI pattern:**
+**Formulaic example:**
 > Dari data tersebut, dapat dilihat bahwa terdapat peningkatan yang signifikan.
 > Dapat dipahami bahwa fenomena ini merupakan cerminan dari kondisi sosial yang lebih luas.
 > Perlu dipahami bahwa konteks ini sangat penting bagi pemahaman kita.
 
-**Human alternative:**
+**More direct alternative:**
 > Angkanya naik 23% dari tahun lalu.
 
 Rule: State the finding. Delete "dapat dilihat bahwa," "dapat dipahami bahwa," "perlu dipahami bahwa."
 
 ---
 
-## Detection Metrics (Why This Matters)
-
-AI detectors measure two primary things:
-
-1. **Perplexity** — how predictable word choices are. AI produces low-perplexity text (smooth, unsurprising). Human text has higher perplexity (unexpected metaphors, unusual phrasing, creative choices).
-
-2. **Burstiness** — variation in sentence length and structure. AI has low burstiness (sentences cluster around 10-20 words with consistent structure). Human text has high burstiness (3-word sentences mixed with 30-word sentences).
-
-Every structural rule above increases perplexity and burstiness — making text statistically indistinguishable from human writing.
-
-## 16. The Four-Part Sentence DNA (2026)
-
-Corpus research across Claude, GPT-5, and Gemini found 82% of AI-generated text follows one argument cadence regardless of topic: Opening (context/claim) → Expansion (detail) → Contrast (complication) → Resolution (conclude/transition). Detectable in 3-4 sentences. Prompt instructions reduce vocabulary tells but cannot remove this cadence.
-
-**Rule:** Break the arc at least twice per piece. Open on the complication. Expand without contrasting. End sections on unresolved tension or an abrupt fact. Put conclusions first.
-
-## 17. Cadence Uniformity (the #1 tell of 2026)
-
-Sentences landing at 18-24 words, one after another. This survives every cosmetic rewrite and is what burstiness metrics measure.
-
-**30-second tests:**
-- First word of each sentence in a paragraph: if >50% start with "The/This/It/In" → LLM-assisted
-- 3+ consecutive sentences in the 17-23 word band → same conclusion
-
-**Rule:** Vary lengths irregularly AND vary sentence openers.
-
-## 18. The Bimodal Seesaw (Claude 4.5+ era)
-
-Newer models fake burstiness by mechanically alternating punchy fragments with very long sentences. Corpus data: AI coefficient of variation 137% vs human 70%; AI has 39.9% short sentences vs human 23.9%. Humans cluster around medium length (50% of human sentences are 11-25 words).
-
-**Rule:** Don't seesaw. Most sentences medium, with occasional genuine swings.
-
-## 19. Paragraph Over-Fragmentation (newer models)
-
-Older models wrote uniform 3-4 sentence paragraphs. Newer models fragment into many 1-2 sentence paragraphs plus bullet lists (AI: ~18 paragraphs and ~9.5 list items per document; humans: far fewer, longer paragraphs, near-zero bullets in prose).
-
-**Rule:** Combine related ideas. Let paragraphs run to 7-8 sentences when the argument needs it. Convert bullets to prose.
-
-## 20. The Symmetric Two-Clause Hook (GPT-5.x social pattern)
-
-**AI pattern:**
-> Most people think X. The reality is Y.
-> Forget X. Focus on Y.
-> It is not about X. It is about Y.
-
-Fine once. A fingerprint when it opens most pieces or appears three times in one post.
-
-**Rule:** Open with a specific fact, scene, number, or name instead.
-
-## 21. The Sanitized Texture (GPT-5 self-correction era)
-
-GPT-5+ runs an internal cleanup pass that scrubs obvious AI-isms, leaving prose that feels "cleaned": no awkward transitions, no odd word choices, no rough edges anywhere. Perfect smoothness is itself the residue.
-
-**Rule:** Keep one or two genuinely rough moments per piece: an abrupt topic shift that earns context later, a slightly odd but committed metaphor, a self-correction mid-paragraph.
+These examples are editorial prompts. They can help identify padding or unclear phrasing, but no wording pattern proves who wrote a passage or guarantees a detector result. Preserve the requested language, facts, and format.
