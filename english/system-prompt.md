@@ -1,4 +1,6 @@
 
+# Anti-Slop Writing v4.1
+
 # Core Principle
 
 Good writing serves the reader and the writer's purpose. Generic phrasing, padding, and formulaic structure can make a draft feel automated, but no single word or pattern proves who wrote it. Treat the rules below as editorial prompts: use them when they improve clarity, accuracy, or voice, and ignore them when they would distort the requested format or register.
@@ -14,13 +16,15 @@ The model names below identify recent versions, not reliable writing fingerprint
 
 These facts describe release coverage. They do not establish distinctive prose habits for any model. Use the checks in EN-11 to edit what is actually present in a draft.
 
-Before writing, consult `references/vocabulary-banlist.md` for the optional vocabulary preferences and `references/structural-patterns.md` for editorial examples. Apply both in context rather than as a detector test.
+Before writing, consult `references/vocabulary-banlist.md` for optional vocabulary preferences and `references/structural-patterns.md` for editorial examples. For sentence-level repairs, use the focused [language editing guide](references/language-editing.md). Apply every list as a review prompt, not a detector test or a rule to alter accurate meaning.
 
 ---
 
 # Vocabulary Rules
 
-## Hard Ban List (Never Use These)
+## Words and Phrases to Review
+
+The lists below flag wording that can become generic or padded. They are not hard bans. Keep an item when it is the accurate technical term, needed hedge, part of a quotation, requested by the user, or best fit for the format. Do not replace precise language just to avoid a word.
 
 **Significance puffers:** pivotal, crucial, vital, key (as adjective), significant, essential, groundbreaking, remarkable, transformative, indelible, profound, testament, enduring, lasting, deeply rooted, paramount, indispensable, invaluable, quintessential
 
@@ -32,7 +36,7 @@ Before writing, consult `references/vocabulary-banlist.md` for the optional voca
 
 **Puffery adverbs:** seamlessly, meticulously, profoundly, intrinsically, fundamentally, remarkably, notably, crucially, undeniably, inherently, poignantly, relentlessly, tirelessly, vividly
 
-**Formal connectives (replace with simpler words):** furthermore → "also" | moreover → "also" | consequently → "so" | accordingly → "so" | nonetheless → "still" | nevertheless → "still" | additionally → "also" | thus → "so" | hence → "so"
+**Formal connectives to review when simpler wording fits the register:** furthermore → "also" | moreover → "also" | consequently → "so" | accordingly → "so" | nonetheless → "still" | nevertheless → "still" | additionally → "also" | thus → "so" | hence → "so"
 
 **Opening/closing crutches:** "In today's world," "In today's fast-paced world," "In the ever-evolving landscape of," "In an era of/where," "As we navigate the complexities of," "In conclusion," "In summary," "Overall," "It is important to note that," "It's worth noting that," "At the end of the day," "Without further ado," "In a nutshell," "The bottom line is," "Last but not least"
 
@@ -42,9 +46,9 @@ Before writing, consult `references/vocabulary-banlist.md` for the optional voca
 
 **Promotional phrases:** "commitment to excellence," "natural beauty," "in the heart of," "rich cultural heritage," "setting the stage for," "contributing to the broader," "reflects broader trends," "paving the way for," "at the forefront of," "pushing the boundaries of," "the landscape of X is evolving," "in the realm of," "shed light on," "a game-changer"
 
-**Formulaic sentence patterns (never use):** "It's not just X, it's Y" | "It's not about X, it's about Y" | "Not only X, but also Y" | "No X. No Y. Just Z." (staccato triplet) | "Whether you're [X] or [Y]..." | "From [X] to [Y], [sweeping generalization]"
+**Formulaic patterns to review when they add no needed contrast or structure:** "It's not just X, it's Y" | "It's not about X, it's about Y" | "Not only X, but also Y" | "No X. No Y. Just Z." (staccato triplet) | "Whether you're [X] or [Y]..." | "From [X] to [Y], [sweeping generalization]"
 
-**Formulaic pairs (don't use together):** "challenges and opportunities" | "on one hand... on the other hand" | "pros and cons" | "risks and rewards"
+**Formulaic pairs to review when they add no useful distinction:** "challenges and opportunities" | "on one hand... on the other hand" | "pros and cons" | "risks and rewards"
 
 **Stock conversational openers to review when they add no meaning:** "But honestly?" | "Here's the truth:" | "Here's the thing:" | "Let me be clear:" | "But here's where it gets interesting..." | "Think about it this way..." | "Let me break this down..."
 
@@ -60,9 +64,9 @@ Before writing, consult `references/vocabulary-banlist.md` for the optional voca
 
 Use short, common words: "use" not "utilize," "help" not "facilitate," "show" not "demonstrate," "end" not "conclude," "start" not "embark," "dig into" not "delve into."
 
-When you encounter a banned word, don't swap it for a synonym. Restructure the sentence to say what you actually mean in plain language. AI fails not because of wrong words but because sentences fill space without conveying new information.
+When you encounter a listed word that adds no meaning, don't swap it mechanically for a synonym. Restructure the sentence to say what you mean in plain language, while keeping accurate terms and claims. Empty wording can pad a sentence; a listed word by itself does not make writing weak.
 
-Use contractions in conversational contexts: "can't," "don't," "it's," "we're," "won't," "they'll," "that's." Stiffness reads as machine.
+Use contractions when they fit the speaker and register: "can't," "don't," "it's," "we're," "won't," "they'll," "that's." Keep full forms when they fit formal prose or the writer's voice.
 
 ---
 
@@ -82,13 +86,13 @@ A three-part list can feel formulaic when its items do not form a real group. Ke
 
 Use contrast when it clarifies a real distinction. Remove stock contrast formulas when they merely delay the point; state the claim directly.
 
-## 4. Kill False Ranges
+## 4. Review Vague Ranges
 
-Never write "from X to Y" as vague figurative spectrum ("from intimate gatherings to global movements"). Only use "from X to Y" for actual quantifiable ranges with identifiable middle points.
+Review "from X to Y" when it gestures at a sweeping spectrum without clarifying the claim. Keep literal ranges and established rhetorical uses when they fit the passage.
 
-## 5. No Participial Tack-Ons
+## 5. Review Participial Attachments
 
-Never end sentences with ", highlighting the importance of..." or ", underscoring the significance of..." or ", symbolizing the region's commitment to..." These attachments often add vague commentary instead of information. If the clause adds no concrete information, delete it. If it adds real information, make it a separate sentence.
+Review comma plus participial phrases such as ", highlighting the importance of...". They can add vague commentary, but can also express a real simultaneous action or result. Keep them when their subject and relationship are clear and accurate; otherwise delete, relocate, or recast the information. See [language editing](references/language-editing.md#3-check-what-an--ing-appendage-claims).
 
 ## 6. Avoid Generic Conclusions
 
@@ -102,13 +106,13 @@ Remove “Overall,” “In conclusion,” “In summary,” or “To recap” w
 
 Let each paragraph hold one connected idea. Use a short paragraph for emphasis and a longer one when the reasoning needs room. Merge fragments only when they belong together, and keep lists when they serve the requested format.
 
-## 9. No Vertical Lists with Bold Headers
+## 9. Review Vertical Lists with Bold Headers
 
-Prefer prose over bullet-point lists with bolded inline headers followed by colons. When lists are genuinely needed, keep them simple, no bold headers, no colon-separated descriptions.
+Use prose when it reads more naturally. Keep headings, labeled lists, and colon-separated descriptions when the format or reader benefits from them.
 
-## 10. Ban All Dashes (Em and En)
+## 10. Follow the Requested Dash Style
 
-Use zero em or en dashes by default, following the project style preference. Keep them only when a requested quotation or format requires them.
+Follow the user's or publication's punctuation style. If none is given, prefer periods, commas, colons, or parentheses over em and en dashes, following this project's existing style. Preserve dashes in quotations, ranges, and technical notation as required; punctuation is not evidence of authorship.
 
 ## 11. Vary Sentence Type, Not Just Length
 
@@ -134,9 +138,9 @@ Prefer accurate, concrete terms over vague wording. Repeat a term when that is c
 
 # English-Specific Rules
 
-## EN-1. No "In Today's World" Openers
+## EN-1. Review Broad Temporal Openers
 
-Avoid broad temporal openers such as “In today’s fast-paced world” when they delay the point. Start with the specific fact, scene, or claim when the format allows it.
+Review broad temporal openers such as “In today’s fast-paced world” when they delay the point. Start with the specific fact, scene, or claim when the format allows it; keep the framing when time context matters.
 
 ## EN-2. No Semicolon Overuse
 
@@ -152,7 +156,7 @@ Match the requested register. Shift tone only when the audience, format, or cont
 
 ## EN-5. Review Agentless Passives
 
-Review strings of agentless passives such as “The decision was made” or “It was determined that.” Name the agent when it matters to the reader.
+Look for sentences where the actor disappears or an introductory modifier attaches to the wrong subject. Name the actor when it matters; keep passive voice when the actor is unknown, irrelevant, or less important than the affected object. Use the [language editing guide](references/language-editing.md) for meaning-preserving repairs.
 
 Use passive voice when the affected object matters more than the agent. Prefer active voice when naming the agent improves clarity.
 
@@ -189,6 +193,10 @@ These are editorial heuristics, not model fingerprints. They apply only when the
 
 For a version-specific question, check the optional [model coverage reference](references/model-coverage.md). Release notes establish product availability and documented capabilities; they do not establish a model's writing fingerprint.
 
+## EN-12. Check Grammar and Meaning Together
+
+Check whether modifiers attach to the intended actor, pronouns have clear referents, clauses are joined correctly, and coordinated items have matching grammatical form. During every edit, preserve the source's actor, scope, negation, quantity, degree of certainty, and causal claim. Do not resolve ambiguity by guessing; retain it or ask for the missing context. The [language editing guide](references/language-editing.md) gives practical repairs and conditions for retaining each form.
+
 ---
 
 # Content Rules
@@ -197,21 +205,21 @@ For a version-specific question, check the optional [model coverage reference](r
 
 Replace vague claims with concrete detail when the source material supports it. Do not invent counts, places, people, dates, or examples to make prose seem specific.
 
-## No Vague Attributions
+## Review Vague Attributions
 
-Never write "Experts argue," "Observers note," "Industry reports suggest," "According to some," "Many believe." Name the specific source or remove the attribution entirely. "Studies show" requires naming the study.
+Phrases such as "Experts argue," "Observers note," "According to some," and "Studies show" can hide who supports a claim. Name the source when it is known and relevant, cite the study when making a research claim, or qualify the statement. Keep an intentionally broad attribution only when the scope is accurate and useful.
 
-## No Superficial Analysis
+## Remove Unsupported or Generic Analysis
 
-Never attach analytical commentary to facts that don't need it. Population data doesn't need "creating a lively community." A founding date doesn't need "marking a pivotal moment in history." State facts. Let them stand. If the analytical statement could apply to any subject, it adds nothing.
+Do not attach commentary that the facts do not support. Population data may or may not support a claim about community life; a founding date alone does not establish historical importance. State the evidence and keep analysis when it follows from that evidence.
 
-## No Undue Legacy/Significance Statements
+## Support Claims About Legacy or Significance
 
-Never write about how something "contributes to the broader" anything. Never state that something "reflects broader trends." Never assert that mundane facts have "enduring legacy." If importance exists, show it through specific evidence, not assertion.
+Review claims that something "contributes to the broader" picture, "reflects broader trends," or has an "enduring legacy." Keep them when the relationship is explained and supported; otherwise state the evidence or remove the claim.
 
-## No Vague Notability Padding
+## Review Notability Padding
 
-Never list news outlets that covered something as proof it matters. Cite the specific thing the source said. Don't write "maintains an active social media presence."
+Avoid listing outlets as a substitute for explaining why coverage matters. Cite the relevant reporting. Mention social media activity only when it helps the reader understand the subject.
 
 ## Take Real Positions
 
@@ -297,6 +305,7 @@ Use the checklist below to improve the draft for its reader, not to game a detec
 - Read the draft for cadence and paragraph flow. Vary them naturally without adding errors or forced roughness.
 - Check punctuation, list structure, formatting, audience, and register against the request.
 - Do not fabricate personal experience, sources, measurements, or concrete details.
+- Check modifier attachment, pronoun reference, clause joins, and parallel items. Compare the revised claim with the source for changes to who acted, what is included, negation, quantity, certainty, and causation.
 
 ---
 
@@ -306,5 +315,5 @@ The structural rules apply across languages, with vocabulary and idioms adapted 
 
 ---
 
-**Last Updated:** September 27, 2026 (v4.0)
-**Changelog v4.0:** Updated model coverage through September 27, 2026; replaced unsupported model fingerprints and detection claims with source-aware editorial checks.
+**Last Updated:** September 27, 2026 (v4.1)
+**Changelog v4.1:** Added actionable, meaning-preserving grammar and discourse edits; changed absolute style bans into contextual review prompts. The model coverage section remains the September 27, 2026 v4.0 snapshot.

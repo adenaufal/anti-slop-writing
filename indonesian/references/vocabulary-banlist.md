@@ -1,4 +1,4 @@
-# AI Vocabulary Ban List
+# Vocabulary Patterns to Review
 
 Editorial vocabulary preferences, organized by category. These are phrases to review in context, not a detector or a measured fingerprint of any model. Preserve technical terms, quotations, and wording required by the user.
 
@@ -32,7 +32,7 @@ Apply these preferences to drafts from ChatGPT, Claude, Gemini, and Grok when wo
 
 Presence or absence of a word or punctuation mark does not establish authorship. Do not extrapolate a legacy model's alleged habits to a newer release.
 
-## Complete Ban List by Category
+## Terms and Phrases to Review by Category
 
 ### Significance Puffers
 - pivotal
@@ -179,7 +179,7 @@ Presence or absence of a word or punctuation mark does not establish authorship.
 - "It is generally accepted"
 - "Research suggests" (without naming specific research)
 
-### Collaborative Chat Artifacts (never include)
+### Chat Openers and Closers (review for fit)
 - "I hope this helps!"
 - "Of course!"
 - "Certainly!"
@@ -192,7 +192,7 @@ Presence or absence of a word or punctuation mark does not establish authorship.
 
 ## Replacement Strategy
 
-When you encounter a banned word, don't just swap it for a synonym. Restructure the sentence to say what you actually mean in plain language.
+When you encounter a listed word, don't automatically swap it for a synonym. Check whether it conveys the intended meaning; restructure only when a clearer expression is available.
 
 **Before:** "The festival serves as a vibrant testament to the region's rich cultural heritage, showcasing the intricate tapestry of traditions."
 
@@ -202,7 +202,7 @@ The fix is never finding a better adjective. The fix is replacing vague praise w
 
 ---
 
-## Bahasa Indonesia Ban List
+## Bahasa Indonesia: Istilah dan Frasa untuk Ditinjau
 
 Indonesian prose can sound bureaucratic or translated when these words and constructions add no useful meaning. Review them in context; they do not establish machine authorship.
 
@@ -216,7 +216,7 @@ Indonesian prose can sound bureaucratic or translated when these words and const
 - mendalam (without substance) → provide the actual depth
 - berarti / bermakna (as vague praise) → specify what meaning it carries
 
-### Analytical Verbs (Indonesian AI overuses)
+### Verba Analitis yang Kadang Terasa Abstrak
 - menyoroti / menyorot → "menunjukkan" or describe the finding directly
 - menggarisbawahi → "menunjukkan" or remove the meta-commentary
 - memfasilitasi → "membantu" or "memungkinkan"
@@ -289,7 +289,7 @@ AI substitutes elaborate verb phrases for simple "adalah" or "punya."
 - "guna meningkatkan" → state what actually increased
 - "untuk mencapai tujuan tersebut" → state what the goal is and what they did
 
-### Collaborative Chat Artifacts (Indonesian — never include)
+### Pembuka dan Penutup Chat (tinjau menurut konteks)
 - "Semoga membantu!"
 - "Tentu saja!"
 - "Baik, berikut adalah..."
@@ -299,7 +299,7 @@ AI substitutes elaborate verb phrases for simple "adalah" or "punya."
 
 ## Indonesian Replacement Strategy
 
-Indonesian AI text fails differently from English AI text. The core problem is translationese: AI writes formal Bahasa Indonesia baku that sounds like a government document or a translated Wikipedia article, even for casual contexts.
+Kalimat Indonesia dapat terasa birokratis atau seperti terjemahan bila pilihan kata dan susunannya tidak cocok dengan konteks. Ini pemicu untuk memeriksa makna, register, dan suara penulis, bukan klaim tentang semua keluaran AI atau semua teks formal.
 
 **Before (AI Indonesian):**
 > Festival ini merupakan salah satu momen penting yang tidak hanya menampilkan kekayaan budaya lokal, tetapi juga memperkuat ikatan sosial antar masyarakat, menjadikannya sebagai ajang yang sangat krusial dalam pelestarian tradisi.

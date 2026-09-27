@@ -1,0 +1,42 @@
+[
+  {
+    "id": "id_memo",
+    "language": "indonesian",
+    "request": "Sunting memo internal berikut agar kalimatnya jelas dan tetap formal. Jangan tambahkan fakta. Hasilkan memo saja: Dalam pemeriksaan terhadap 40 berkas menunjukkan bahwa 12 berkas belum lengkap. Rina menghentikan pengiriman pada Senin setelah pemeriksaan itu. Belum diketahui apakah penyebab ketidaklengkapan berkas adalah gangguan sistem. Tim akan memeriksa ulang berkas pada Jumat."
+  },
+  {
+    "id": "id_scope",
+    "language": "indonesian",
+    "request": "Rapikan pengumuman ini menjadi tepat tiga butir singkat. Pertahankan semua batas maknanya, jangan tambahkan janji: Hanya uji coba yang ditunda. Peluncuran belum dibatalkan. Tim belum menentukan tanggal baru."
+  },
+  {
+    "id": "id_voice",
+    "language": "indonesian",
+    "request": "Benerin pemisahan di dan tanda baca pesan WhatsApp ini, jangan ubah gaya aku/lo dan jangan tambah isi: aku udah di kantor, berkasnya juga udah di kirim. kalau lo belum nemu filenya kabarin aku ya."
+  },
+  {
+    "id": "id_technical",
+    "language": "indonesian",
+    "request": "Periksa kalimat formal ini. Jika sudah jelas, pertahankan. Jangan mengganti istilah bidangnya atau menguatkan kepastian: Pemulihan ekosistem terumbu karang mungkin memerlukan beberapa tahun."
+  },
+  {
+    "id": "en_memo",
+    "language": "english",
+    "request": "Edit this internal memo for grammatical clarity. Keep it formal and introduce no facts. Return only the memo: After reviewing 40 files, the shipment was paused by Rina on Monday because 12 files were incomplete. It is not yet known whether a system fault caused the incomplete files. The team will review the files again on Friday."
+  },
+  {
+    "id": "en_scope",
+    "language": "english",
+    "request": "Edit this notice into exactly three brief bullets. Preserve all qualifications and introduce no promises: Only the trial is delayed. The launch has not been cancelled. The team has not set a new date."
+  },
+  {
+    "id": "en_technical",
+    "language": "english",
+    "request": "Check this formal sentence. If it is already clear, retain it. Keep its technical terminology and degree of certainty: Robust regression may reduce the influence of outliers."
+  },
+  {
+    "id": "en_ambiguity",
+    "language": "english",
+    "request": "Edit this line without guessing who approved the note. If clarification is needed, briefly identify what is missing: The editor sent the writer the revised note after they approved it."
+  }
+]

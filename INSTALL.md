@@ -10,14 +10,18 @@ Repo ini punya dua versi:
 
 | Versi | Ukuran | Untuk Platform |
 |---|---|---|
-| **Full** (`SKILL.md` / `system-prompt.md`) | sekitar 20 KB (English) / 40 KB (Indonesia) saat ini | Projects, Gems, agents, API, atau platform yang menerima file referensi |
-| **Lite** (`SKILL-lite.md`) | sekitar 2 KB (English) / 4 KB (Indonesia) | Chat atau kolom instruksi dengan batas lebih ketat; periksa batas karakter |
+| **Full** (`SKILL.md` / `system-prompt.md`) | sekitar 23 KB (English) / 38 KB (Indonesia), di luar referensi | Projects, Gems, agents, API, atau platform yang menerima file referensi |
+| **Lite** (`SKILL-lite.md`) | sekitar 3,5 KB (English) / 4 KB (Indonesia) | Chat atau kolom instruksi dengan batas lebih ketat; periksa batas karakter |
 
 Lite tetap lebih dari 1.500 karakter, jadi mungkin tidak muat di kolom instruksi akun ChatGPT Free/Go. Pilih dan tempel hanya aturan yang sesuai dengan batas platform, atau unggah Full sebagai file referensi bila platform mendukungnya. Tidak ada versi yang dijamin muat di semua kolom instruksi.
 
 Bahasa: pilih folder `indonesian/` (Bahasa Indonesia) atau `english/` (English).
 
 Cakupan model dan sumber rilis v4: [Bahasa Indonesia](indonesian/references/model-coverage.md) | [English](english/references/model-coverage.md).
+
+Panduan tata bahasa v4.1: [Bahasa Indonesia](indonesian/references/language-editing.md) | [English](english/references/language-editing.md). Saat menyalin adapter Full (`AGENTS.md`, `GEMINI.md`, atau `system-prompt.md`), sediakan juga folder `references/` dari bahasa yang sama di lokasi relatif yang diminta, atau unggah referensinya sebagai sumber proyek. Untuk kolom yang hanya menerima teks, Lite memuat pemeriksaan inti; referensi menambah contoh jika platform mendukung file.
+
+Untuk membangun empat paket dari checkout ini, jalankan `python scripts/build_skills.py`; gunakan `python scripts/build_skills.py --check` untuk memeriksa paket tanpa menulis ulang. Perintah ini hanya memakai pustaka standar Python dan tidak memanggil API model.
 
 ---
 
@@ -26,7 +30,7 @@ Cakupan model dan sumber rilis v4: [Bahasa Indonesia](indonesian/references/mode
 ### Custom Instructions (gratis + Plus + Team)
 
 1. Buka **Settings → Personalization → Custom Instructions** (nama/menu dapat berbeda antar perangkat).
-2. Tempel aturan pilihan. Batas resmi saat ini: Free dan Go hingga 1.500 karakter; Plus, Pro, Enterprise, Business, dan Education hingga 5.000 karakter. Lite English sekitar 2 KB dan Lite Indonesia sekitar 4 KB; keduanya melampaui 1.500 karakter. Pilih beberapa aturan utama agar sesuai dengan batas akun Anda.
+2. Tempel aturan pilihan. Batas resmi saat ini: Free dan Go hingga 1.500 karakter; Plus, Pro, Enterprise, Business, dan Education hingga 5.000 karakter. Lite v4.1 English sekitar 3.500 karakter dan Indonesia sekitar 4.000 karakter; keduanya melampaui 1.500 karakter. Pilih beberapa aturan utama agar sesuai dengan batas akun Anda.
 3. Klik **Save**
 4. Tiap chat baru otomatis pakai instruksi ini
 
@@ -255,15 +259,19 @@ Biasanya ada field **System Prompt** atau **Character Card**. Paste isi `system-
 
 ### Claude.ai Web
 
-1. Download `anti-slop-writing.skill` dari [Releases](https://github.com/adenaufal/anti-slop-writing/releases/latest)
-2. Claude.ai → **Settings** → **Skills** → **Install from file**
-3. Upload file → langsung jalan
+1. Unduh paket Full atau Lite untuk bahasa yang dipilih dari [Release v4.1](https://github.com/adenaufal/anti-slop-writing/releases/tag/v4.1).
+2. Di Claude.ai, buka **Customize → Skills → + Create skill → Upload a skill**, lalu unggah paket dan aktifkan skill. Jika kolom unggah hanya menerima `.zip`, ganti ekstensi `.skill` menjadi `.zip` tanpa membongkar isinya.
+3. Ikuti [panduan resmi Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude) untuk mengaktifkan fitur yang diperlukan. Setelah skill aktif, minta Claude menulis atau menyunting teks.
 
 ### Claude Code
 
 ```bash
-git clone https://github.com/adenaufal/anti-slop-writing ~/.claude/skills/anti-slop-writing
+git clone https://github.com/adenaufal/anti-slop-writing anti-slop-writing
+mkdir -p ~/.claude/skills/anti-slop-writing-id
+cp -R anti-slop-writing/indonesian/. ~/.claude/skills/anti-slop-writing-id/
 ```
+
+Contoh Bash untuk macOS/Linux/Git Bash. Salin seluruh folder bahasa beserta `references/`; jangan menempatkan root repo sebagai satu skill karena `SKILL.md` ada di subfolder bahasa. Untuk English, gunakan folder `english/` dan tujuan `anti-slop-writing`.
 
 ### Claude Projects
 
@@ -532,15 +540,19 @@ Look for **System Prompt** or **Character Card** field. Paste `system-prompt.md`
 
 ### Claude.ai Web
 
-1. Download `anti-slop-writing.skill` from [Releases](https://github.com/adenaufal/anti-slop-writing/releases/latest)
-2. Claude.ai, **Settings**, **Skills**, **Install from file**
-3. Upload and go
+1. Download the Full or Lite package for your language from [Release v4.1](https://github.com/adenaufal/anti-slop-writing/releases/tag/v4.1).
+2. In Claude.ai, open **Customize → Skills → + Create skill → Upload a skill**, upload the package, and enable it. If the uploader accepts only `.zip`, rename the `.skill` extension to `.zip` without unpacking it.
+3. Follow [Claude's official guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) to enable the required features. Once the skill is enabled, ask Claude to write or edit your text.
 
 ### Claude Code
 
 ```bash
-git clone https://github.com/adenaufal/anti-slop-writing ~/.claude/skills/anti-slop-writing
+git clone https://github.com/adenaufal/anti-slop-writing anti-slop-writing
+mkdir -p ~/.claude/skills/anti-slop-writing
+cp -R anti-slop-writing/english/. ~/.claude/skills/anti-slop-writing/
 ```
+
+Bash example for macOS/Linux/Git Bash. Copy the entire language folder, including `references/`; the repository root itself is not one skill because its `SKILL.md` files live in language subfolders. For Indonesian, use `indonesian/` and the destination `anti-slop-writing-id`.
 
 ### Claude Projects
 
@@ -558,7 +570,7 @@ Switch from `SKILL.md` to `SKILL-lite.md`. If still too long, trim sections (the
 ### Output still reads as AI
 1. Check that your platform actually supports system prompts. Some web chat tools don't.
 2. If Custom Instructions got truncated, only part of the rules may be active.
-3. Test with a prompt like: "Rewrite this paragraph to sound natural, with zero em dashes." If output still has em dashes, the system prompt isn't active.
+3. Test a concrete edit that preserves meaning, such as: "Rewrite this notice as exactly three bullets: only the trial is delayed; the launch has not been cancelled; no new date has been set." Check the format and qualifiers. A single failed instruction does not prove the skill is inactive, and punctuation alone is not an activation test.
 
 ### Output still uses "Anda" in casual Indonesian contexts
 Add to your prompt: "Use [semi-formal/informal] tier. No 'Anda'."

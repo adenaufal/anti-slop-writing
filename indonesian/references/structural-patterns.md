@@ -1,6 +1,6 @@
 # Structural Patterns to Avoid
 
-The checks below are editorial heuristics for clarity and style. They are not validated as reliable indicators of AI authorship, and should not override the writer's intended meaning, register, or format.
+The checks below are editorial prompts for clarity and style, not reliable indicators of authorship. The examples are constructed. Preserve supported claims, actors, and quantities; revise only when it improves clarity, accuracy, or fit for the requested register and format.
 
 ## 1. Participial -ing Tack-Ons
 
@@ -12,11 +12,11 @@ A comma followed by an -ing phrase can make a sentence feel padded when the phra
 > As of 2008, the population stood at 56,998, creating a lively community.
 
 **More direct option:**
-> The team launched the product. The industry changed.
-> The temple was built in 1850.
-> As of 2008, the population was 56,998.
+> The team launched the product and revolutionized the industry.
+> The temple was built in 1850 and symbolizes the community's enduring faith.
+> As of 2008, the population was 56,998. [Add a specific supported description of community life only if relevant.]
 
-Rule: If the -ing clause adds no concrete information, delete it entirely. If it adds real information, make it a separate sentence.
+Rule: Remove a clause only when it adds no useful information or its claim is unsupported. Otherwise, retain its claim and state it directly or in a separate sentence.
 
 ## 2. The Rule of Three
 
@@ -26,11 +26,11 @@ Lists can feel formulaic when they repeatedly use the same number of items.
 > The conference features keynote sessions, panel discussions, and networking opportunities.
 > The design is bold, innovative, and timeless.
 
-**More direct option:**
-> The conference runs keynote sessions and panels. There's time to meet people between talks.
-> The design is bold. It'll still work in ten years.
+**Keep the original list when the items form a real group:**
+> The conference features keynote sessions, panel discussions, and networking opportunities.
+> The design is bold, innovative, and timeless.
 
-Rule: Choose the number of items that the content and reader need. Do not add or remove items to satisfy a pattern.
+Rule: Use prose when it reads more naturally. Keep bold labels and colon-separated descriptions when they help readers or the requested format.
 
 ## 3. Negative Parallelisms
 
@@ -41,8 +41,8 @@ Rule: Choose the number of items that the content and reader need. Do not add or
 > The painting represents not merely an artistic achievement, but a cultural milestone.
 
 **More direct option:**
-> It's a memoir about growing up in the city. You can feel the author's affection for it on every page.
-> The painting became a cultural reference point. People still argue about it.
+> It's a memoir and a love letter to the city.
+> The painting is both an artistic achievement and a cultural milestone.
 
 Rule: State what something IS. Don't frame it as a correction of what someone might wrongly think.
 
@@ -56,8 +56,9 @@ Vague figurative spectrum using "from X to Y" where no real scale exists.
 > From the singularity of the Big Bang to the grand cosmic web...
 
 **More direct option:**
-> The organization started with twelve people in a living room. Last year 40,000 showed up to their conference.
-> Works whether you've been doing this for a week or a decade.
+> The organization has made an impact in intimate gatherings and global movements.
+> Beginners and experts can benefit.
+> The discussion covers the Big Bang singularity and the cosmic web.
 
 Rule: Only use "from X to Y" when there's a real, identifiable midpoint on a real scale.
 
@@ -69,9 +70,9 @@ The formulaic challenges-and-future-prospects ending.
 > Despite its industrial prosperity, Korattur faces challenges typical of urban areas, including... With its strategic location and ongoing initiatives, Korattur continues to thrive.
 
 **More direct option:**
-> Korattur's water supply can't keep up with the population. The pipes are from the 1970s.
+> Korattur is industrially prosperous but faces typical urban challenges, including... It also has a strategic location and ongoing initiatives, and continues to thrive.
 
-Rule: If you mention problems, name specific ones with specific evidence. Never follow with vague optimism about "ongoing initiatives."
+Rule: Name problems with source-supported evidence. Retain relevant context and outlook, but explain the relationship instead of using a stock pivot.
 
 ## 6. Copula Avoidance ("Serves As" / "Stands As")
 
@@ -83,7 +84,7 @@ Elaborate verb phrases can obscure a simple state or action.
 > She holds the distinction of being the first female director.
 
 **More direct option:**
-> Gallery 825 is LAAA's exhibition space.
+> Gallery 825 is LAAA's exhibition space for contemporary art.
 > The gallery has four separate spaces.
 > She was the first female director.
 
@@ -99,9 +100,9 @@ Generic commentary attached to facts that need no commentary.
 > These citations illustrate the enduring relevance of his work.
 
 **More direct option:**
-> The city has a population of 56,998.
-> The inscriptions name the craftsmen who built the mosque.
-> His work keeps getting cited.
+> The city has a population of 56,998. [Retain a supported description of community life if relevant.]
+> The inscriptions provide evidence about the mosque's construction.
+> These citations show the continued relevance of his work.
 
 Rule: If the analytical statement could apply to literally any subject, it adds nothing. Delete it.
 
@@ -113,7 +114,7 @@ Cycling through synonyms to avoid repetition can make prose less clear.
 > Soviet artistic constraints... non-conformist artists... their creativity... the confines of state-imposed artistic norms... the artistic aspirations...
 
 **More direct option:**
-> The Soviet government told artists what they could and couldn't paint. Yankilevsky painted what he wanted anyway.
+> Soviet artistic constraints restricted artists' creative work and aspirations.
 
 Rule: Repeat words when clarity demands it. Don't cycle through "constraints / confines / norms / limitations" to avoid saying the same word twice.
 
@@ -125,7 +126,7 @@ An em dash (—) is one punctuation option; in Indonesian prose, a comma, period
 > The article complies with policies — including WP:V, WP:RS, and WP:BLP — with all claims supported by multiple sources.
 
 **More direct option:**
-> The article complies with WP:V, WP:RS, and WP:BLP. All claims have sources.
+> The article complies with WP:V, WP:RS, and WP:BLP, with all claims supported by multiple sources.
 
 Rule: Prefer commas, periods, colons, or parentheses for new prose in this skill. Preserve dashes in quotations or when the requested format or style calls for them.
 
@@ -139,7 +140,9 @@ Formatting everything as bullet points with **Bold Header:** description.
 > - **GIO:** Strategies for ensuring businesses are cited...
 
 **More direct option:**
-Write it as prose. If a list is genuinely needed, keep it simple without bold headers and colon separators.
+> - SEO: Traditional methods for improving visibility...
+> - AEO: Techniques focused on optimizing content...
+> - GIO: Strategies for ensuring businesses are cited...
 
 ## 11. Undue Emphasis on Notability/Media Coverage
 
@@ -150,9 +153,10 @@ Painstakingly listing every source that covered the topic to prove it matters.
 > The mall maintains a strong digital presence, particularly on Instagram.
 
 **More direct option:**
-> She wrote a piece for the Times about it. [cite the actual piece]
+> Her views have been cited in The New York Times, BBC, Financial Times, and The Hindu. Cite the specific reports and explain their relevance.
+> The mall maintains a strong digital presence, particularly on Instagram.
 
-Rule: Cite sources inline as references. Don't make the existence of coverage into content.
+Rule: Cite the reporting that supports the point. Mention coverage when relevant, and explain why.
 
 ## 12. Overuse of Boldface
 
@@ -162,7 +166,7 @@ Mechanically bolding every key term, proper noun, or concept.
 > A **leveraged buyout (LBO)** uses **debt financing** to let **private equity firms** control businesses using the company's **assets and future cash flows** as collateral.
 
 **More direct option:**
-> A leveraged buyout uses debt to buy a company. The company's own assets and cash flow back the loans.
+> A leveraged buyout uses debt to let private equity firms control businesses; each company's assets and future cash flows secure the loans.
 
 Rule: Bold sparingly. In most prose, bold nothing at all.
 
@@ -181,7 +185,7 @@ An explicit **"Kesimpulan"** (Conclusion) section is useful in some formats, but
 > Dengan demikian, dapat disimpulkan bahwa festival ini memiliki peran penting dalam melestarikan budaya lokal dan memperkuat kohesi sosial masyarakat.
 
 **More direct option:**
-> Festival itu masih jalan sampai sekarang. Itu yang penting.
+> Festival ini melestarikan budaya lokal dan memperkuat kohesi sosial masyarakat.
 
 Rule: Use a section titled "Kesimpulan" when the genre or requested format calls for one. Otherwise, a final prose paragraph may be enough.
 
@@ -208,7 +212,7 @@ The Indonesian equivalent of "Not only X, but also Y" can become repetitive if u
 > Festival ini tidak hanya menjadi hiburan, tetapi juga sarana pelestarian budaya.
 
 **More direct option:**
-> Peserta dapat sertifikat. Mereka juga dapat akses ke grup alumni yang lumayan aktif.
+> Pelatihan ini meningkatkan kompetensi peserta dan memperkuat jaringan profesional mereka.
 
 Rule: Keep the contrast when it clarifies a real distinction; otherwise state the point directly.
 
@@ -233,7 +237,7 @@ Discourse particles such as **nah, sih, dong, deh, lho, nih, tuh, kan, kok, ya**
 > Hal ini menunjukkan bahwa pentingnya memahami konteks sosial dalam pengambilan keputusan.
 
 **More direct option:**
-> Nah, makanya keputusan itu nggak bisa diambil asal-asalan. Konteks sosialnya beda-beda, kan?
+> Jadi, konteks sosial perlu dipahami saat mengambil keputusan.
 
 Rule: Use particles only when they fit the register and voice. Their presence or absence does not establish authorship.
 
@@ -245,7 +249,7 @@ A generic "challenges" pivot after every positive statement can feel formulaic.
 > Di sisi lain, terdapat beberapa tantangan yang perlu diatasi, seperti keterbatasan sumber daya dan rendahnya kesadaran masyarakat. Namun, dengan upaya yang tepat, tantangan ini dapat diatasi.
 
 **More direct option:**
-> Dananya cuma Rp 50 juta. Itu cukup untuk tiga bulan, bukan setahun seperti yang direncanakan.
+> Sumber daya yang tersedia ialah [jenis atau jumlah sesuai sumber], sedangkan [kendala lain] masih perlu diperiksa.
 
 Rule: When mentioning problems, name those supported by the source. Avoid vague optimism that does not advance the point.
 
@@ -258,7 +262,8 @@ Heavy noun phrases can make prose bureaucratic when a simple verb would be clear
 > Pengembangan kapasitas sumber daya manusia merupakan prioritas utama.
 
 **More direct option:**
-> Program ini melatih 200 orang per tahun. Tujuannya: cari kerja lebih cepat.
+> Program pelatihan vokasional ini bertujuan meningkatkan kompetensi dan kesiapan tenaga kerja serta mempercepat adaptasi mereka.
+> Prioritas utamanya adalah mengembangkan kapasitas sumber daya manusia.
 
 Rule: Prefer verbs over noun derivations. "Melatih" not "pelaksanaan pelatihan." "Mengembangkan" not "pengembangan."
 
@@ -271,8 +276,8 @@ The relative "di mana" can sound like a literal translation of English "where" i
 > Kami memiliki sistem di mana setiap anggota dapat mengakses data secara real-time.
 
 **More direct option:**
-> Program ini melatih peserta intensif selama tiga bulan.
-> Setiap anggota bisa akses data kapan saja.
+> Dalam program ini, peserta akan mendapat pelatihan intensif selama tiga bulan.
+> Sistem kami memungkinkan setiap anggota mengakses data secara real-time.
 
 Rule: Rewrite "di mana" relative clauses as direct sentences.
 
@@ -284,7 +289,7 @@ Choose among "Anda," "kamu," "lo/lu," or "gue/aku" according to register and aud
 > Anda mungkin pernah mengalami hal serupa. Apakah Anda sudah mencoba solusi berikut ini?
 
 **Casual option:**
-> Pernah ngalamin hal yang sama? Coba deh tiga cara ini dulu.
+> Pernah ngalamin hal serupa? Sudah coba solusi ini?
 
 Rule: Match pronoun register to the requested context and keep it consistent unless there is a reason to shift.
 
@@ -300,7 +305,7 @@ Passive epistemic constructions such as "dapat dilihat bahwa" can add words with
 **More direct option:**
 > [Indikator] naik [angka] dibanding [periode sebelumnya].
 
-Rule: State the finding. Delete "dapat dilihat bahwa," "dapat dipahami bahwa," "perlu dipahami bahwa."
+Rule: State the finding directly, preserving any measurement and qualification that matters. Remove "dapat dilihat bahwa," "dapat dipahami bahwa," or "perlu dipahami bahwa" only when the phrase adds no meaning.
 
 ---
 

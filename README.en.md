@@ -1,198 +1,104 @@
 # anti-slop-writing
 
-**v4.0** — September 27, 2026
+**v4.1 · September 27, 2026**
 
-[Bahasa Indonesia](README.md) | English
+[Bahasa Indonesia](README.md)
 
-A universal skill that makes AI output read more human, specific, and less stiff.
+anti-slop-writing is a reusable set of writing and editing instructions. It helps AI produce clearer, more specific writing that fits the writer's voice.
 
-Works with **ChatGPT, Claude, Gemini, Grok, Claude Code, Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf**, and tools that support writing instructions.
+Use the text directly in a writing conversation, or import a `.skill` package if your platform supports skill imports.
 
-Based on Wikipedia ["Signs of AI Writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) + AI text detection research. Inspired by [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877).
+## Download or view Lite
 
----
+Choose a language and size. For most people, choose **Full** if your platform can import a package; choose **Lite** to paste text into a chat or instruction field.
 
-## What's New in v4.0
+| Package | Bahasa Indonesia | English |
+|---|---|---|
+| Full | [Download `.skill`](https://github.com/adenaufal/anti-slop-writing/releases/download/v4.1/anti-slop-writing-id.skill) · [View SKILL.md](indonesian/SKILL.md) | [Download `.skill`](https://github.com/adenaufal/anti-slop-writing/releases/download/v4.1/anti-slop-writing-en.skill) · [View SKILL.md](english/SKILL.md) |
+| Lite | [Download `.skill`](https://github.com/adenaufal/anti-slop-writing/releases/download/v4.1/anti-slop-writing-id-lite.skill) · [View Lite text](indonesian/SKILL-lite.md) | [Download `.skill`](https://github.com/adenaufal/anti-slop-writing/releases/download/v4.1/anti-slop-writing-en-lite.skill) · [View Lite text](english/SKILL-lite.md) |
 
-- **Four-provider coverage:** updates after v3.0 (July 6, 2026) through September 27, 2026, with official sources and access status.
-- **Checks for current model output:** assistant scaffolding, hype/reassurance, unwanted personas, citations, repetition, and requested formatting.
-- **Clear evidence limits:** release facts are separate from editing heuristics. Unsupported legacy vocabulary/punctuation ratios and model fingerprint claims are removed.
-- **Facts survive editing:** do not fabricate details, numbers, quotes, or experiences to sound human. The skill does not guarantee AI detector results.
-- **Synchronized Full, Lite, and adapters:** English and Indonesian versions, including `AGENTS.md`, `GEMINI.md`, and `system-prompt.md`.
+See the changes and all packages in the [v4.1 release](https://github.com/adenaufal/anti-slop-writing/releases/tag/v4.1).
 
-| Provider | Text releases covered since v3.0 |
-|---|---|
-| ChatGPT / OpenAI | GPT-5.6 Sol/Terra/Luna; GPT-6 Astra; GPT-6 Sol/Luna in API, Work, and Codex. GPT-6 Pro uses Astra. |
-| Claude / Anthropic | Opus 5, Fable 5.1, Mythos 5.1 (restricted access), Opus 5.5. |
-| Gemini / Google | 3.6 Flash, 3.5 Flash-Lite, 3.7 Flash, 3.8 Flash. |
-| Grok / xAI | 4.5, 4.6, 4.7. |
+## Choose Full or Lite
 
-Chat product labels and access can differ from API models. Sonnet/Haiku 5.5 were upcoming at review time. See [model coverage, dates, and sources](english/references/model-coverage.md). This is an instruction update based on official documentation; no live model comparison was run.
+| | Full | Lite |
+|---|---|---|
+| Includes | Complete guide and language-specific references | Core guidance in a shorter form |
+| Suited to | Skill imports, projects, Gems, or instructions that support reference files | Pasting into a chat or a smaller instruction field |
+| Keep in mind | Longer; file support and limits depend on the platform | Can still exceed some field limits; select and paste what fits |
 
----
+Not every chat accepts files or has a custom-instructions field. Projects and Gems also depend on the features and limits of your account. If unsure, paste the Lite text into the conversation you are using.
 
-## Before vs After
+## Start without installing
 
-**Without this skill:**
-> The festival serves as a vibrant testament to the region's rich cultural heritage, showcasing the intricate tapestry of traditions that have endured through the ages, contributing to the broader social fabric of the community.
+1. Open [English Lite](english/SKILL-lite.md) or [Bahasa Indonesia Lite](indonesian/SKILL-lite.md).
+2. Copy from the main `# Anti-Slop...` heading onward. Skip the metadata block at the top, between the `---` lines.
+3. Paste it at the start of a writing conversation, then add your draft or request.
 
-**With this skill:**
-> The festival has run every April since 1987. Locals build their own stalls. The goat cheese and handmade pottery sell out by noon.
+Ready-to-use prompt:
 
----
+> Use the writing guide above to edit this draft. Preserve its facts, meaning, level of certainty, and the writer's voice. Change only what makes it less clear or natural.
 
-## Quick Start
+If you use Claude.ai, download a package from the table and follow [Claude's official instructions for importing a skill](https://support.claude.com/en/articles/12512180-use-skills-in-claude). A `.skill` package is a ZIP archive; if the uploader accepts only `.zip`, change the file extension to `.zip` without extracting or repacking it. Other platforms may use a different import process or may not support skill imports.
 
-### Claude.ai (Web) — Easiest
+## Editing example
 
-The Full and Lite v4.0 packages are available from [Release v4.0](https://github.com/adenaufal/anti-slop-writing/releases/tag/v4.0).
+Constructed editorial exercise. Source facts: only the trial is delayed; the launch has not been cancelled; a new date has not been set.
 
-1. Download `anti-slop-writing-en.skill` (English) or `anti-slop-writing-id.skill` (Indonesian) from the [latest release](https://github.com/adenaufal/anti-slop-writing/releases/latest)
-2. In Claude.ai: `Settings → Skills → Install from file`
-3. Select the downloaded file
-4. Start a new chat and go
+**Before:** “A postponement of the trial has been carried out by the team, while a cancellation of the launch has not been carried out and a determination of a new date has not been made.”
 
-### Claude Code
+**After:** “The team has postponed the trial. The launch has not been cancelled, and a new date has not been set.”
 
-```bash
-# Global
-git clone https://github.com/adenaufal/anti-slop-writing ~/.claude/skills/anti-slop-writing
+“Has not been” remains part of the meaning. Changing it to “the launch will not be cancelled” would add a promise absent from the source.
 
-# Or per-project
-git clone https://github.com/adenaufal/anti-slop-writing .claude/skills/anti-slop-writing
-```
+## What's new in v4.1
 
-Skill file: `english/SKILL.md` (English) or `indonesian/SKILL.md` (Bahasa Indonesia).
+- Adds language-editing guidance and examples for English and Bahasa Indonesia.
+- Clarifies checks for actors, references, chronology, causation, and the scope of words such as “only,” “not yet,” and “may.”
+- Preserves the writer's voice: revise the parts that need work; do not automatically formalize casual writing or add slang to formal writing.
+- Aligns Full, Lite, and adapters; constructed examples have been reviewed for factual drift.
 
-### Other Tools (Codex CLI, Gemini CLI, Copilot, Cursor, Windsurf, Aider, ChatGPT, Grok)
+## For technical users
 
-See [Full Installation](#full-installation) below.
+### Install as a skill
 
----
+Each skill has its own folder containing `SKILL.md`. To install from source:
 
-## How to Use
+1. Clone the repository to a working location, then choose **one language folder**: `english/` or `indonesian/`.
+2. Copy `SKILL.md` for Full, or copy `SKILL-lite.md` and name it `SKILL.md` for Lite. Include the `references/` folder for the same language.
+3. Use the skill folder name in the table below. It matches the `name` in the file's metadata.
 
-Use natural prompts:
-- "Rewrite this so it sounds more human."
-- "Make this not read like AI."
-- "No slop. Keep it direct."
+| Language | Full folder | Lite folder |
+|---|---|---|
+| Bahasa Indonesia | `anti-slop-writing-id` | `anti-slop-writing-id-lite` |
+| English | `anti-slop-writing` | `anti-slop-writing-lite` |
 
-In Claude Code you can also use `/anti-slop-writing`.
+Claude Code reads personal skills from `~/.claude/skills/<skill-name>/SKILL.md` and project skills from `.claude/skills/<skill-name>/SKILL.md`. Other platforms have their own locations and activation rules. This repository's root holds the source; its skill files live inside the language folders.
 
-### Quick Check
+For the `AGENTS.md`, `GEMINI.md`, and `system-prompt.md` adapters, follow the [platform installation guide](INSTALL.md) and include the same language's `references/`. Merge the rules with your existing instructions to preserve them.
 
-Send this test prompt:
+### Source map
 
-```text
-Rewrite this paragraph into 2 versions:
-1) short formal version
-2) casual version
-Both must stay natural and avoid AI template phrasing.
-```
+- `english/` and `indonesian/`: Full and Lite skills, adapters, and language references.
+- `*/references/language-editing.md`: language-editing route and examples.
+- `*/references/model-coverage.md`: historical model release notes and sources.
+- `evaluations/`: synthetic scenarios, outputs, and the v4.1 evaluation record.
+- `scripts/build_skills.py`: validates sources and builds or checks the four packages.
 
-If output is more concrete and sentence rhythm varies, the rules are active.
+Build packages with `python scripts/build_skills.py`. Check existing packages without rewriting them with `python scripts/build_skills.py --check`.
 
----
+## Evaluation limits
 
-## Full Installation
+The [v4.1 evaluation record](evaluations/v4.1.md) covers 8 scenarios (4 per language) and 16 Full/Lite outputs from `gpt-6-luna` at medium reasoning. This is a small check of the instructions, not a benchmark of all providers or models. The guide cannot guarantee detector results, and detectors cannot reliably establish authorship. Model coverage in the [reference](english/references/model-coverage.md) is the v4.0 release history, not a v4.1 evaluation.
 
-> All tools besides Claude.ai need a repo clone first:
-> ```bash
-> git clone https://github.com/adenaufal/anti-slop-writing /tmp/anti-slop-writing
-> ```
-> Then pick files from `english/` (English) or `indonesian/` (Bahasa Indonesia).
+## Sources and credits
 
-| Tool | File & Location |
-|------|-----------------|
-| **Codex CLI** (global) | `cp /tmp/anti-slop-writing/english/AGENTS.md ~/.codex/AGENTS.md` |
-| **Codex CLI** (project) | `cp /tmp/anti-slop-writing/english/AGENTS.md ./AGENTS.md` |
-| **Gemini CLI** (global) | `cp /tmp/anti-slop-writing/english/GEMINI.md ~/.gemini/GEMINI.md` |
-| **Gemini CLI** (project) | `cp /tmp/anti-slop-writing/english/GEMINI.md ./GEMINI.md` |
-| **GitHub Copilot** | `cp /tmp/anti-slop-writing/english/AGENTS.md .github/copilot-instructions.md` |
-| **Cursor** | `cp /tmp/anti-slop-writing/english/AGENTS.md .cursor/rules/anti-slop-writing.mdc` |
-| **Windsurf** | `cp /tmp/anti-slop-writing/english/AGENTS.md .windsurf/rules/anti-slop-writing.md` |
-| **Aider** | `aider --system-prompt "$(cat english/system-prompt.md)"` |
-| **ChatGPT / Grok / other** | Use writing instructions from `english/SKILL-lite.md`; for APIs or projects that support them, use `system-prompt.md` and references. Check the field limit. |
-
-> Replace `english/` with `indonesian/` for Bahasa Indonesia.
-
----
-
-## Repo Contents
-
-```text
-anti-slop-writing/
-├── english/
-│   ├── SKILL.md
-│   ├── SKILL-lite.md
-│   ├── AGENTS.md
-│   ├── GEMINI.md
-│   ├── system-prompt.md
-│   └── references/
-│       ├── vocabulary-banlist.md
-│       ├── structural-patterns.md
-│       └── model-coverage.md
-├── indonesian/
-│   ├── SKILL.md
-│   ├── SKILL-lite.md
-│   ├── AGENTS.md
-│   ├── GEMINI.md
-│   ├── system-prompt.md
-│   └── references/
-│       ├── vocabulary-banlist.md
-│       ├── structural-patterns.md
-│       └── model-coverage.md
-├── references/              ← legacy (combined)
-├── anti-slop-writing-en.skill   ← Full English package (local build)
-├── anti-slop-writing-id.skill   ← Full Indonesian package (local build)
-├── anti-slop-writing-en-lite.skill
-├── anti-slop-writing-id-lite.skill
-├── README.md
-├── README.en.md
-└── LICENSE
-```
-
-- `AGENTS.md`, `GEMINI.md`, `system-prompt.md` share the same core rules — just different formats per tool.
-- `SKILL.md` is for Claude Code skill format.
-- `anti-slop-writing-*.skill` are released separately via [Releases](https://github.com/adenaufal/anti-slop-writing/releases).
-- Release v4.0 includes four packages: Full and Lite for English and Indonesian.
-
----
-
-## Indonesian Language Support
-
-This repo includes rules specific to AI patterns in Bahasa Indonesia text:
-- Over-formal style in casual contexts
-- Formulaic templates ("tidak hanya... tetapi juga")
-- Forced "Kesimpulan" endings
-- Heavy nominalization
-- Missing discourse particles (nah/sih/dong/kan)
-- Always-formal "Anda" regardless of register
-- Translationese (English-calqued sentence structures)
-- Symmetric two-clause hooks ("Banyak orang mengira X. Kenyataannya Y.")
-- Prompt keyword repetition
-
-Use files from the `indonesian/` folder.
-
----
-
-## Sources
-
-- July-September 2026 model releases: [four-provider timeline and official sources](english/references/model-coverage.md).
-- Wikipedia: [Signs of AI Writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
-- Kobak et al. (2024): *Delving into LLM-assisted writing* ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016))
-- Russell, Karpinska & Iyyer (2025): *People who frequently use ChatGPT are accurate detectors of AI-generated text*
-- Fraser, Dawkins & Kiritchenko (2025): *Detecting AI-generated text: factors influencing detectability*
-- Wang et al. (2024): *M4: Multi-generator, Multi-domain, Multi-lingual Black-Box MGT Detection*
-- Lovenia et al. (2024): *SEACrowd* ([arXiv:2406.10118](https://arxiv.org/abs/2406.10118))
-- Ilman Akbar (2024): *Cara gampang mendeteksi konten buatan AI secara manual*
-- The Conversation Indonesia (2024): *Mengapa tulisan asli bisa terdeteksi buatan AI*
-
-## Credits
-
-- [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877)
-- Wikipedia [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup)
+- Language guidance: [English](english/references/language-editing.md) · [Bahasa Indonesia](indonesian/references/language-editing.md)
+- Historical model notes: [releases, dates, and sources](english/references/model-coverage.md)
+- [Wikipedia: Signs of AI Writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
+- Kobak et al. (2024), [Delving into LLM-assisted writing](https://arxiv.org/abs/2406.07016)
+- [@mkbijaksana](https://x.com/mkbijaksana/status/2027714311330627877) · Wikipedia [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup)
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE).

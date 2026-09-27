@@ -1,6 +1,6 @@
-# AI Vocabulary Ban List
+# Vocabulary and Phrase Review List
 
-Editorial vocabulary preferences, organized by category. These are phrases to review in context, not a detector or a measured fingerprint of any model. Preserve technical terms, quotations, and wording required by the user.
+Editorial vocabulary preferences, organized by category. These are review prompts, not bans, a detector, or a measured fingerprint of any model. Preserve accurate technical terms, quotations, necessary hedges, requested wording, and structures required by the format. Do not weaken or change meaning merely to avoid a listed item.
 
 ## Legacy review lists retained from earlier versions
 
@@ -32,7 +32,7 @@ Apply these preferences to drafts from ChatGPT, Claude, Gemini, and Grok when wo
 
 Presence or absence of a word or punctuation mark does not establish authorship. Do not extrapolate a legacy model's alleged habits to a newer release.
 
-## Complete Ban List by Category
+## Commonly Overused Language to Review by Category
 
 ### Significance Puffers
 - pivotal
@@ -179,7 +179,7 @@ Presence or absence of a word or punctuation mark does not establish authorship.
 - "It is generally accepted"
 - "Research suggests" (without naming specific research)
 
-### Collaborative Chat Artifacts (never include)
+### Collaborative Chat Artifacts (remove when they do not belong in the deliverable)
 - "I hope this helps!"
 - "Of course!"
 - "Certainly!"
@@ -192,17 +192,17 @@ Presence or absence of a word or punctuation mark does not establish authorship.
 
 ## Replacement Strategy
 
-When you encounter a banned word, don't just swap it for a synonym. Restructure the sentence to say what you actually mean in plain language.
+When a listed word adds no meaning, don't just swap it for a synonym. Restructure the sentence to say what you mean in plain language while preserving supported claims.
 
 **Before:** "The festival serves as a vibrant testament to the region's rich cultural heritage, showcasing the intricate tapestry of traditions."
 
-**After:** "The festival has been running since 1987. Locals sell handmade pottery and goat cheese from stalls they build themselves each spring."
+**After:** "The festival began in [supported year]. Its program includes [supported activities]."
 
-The fix is never finding a better adjective. The fix is replacing vague praise with specific facts.
+Replace vague praise with specific facts when the source supports them. If no supporting detail is available, remove the praise rather than inventing one.
 
 ---
 
-## Bahasa Indonesia Ban List
+## Bahasa Indonesia Phrases to Review
 
 Indonesian prose can sound bureaucratic or translated when these words and constructions add no useful meaning. Review them in context; they do not establish machine authorship.
 
@@ -216,7 +216,7 @@ Indonesian prose can sound bureaucratic or translated when these words and const
 - mendalam (without substance) → provide the actual depth
 - berarti / bermakna (as vague praise) → specify what meaning it carries
 
-### Analytical Verbs (Indonesian AI overuses)
+### Analytical Verbs to Review (Indonesian)
 - menyoroti / menyorot → "menunjukkan" or describe the finding directly
 - menggarisbawahi → "menunjukkan" or remove the meta-commentary
 - memfasilitasi → "membantu" or "memungkinkan"
@@ -239,7 +239,7 @@ Indonesian prose can sound bureaucratic or translated when these words and const
 - beragam (as vague filler) → list the actual variety
 - terkini (without a date) → give the actual date or timeframe
 
-### Formal Connectives AI Overuses in Indonesian
+### Formal Connectives to Review (Indonesian)
 Replace with simpler alternatives or restructure.
 - selain itu → "juga" or restructure the sentence
 - di sisi lain → "tapi" or "namun" (not as a hollow pivot)
@@ -289,7 +289,7 @@ AI substitutes elaborate verb phrases for simple "adalah" or "punya."
 - "guna meningkatkan" → state what actually increased
 - "untuk mencapai tujuan tersebut" → state what the goal is and what they did
 
-### Collaborative Chat Artifacts (Indonesian — never include)
+### Collaborative Chat Artifacts (Indonesian; remove when they do not belong in the deliverable)
 - "Semoga membantu!"
 - "Tentu saja!"
 - "Baik, berikut adalah..."
@@ -299,10 +299,10 @@ AI substitutes elaborate verb phrases for simple "adalah" or "punya."
 
 ## Indonesian Replacement Strategy
 
-Indonesian AI text fails differently from English AI text. The core problem is translationese: AI writes formal Bahasa Indonesia baku that sounds like a government document or a translated Wikipedia article, even for casual contexts.
+When editing Indonesian, check for phrasing that sounds bureaucratic or translated in the requested context. This is a contextual review, not a claim about all Indonesian writers or models.
 
-**Before (AI Indonesian):**
+**Before (constructed editorial example):**
 > Festival ini merupakan salah satu momen penting yang tidak hanya menampilkan kekayaan budaya lokal, tetapi juga memperkuat ikatan sosial antar masyarakat, menjadikannya sebagai ajang yang sangat krusial dalam pelestarian tradisi.
 
-**After (human Indonesian):**
-> Festival ini sudah jalan sejak 1987. Warga bikin lapak sendiri. Keju kambing dan gerabah habis sebelum tengah hari.
+**After (use only details supplied by the source):**
+> Festival ini melestarikan budaya lokal dan memperkuat ikatan sosial.

@@ -5,7 +5,7 @@ description: Tulis dan sunting teks Bahasa Indonesia agar jelas, spesifik, alami
 
 # Prinsip Utama
 
-**Cakupan versi 4.0 (27 September 2026):** Panduan ini berlaku lintas ChatGPT/OpenAI, Claude/Anthropic, Gemini/Google, dan Grok/xAI. Model dan tanggal rilis yang sudah diverifikasi dicatat di [`references/model-coverage.md`](references/model-coverage.md). Untuk permintaan yang menyebut model atau versi tertentu, cek catatan itu; nama versi bisa berubah dan peluncuran bisa bertahap.
+**Versi 4.1 (27 September 2026):** Panduan lintas model. Catatan model yang diperiksa pada versi 4.0 tetap ada di [`references/model-coverage.md`](references/model-coverage.md); catatan itu bersifat historis, bukan klaim bahwa pola bahasa tertentu milik model tertentu.
 
 Tulisan generik sering terasa aman, berulang, atau kurang terikat pada konteks. Revisi untuk memperjelas maksud, menambah detail yang memang tersedia, dan mempertahankan suara serta tujuan penulis. Jangan menganggap ketidaksempurnaan buatan sebagai bukti keaslian.
 
@@ -15,7 +15,7 @@ Panduan ini membantu menghasilkan tulisan yang jelas, spesifik, dan sesuai konte
 
 Tidak ada daftar ciri gaya yang berlaku pasti untuk semua versi atau semua jenis tugas. Model, pengaturan, prompt, dan konteks bisa mengubah hasil. Perlakukan pemeriksaan berikut sebagai **heuristik editorial**, bukan sidik jari yang terbukti secara statistik: cek apakah kalimat pembuka dan panjang kalimat terlalu berulang; apakah draf memakai kontras, daftar, transisi, atau ringkasan yang sama berulang kali; dan apakah kata-kata abstrak menggantikan fakta atau tindakan. Ubah hanya bagian yang mengganggu kejelasan, akurasi, atau suara yang diminta.
 
-Sebelum nulis apa pun, muat `references/vocabulary-banlist.md` buat kosakata yang dilarang, dan `references/structural-patterns.md` buat pola yang harus dihindari.
+Saat menyunting, gunakan `references/vocabulary-banlist.md` dan `references/structural-patterns.md` sebagai pemicu pemeriksaan, bukan larangan tanpa konteks. Untuk keputusan tata bahasa dan ejaan Indonesia, ikuti rute ringkas di [`references/language-editing.md`](references/language-editing.md).
 
 ---
 
@@ -80,7 +80,9 @@ Di post-generation checklist, **tinjau dash (em dan en)** dan hindari secara def
 
 # Aturan Kosakata
 
-## Daftar Larangan Keras (Jangan Pernah Gunakan)
+## Daftar Pola untuk Ditinjau
+
+Daftar ini berisi pemicu editorial, bukan larangan gramatikal. Pertahankan kata atau struktur jika maknanya tepat, diperlukan oleh bidang/format, bagian dari kutipan, atau sesuai suara penulis. Jangan mengganti secara mekanis.
 
 **Penggelembung kepentingan:** sangat penting, sangat krusial, sangat signifikan, sangat relevan, fundamental (sebagai pujian samar), luar biasa (sebagai pujian generik), mendalam (tanpa detail konkret), berarti / bermakna (sebagai pujian samar)
 
@@ -98,7 +100,7 @@ Di post-generation checklist, **tinjau dash (em dan en)** dan hindari secara def
 
 **Kata sifat promosi (puffery):** komprehensif, holistik, inovatif, dinamis, inklusif, berbagai macam (sebagai pengisi samar), beragam (sebagai pengisi samar), terkini (tanpa tanggal), kolaboratif, berkelanjutan (sebagai buzzword)
 
-**Buzzword AI Indonesia (jangan pernah gunakan sebagai jargon samar):** transformasi digital, ekosistem (figuratif), paradigma, optimalisasi, sinergi, lanskap (kalke dari "landscape"), kompleksitas (tanpa menjelaskan apa yang rumit), dinamika (tanpa menjelaskan apa yang berubah)
+**Istilah abstrak untuk ditinjau:** transformasi digital, ekosistem (figuratif), paradigma, optimalisasi, sinergi, lanskap (kalke dari "landscape"), kompleksitas (tanpa menjelaskan apa yang rumit), dinamika (tanpa menjelaskan apa yang berubah). Pertahankan istilah yang punya makna khusus dalam konteks.
 
 **Frasa pengisi AI yang umum (potong atau ganti):** "memainkan peran [penting/krusial/kunci]" → nyatakan tindakannya langsung | "dalam hal ini" → spesifik tentang apa | "dalam rangka untuk" → "untuk" | "berbagai macam" → sebutkan apa saja | "tidak perlu dikatakan" → potong | "sudah jelas bahwa" → potong | "lebih sering daripada tidak" → "biasanya" atau beri angka | "dalam beberapa tahun terakhir" → berikan tahun atau rentang waktu yang sebenarnya | "hal ini menunjukkan betapa pentingnya" → nyatakan faktanya | "mari kita telusuri lebih dalam" → langsung bahas | "tantangan dan peluang" → sebutkan masalah atau manfaat spesifik, jangan pasangkan
 
@@ -106,7 +108,7 @@ Di post-generation checklist, **tinjau dash (em dan en)** dan hindari secara def
 
 **Hedging berlebihan:** "meskipun demikian" → hapus atau ganti dengan "tapi" | "namun perlu diingat bahwa" → potong | "bisa jadi diargumentasikan bahwa" → ambil posisi | "ada baiknya jika" → nyatakan langsung
 
-**Artefak chat kolaboratif (jangan pernah gunakan):** "Semoga membantu!" | "Tentu saja!" | "Baik, berikut adalah..." | "Apakah ada yang ingin Anda tanyakan?" | "Jika ada pertanyaan, jangan ragu untuk bertanya." | "Sebagai AI, saya..."
+**Penutup atau pembuka chat untuk ditinjau:** "Semoga membantu!" | "Tentu saja!" | "Baik, berikut adalah..." | "Apakah ada yang ingin Anda tanyakan?" | "Jika ada pertanyaan, jangan ragu untuk bertanya." | "Sebagai AI, saya...". Gunakan bila memang sesuai dengan interaksi, format, dan permintaan.
 
 **Frasa yang sering terasa sebagai pengisi:** "memastikan" tanpa menjelaskan tindakan | "berperan penting dalam membentuk" | "mencerminkan / menunjukkan / mendukung" tanpa bukti atau makna yang jelas | "mampu untuk X" ketika kata kerja langsung cukup | "pada intinya" / "pada dasarnya" / "secara fundamental" | intensifier tanpa ukuran ("secara signifikan", "secara efektif", "semakin") | "satu hal yang pasti" / "satu hal yang jelas" | "intinya adalah" | "ketegangan inheren" | "ini memunculkan pertanyaan penting tentang" | tumpukan kata pembatas seperti "biasanya", "sering kali", "umumnya", "berpotensi", "terkadang". Pertahankan frasa yang diperlukan; sunting hanya jika fungsinya kabur atau berulang.
 
@@ -180,7 +182,7 @@ Pilih kata penghubung, preposisi, dan partikel sesuai makna serta register. Vari
 
 ## 15. Pilih Kosakata yang Tepat
 
-AI ngasilin teks dengan rasio tipe-token (type-token ratio) yang rendah, artinya lebih sedikit kata unik. Manusia pakai lebih banyak hapax legomena (kata yang cuma muncul sekali). Untuk ningkatin: pakai istilah domain-spesifik, campur register (formal + informal), masukin kata dari bahasa daerah, pakai bahasa figuratif yang spesifik, dan jangan hindarin pengulangan kata yang sama demi siklus sinonim.
+Keragaman kosakata bergantung pada topik, panjang teks, genre, dan penulis; jangan memakai rasio tipe-token sebagai ukuran keaslian atau alasan untuk mencampur register. Gunakan istilah domain, bahasa daerah, atau ungkapan figuratif hanya bila didukung bahan dan cocok dengan suara penulis. Hindari siklus sinonim jika justru mengaburkan istilah yang konsisten.
 
 ---
 
@@ -216,7 +218,7 @@ Tulis ulang "program di mana peserta akan..." menjadi "program yang..." atau kal
 
 ### BI-8. Lebih Suka Kata Kerja daripada Nominalisasi
 
-"Melatih" bukan "pelaksanaan pelatihan." "Mengembangkan" bukan "pengembangan kapasitas." "Membangun" bukan "pembangunan." AI belajar gaya birokrasi akademis Indonesia secara berlebihan. Frasa kata benda berat yang gantiin kata kerja sederhana.
+Frasa nomina panjang dapat terasa birokratis bila verba langsung menyatakan tindakan yang sama, misalnya "melaksanakan pelatihan" menjadi "melatih". Namun, jangan menghapus objek atau konsep: "mengembangkan kapasitas" tetap perlu menyebut kapasitas. Tinjau konstruksi seperti "melakukan implementasi" menurut konteks; jangan menganggapnya ciri model tertentu.
 
 ### BI-9. Jangan Pasangan Formulaik "Tantangan dan Peluang"
 
@@ -317,8 +319,8 @@ Partikel wacana bisa membantu nada percakapan. Pakai sesuai tier dan konteks, ta
 
 Panduan per tier:
 - **Tier 1 (Formal)**: umumnya hindari partikel kecuali memang sesuai dengan suara penulis atau konteks kutipan.
-- **Tier 2 (Semi-formal)**: partikel boleh dipakai sesekali bila cocok. Hindarin yang paling santai (mah, deh berturut-turut) untuk audiens formal.
-- **Tier 3 (Informal)**: natural, kayak ngobrol. Bisa 1 sampai 2 per paragraf.
+- **Tier 2 (Semi-formal)**: partikel boleh dipakai bila cocok dengan suara dan fungsi kalimat.
+- **Tier 3 (Informal)**: partikel boleh dipakai bila memang akan diucapkan penulis; tidak ada jumlah atau kuota per paragraf.
 
 ## Sesuaikan Register Kata Ganti
 
@@ -330,9 +332,9 @@ Pilih kata ganti yang sesuai konteks dan hubungan penulis dengan pembaca.
 
 Cocokkan register yang diminta. Pilih kata ganti yang cocok dan pertahankan kecuali ada alasan untuk berganti.
 
-## Hindari Bahasa Indonesia Baku Murni dalam Konteks Santai
+## Sesuaikan Ragam dengan Konteks
 
-Untuk konteks informal, gunakan bentuk percakapan yang cocok bagi audiens:
+Untuk konteks santai, bentuk percakapan dapat cocok bagi audiens. Bentuk baku tetap boleh dipakai bila itulah suara penulis:
 
 | Formal | Santai |
 |---|---|
@@ -352,9 +354,9 @@ Untuk konteks informal, gunakan bentuk percakapan yang cocok bagi audiens:
 | mencari | nyari |
 | menonton | nonton |
 
-## Gunakan Pemendekan Prefiks dalam Konteks Santai
+## Bentuk Percakapan dan Prefiks
 
-Bahasa Indonesia informal memendekkan prefiks meN- jadi bentuk nasal. Aturan asimilasi nasal meN-:
+Dalam ragam percakapan, beberapa kata berprefiks sering muncul dalam bentuk ringkas. Ini variasi pemakaian, bukan aturan untuk mengubah setiap kata atau alasan untuk mengubah suara penulis.
 
 | Prefiks | Huruf awal | Nasal | Contoh formal → informal |
 |---|---|---|---|
@@ -363,7 +365,7 @@ Bahasa Indonesia informal memendekkan prefiks meN- jadi bentuk nasal. Aturan asi
 | mem- | b, p, f | m-/mb- | membantu → mbantu, membuat → mbuat |
 | meny- | s | ny- | menyapu → nyapu, menyukai → nyukain |
 
-Contoh lengkap:
+Contoh variasi yang dapat dijumpai:
 - mengerti → ngerti
 - mencari → nyari
 - menonton → nonton
@@ -411,55 +413,35 @@ Di tier informal, code-switching seperti "literally", "which is", "somehow", ata
 
 # Aturan Anti-Translationese
 
-AI nulis Bahasa Indonesia yang kedengeran kayak terjemahan dari bahasa Inggris. Ini namanya "translationese", secara gramatikal bener tapi nggak natural. Aturan-aturan berikut ngatasin pola-pola translationese paling umum.
+Kalimat dapat terasa seperti terjemahan harfiah bila pilihan kata atau hubungan klausanya mengikuti susunan bahasa sumber. Periksa makna dan kelancaran dalam konteks Bahasa Indonesia; contoh di bawah adalah kemungkinan penyuntingan, bukan pola yang selalu salah atau ciri model.
 
-## TR-1. Jangan Over-Passive dengan "Oleh"
+## TR-1. Pilih Aktif atau Pasif Berdasarkan Fokus
 
-Bahasa Indonesia punya dua jenis pasif:
-- **Pasif di-** (formal): "Buku itu dibaca oleh guru."
-- **Pasif prokletik** (natural/informal): "Buku itu guru baca." atau "Buku itu saya baca."
+Bahasa Indonesia memakai konstruksi aktif dan beberapa konstruksi pasif. Pilih menurut fokus informasi, register, dan apakah pelaku perlu dipertahankan. Kata **oleh** tidak otomatis salah atau perlu dihapus.
 
-Bahasa Indonesia memiliki pilihan kalimat aktif, pasif berawalan di-, serta pasif prokletik. Pilih bentuk yang menjaga fokus dan kelancaran kalimat; hindari "oleh" jika pelakunya tidak perlu disebut.
+Contoh buatan: "Keputusan itu dibuat oleh tim manajemen." → "Tim manajemen membuat keputusan itu." Perubahan ini mempertahankan pelaku dan tindakan; jika keputusan yang menjadi topik, pasifnya juga dapat dipertahankan.
 
-**Pola AI:** "Keputusan itu dibuat oleh tim manajemen."
-**Natural:** "Tim manajemen yang bikin keputusan itu." atau "Keputusan itu tim manajemen yang buat."
+## TR-2. Topik dan Fokus Harus Tetap Jelas
 
-Aturan: Kurangi "oleh" secara drastis. Pakai pasif prokletik (pronomina + verba dasar) buat register santai. Pakai kalimat aktif kalau memungkinkan.
+Topik di awal kalimat dapat cocok dalam bahasa Indonesia, tetapi bukan kewajiban dan tidak boleh mengaburkan siapa melakukan apa. Jangan mengubah kalimat hanya agar tampak lebih lisan.
 
-## TR-2. Gunakan Struktur Topik-Komentar
+Contoh buatan: "Program ini memberi manfaat kepada warga." → "Warga mendapat manfaat dari program ini." Bentuk kedua menonjolkan warga, tetapi mempertahankan program sebagai sumber manfaat. Hindari "Kalau programnya, warga sudah merasakan manfaatnya" bila hubungan atau cakupan klaim berubah.
 
-Bahasa Indonesia adalah bahasa topic-prominent, bukan subject-prominent kayak Inggris. Kalimat natural Indonesia sering naro topik di depan, bukan subjek gramatikal.
-
-**Pola AI (subject-prominent, kalke Inggris):** "Program ini telah memberikan manfaat kepada masyarakat."
-**Natural (topic-prominent):** "Kalau programnya, masyarakat udah mulai ngerasain manfaatnya."
-
-Contoh lain:
-- AI: "Saya sudah menyelesaikan pekerjaan itu." → Natural: "Pekerjaan itu, udah selesai."
-- AI: "Mereka mengalami kesulitan." → Natural: "Kalau mereka, ya susah juga sih."
-
-Aturan: Sesekali pakai struktur topik-komentar. Mulai kalimat dengan topik yang dibahas, bukan selalu dengan subjek gramatikal.
-
-## TR-3. Gunakan Pro-drop (Penghilangan Subjek)
+## TR-3. Hilangkan Subjek Hanya Jika Rujukannya Pasti
 
 Bahasa Indonesia membolehkan penghilangan subjek ketika konteksnya sudah jelas. Hilangkan subjek berulang bila rujukannya tidak membingungkan.
 
-**Pola AI:** "Dia pergi ke pasar. Dia membeli sayuran. Dia kembali sore hari."
-**Natural:** "Pergi ke pasar. Beli sayuran. Sore baru balik."
+Penghilangan subjek mungkin wajar ketika pelaku tetap dapat dipulihkan dari konteks dan tidak ada pergantian pelaku. Jangan menghapus subjek yang memikul tanggung jawab, membedakan aktor, atau menjadi rujukan yang belum jelas.
 
-**Pola AI:** "Kami mengadakan rapat. Kami membahas anggaran. Kami menyetujui proposal."
-**Natural:** "Ngadain rapat, bahas anggaran, terus setujuin proposalnya."
-
-Aturan: Ketika subjek udah jelas dari konteks, hilangin. Pengulangan subjek yang nggak perlu adalah tanda translationese.
+Contoh buatan: "Rina membuka rapat. Rina menjelaskan anggaran." → "Rina membuka rapat lalu menjelaskan anggaran." Pelakunya tetap Rina. Jangan ringkas menjadi "Rapat dibuka. Anggaran dijelaskan" jika atribusi tindakan perlu dipertahankan.
 
 ## TR-4. Jangan "Yang" Berlebihan
 
 Rantai klausa dengan "yang" kadang membuat kalimat berat. Susun ulang jika maknanya tetap jelas tanpa klausa bertingkat.
 
-**Pola AI:** "Orang yang tinggal di desa yang terletak di kaki gunung yang bernama Merapi."
-**Natural:** "Orang desa di kaki Merapi."
+Contoh buatan: "Warga yang tinggal di desa yang berada di kaki Merapi" → "Warga desa di kaki Merapi" hanya jika status tinggal dan lokasi memang sama-sama dimaksud. Jangan buang klausa relatif bila klausa itu membatasi kelompok atau menambahkan informasi penting.
 
-**Pola AI:** "Strategi yang digunakan oleh perusahaan yang bergerak di bidang teknologi."
-**Natural:** "Strategi perusahaan teknologi."
+Contoh buatan: "Strategi yang dipakai oleh perusahaan yang bergerak di bidang teknologi" → "Strategi yang dipakai perusahaan teknologi." Bentuk ringkas mempertahankan tindakan dan pelaku; jangan ubah menjadi "strategi perusahaan" jika informasi pemakaian atau bidangnya dibutuhkan.
 
 Aturan: Kurangi rantai "yang" bila klausa bertingkat membuat kalimat sulit dibaca.
 
@@ -467,10 +449,7 @@ Aturan: Kurangi rantai "yang" bila klausa bertingkat membuat kalimat sulit dibac
 
 Bahasa Indonesia sering tidak membutuhkan kopula "adalah" jika hubungan antarkata sudah jelas.
 
-**Pola AI:** "Indonesia adalah negara kepulauan. Jakarta adalah ibukotanya. Bahasa Indonesia adalah bahasa resminya."
-**Natural:** "Indonesia negara kepulauan. Ibukotanya Jakarta. Bahasa resminya Bahasa Indonesia."
-
-Aturan: Bahasa Indonesia sering nggak butuh "adalah". Hilangkan ketika konteks udah jelas. Pakai "adalah" cuma buat penekanan identitas atau definisi formal.
+"Adalah" dapat dipakai untuk kejelasan, penekanan, atau definisi; menghapusnya bukan sasaran tersendiri. Pertahankan kopula jika penghilangan membuat relasi atau batas kalimat rancu.
 
 ## TR-6. Ejaan KBBI yang Konsisten
 
@@ -485,14 +464,9 @@ Perhatikan konsistensi ejaan. Dalam konteks informal, tentukan bentuk yang dipak
 
 Aturan: Pakai ejaan KBBI secara konsisten untuk tulisan formal. Dalam konteks informal, pilih bentuk yang cocok dan gunakan dengan konsisten.
 
-## TR-7. Konvensi Retorika Indonesia
+## TR-7. Alur Retoris Menurut Tujuan
 
-Tulisan Indonesia punya konvensi retorika yang beda dari Inggris:
-
-- **Penalaran induktif lebih umum:** Orang Indonesia sering nyajiin bukti/konteks dulu, baru kesimpulan. Kebalikan dari Inggris yang langsung klaim di awal. Jangan selalu buka dengan tesis.
-- **Pengembangan sirkuler:** Tulisan Indonesia kadang kembali ke poin dari sudut berbeda. Gunakan bila membantu argumen, tanpa mengulang isi sekadar mengisi ruang.
-- **Hedging kultural:** Dalam budaya Indonesia, hedging ringan itu sopan, bukan lemah. "Sepertinya..." atau "Mungkin bisa dibilang..." bisa natural. Bedain dari hedging AI yang generik dan tanpa isi.
-- **Peribahasa/Pepatah:** Manusia Indonesia kadang nyisipin peribahasa. "Sedikit-sedikit, lama-lama jadi bukit" lebih natural daripada "Akumulasi usaha kecil menghasilkan hasil besar."
+Tidak ada satu urutan retoris atau kadar hedging yang cocok untuk semua penulis Indonesia. Dahulukan klaim, kontekskan dulu, atau kembali ke gagasan sesuai genre, audiens, dan bahan. Pakai peribahasa hanya jika memang sesuai maksud dan suara penulis; jangan sisipkan sebagai penanda keaslian.
 
 ---
 
@@ -553,19 +527,21 @@ Setelah nyusun draf, jalanin daftar periksa ini:
 30. Cari rantai "yang" dan susun ulang bila kalimat menjadi sulit dibaca.
 31. Periksa subjek berulang dan hilangkan yang tidak diperlukan bila rujukan tetap jelas.
 32. Cari "adalah" berlebihan, hilangkan kalau konteks udah jelas tanpa kopula.
-33. Periksa apakah ada struktur topik-komentar. Kalau semua kalimat subject-prominent, ubah beberapa jadi topic-prominent.
+33. Tinjau struktur topik-komentar jika sesuai dengan register dan membantu fokus. Jangan mengubah susunan hanya untuk mencapai variasi.
 34. Periksa alur gagasan. Kembali ke poin sebelumnya hanya jika membantu penjelasan, bukan sekadar untuk membuat struktur terasa berbeda.
 35. Periksa ulang akurasi semantik. Pastikan setiap penggantian mempertahanin makna asli.
 
-**Pemeriksaan akhir versi 4.0:**
+**Pemeriksaan akhir versi 4.1:**
 36. Pastikan tidak ada scaffolding chat atau uraian proses berpikir yang bukan bagian dari hasil yang diminta.
 37. Hapus reassurance, pujian, promosi, atau nada edgy yang muncul otomatis dan tidak diminta.
 38. Pastikan fakta, kutipan, tautan, dan atribusi benar; jangan mengarang pengalaman, data, atau sumber.
 39. Tinjau repetisi kata/frasa, pembuka kalimat, pola daftar, transisi, dan penutup. Variasikan hanya bila hasilnya lebih jelas dan sesuai suara yang diminta.
 40. Pertahankan ketidakpastian yang nyata; jangan mengubah dugaan menjadi fakta atau menghapus kualifikasi yang penting.
-41. Pastikan format dan register sesuai permintaan. Bahasa Indonesia harus terdengar alami, bukan terjemahan harfiah dari Inggris.
+41. Untuk penyuntingan tata bahasa, buka [`references/language-editing.md`](references/language-editing.md); periksa subjek-predikat, rujukan, lingkup negasi/modalitas, dan paralelisme sebelum merapikan gaya.
+42. Pastikan format dan register sesuai permintaan. Bahasa Indonesia harus terdengar alami, bukan terjemahan harfiah dari Inggris.
 
 ---
 
-**Terakhir Diperbarui:** 27 September 2026 (v4.0)
+**Terakhir Diperbarui:** 27 September 2026 (v4.1)
+**Changelog v4.1:** Menambahkan rute pemeriksaan bahasa Indonesia dengan contoh buatan dan rujukan EYD V; memperbaiki panduan yang dapat menghapus pelaku atau mengubah makna; menjadikan daftar gaya pemicu kontekstual.
 **Changelog v4.0:** Cakupan model diperbarui untuk OpenAI, Anthropic, Google, dan xAI. Klaim sidik jari tanpa bukti yang dapat diperiksa diganti dengan pemeriksaan editorial yang jelas berstatus heuristik; panduan deteksi dan instruksi agar tulisan tampak sengaja tidak sempurna dihapus.
